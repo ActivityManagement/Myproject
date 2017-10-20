@@ -14,6 +14,9 @@ public class LoginController {
     @FXML
     private Label status_login;
 
+    private String aid = "eakarin01";
+    private String apass= "123456789";
+
     @FXML
     void callLoginEvent(ActionEvent event) {
         String userid = userid_box.getText();
@@ -21,6 +24,8 @@ public class LoginController {
         if (checkLogin(userid,pass))
         {
             // go to main scene
+            //TODO
+            MainProgram.primaryWindow.setTitle("New Manage");
         }
     }
 
@@ -36,6 +41,8 @@ public class LoginController {
 
     private boolean matchLoginDB(String userid,String pass)
     {
+        //TODO
+        if (userid.equals(this.aid) && pass.equals(this.apass)) return true;
         status_login.setText("USER ID หรือ PASSWORD ไม่ถูกต้อง");
         return false;
     }
