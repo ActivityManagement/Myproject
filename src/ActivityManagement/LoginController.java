@@ -1,5 +1,7 @@
 package ActivityManagement;
 
+import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -8,11 +10,14 @@ import javafx.scene.control.TextField;
 
 public class LoginController {
     @FXML
-    private TextField userid_box;
+    private JFXTextField userid_box;
     @FXML
-    private PasswordField pass_box;
+    private JFXPasswordField pass_box;
     @FXML
     private Label status_login;
+
+    private String aid = "eakarin01";
+    private String apass= "123456789";
 
     @FXML
     void callLoginEvent(ActionEvent event) {
@@ -21,6 +26,8 @@ public class LoginController {
         if (checkLogin(userid,pass))
         {
             // go to main scene
+            //TODO
+            MainProgram.primaryWindow.setTitle("New Manage");
         }
     }
 
@@ -28,7 +35,7 @@ public class LoginController {
     {
         boolean value = false;
         if (userid.length()==0 || pass.length()==0)
-            status_login.setText("กรุณากรอก USER ID และ PASSWORD");
+            status_login.setText("Please enter Username and Password");
         else
             value = matchLoginDB(userid,pass);
         return value;
@@ -36,7 +43,9 @@ public class LoginController {
 
     private boolean matchLoginDB(String userid,String pass)
     {
-        status_login.setText("USER ID หรือ PASSWORD ไม่ถูกต้อง");
+        //TODO
+        if (userid.equals(this.aid) && pass.equals(this.apass)) return true;
+        status_login.setText("Username or Password invalid");
         return false;
     }
 
