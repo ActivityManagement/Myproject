@@ -19,7 +19,8 @@ public class MainProgram extends Application {
         Parent login = FXMLLoader.load(getClass().getResource("loginpage.fxml"));
         primaryWindow = primaryStage;
         primaryWindow.setTitle("Activity Management");
-        primaryWindow.setScene(new Scene(login));
+        Scene scene = new Scene(login);
+        primaryWindow.setScene(scene);
         primaryWindow.setMinWidth(1280);
         primaryWindow.setMinHeight(720);
         primaryWindow.show();
