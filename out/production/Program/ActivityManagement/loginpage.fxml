@@ -61,5 +61,10 @@
             <Font name="Arial Bold" size="24.0" />
          </font>
       </Label>
+      <JFXButton buttonType="RAISED" layoutX="550.0" layoutY="457.0" onAction="#callRegisterEvent" prefHeight="37.0" prefWidth="115.0" style="-fx-background-color: #aeaeae;" text="REGISTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

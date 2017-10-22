@@ -5,8 +5,6 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 
 public class LoginController {
     @FXML
@@ -28,7 +26,21 @@ public class LoginController {
             // go to main scene
             //TODO
             MainProgram.primaryWindow.setTitle("New Manage");
+
         }
+    }
+    @FXML
+    void callRegisterEvent(ActionEvent event) {
+        String userid = userid_box.getText();
+        String pass = pass_box.getText();
+
+        if (!userid.isEmpty() && !pass.isEmpty())
+        {
+            DBConnection bConnection = new DBConnection();
+            bConnection.createTable("Login");
+            bConnection.insertToTable("Login",userid,"admin","kub",pass);
+        }
+
     }
 
     private boolean checkLogin(String userid,String pass)
@@ -44,6 +56,7 @@ public class LoginController {
     private boolean matchLoginDB(String userid,String pass)
     {
         //TODO
+        DBConnection bConnection = new DBConnection();
         if (userid.equals(this.aid) && pass.equals(this.apass)) return true;
         status_login.setText("Username or Password invalid");
         return false;
