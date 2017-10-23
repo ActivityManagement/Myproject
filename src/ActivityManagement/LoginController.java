@@ -14,6 +14,9 @@ public class LoginController {
     @FXML
     private Label status_login;
 
+    private final String tableName = "Login";
+    private final String createTBF = "Create TABLE "+tableName+" (UID varchar(10),FirstName varchar(50),LastName varchar(50),Password varchar(16))";
+
     private String aid = "eakarin01";
     private String apass= "123456789";
 
@@ -25,6 +28,7 @@ public class LoginController {
         {
             // go to main scene
             //TODO
+            status_login.setText("IS TRUE");
             MainProgram.primaryWindow.setTitle("New Manage");
 
         }
@@ -37,8 +41,12 @@ public class LoginController {
         if (!userid.isEmpty() && !pass.isEmpty())
         {
             DBConnection bConnection = new DBConnection();
-            bConnection.createTable("Login");
-            bConnection.insertToTable("Login",userid,"admin","kub",pass);
+            bConnection.createTable(createTBF);
+            if (bConnection.getValueinTable(tableName,"UID",userid,"Password")==null)
+                bConnection.insertToTable("INSERT INTO "+tableName+" Values ('"+userid+"','Admin','kub','"+pass+"')");
+            else
+//                repeat UID
+                System.out.println("Repeat");
         }
 
     }
@@ -57,7 +65,9 @@ public class LoginController {
     {
         //TODO
         DBConnection bConnection = new DBConnection();
-        if (userid.equals(this.aid) && pass.equals(this.apass)) return true;
+        bConnection.printAll("Login");
+        String getpass = bConnection.getValueinTable(tableName,"UID",userid,"Password");
+        if (getpass!=null && getpass.equals(pass)) return true;
         status_login.setText("Username or Password invalid");
         return false;
     }
