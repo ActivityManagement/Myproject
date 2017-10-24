@@ -9,8 +9,8 @@ import javafx.stage.Stage;
 public class MainProgram extends Application {
 
     static Stage primaryWindow;
-    static Parent login;
-    static Parent createact;
+    static Scene loginScene;
+    static Scene createactScene;
 
     public static void main(String[] args) {
         launch(args);
@@ -18,11 +18,13 @@ public class MainProgram extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        login = FXMLLoader.load(getClass().getResource("loginpage.fxml"));
-        createact = FXMLLoader.load(getClass().getResource("createActPage.fxml"));
+        Parent login = FXMLLoader.load(getClass().getResource("loginpage.fxml"));
+        Parent createact = FXMLLoader.load(getClass().getResource("createActPage.fxml"));
+        loginScene = new Scene(login);
+        createactScene = new Scene(createact);
         primaryWindow = primaryStage;
         primaryWindow.setTitle("Activity Management");
-        primaryWindow.setScene(new Scene(createact));
+        primaryWindow.setScene(loginScene);
         primaryWindow.setMinWidth(1280);
         primaryWindow.setMinHeight(720);
         primaryWindow.show();

@@ -18,7 +18,7 @@ public class CreateActController {
 
     @FXML
     void clickBackButton(ActionEvent event) {
-        MainProgram.primaryWindow.setScene(new Scene(MainProgram.login));
+        MainProgram.primaryWindow.setScene(MainProgram.loginScene);
     }
 
     @FXML
