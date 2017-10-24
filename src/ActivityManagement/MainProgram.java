@@ -6,12 +6,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class MainProgram extends Application {
 
     public static Stage primaryWindow;
-    public static Scene loginScene;
-    public static Scene createactScene;
+    public static Scene programScene;
     public static String UIDCurrent;
+    public static Parent login;
+    public static Parent createact;
 
     public static void main(String[] args) {
         launch(args);
@@ -19,15 +22,27 @@ public class MainProgram extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent login = FXMLLoader.load(getClass().getResource("View/loginpage.fxml"));
-        Parent createact = FXMLLoader.load(getClass().getResource("View/createActPage.fxml"));
-        loginScene = new Scene(login);
-        createactScene = new Scene(createact);
+//        login = FXMLLoader.load(getClass().getResource("View/loginpage.fxml"));
+//        createact = FXMLLoader.load(getClass().getResource("View/createActPage.fxml"));
+        login = loadPage("View/loginpage.fxml");
+        createact = loadPage("View/createActPage.fxml");
+        programScene = new Scene(login);
         primaryWindow = primaryStage;
         primaryWindow.setTitle("Activity Management");
-        primaryWindow.setScene(loginScene);
+        primaryWindow.setScene(programScene);
+        primaryWindow.getScene().setRoot(login);
         primaryWindow.setMinWidth(1280);
         primaryWindow.setMinHeight(720);
         primaryWindow.show();
+    }
+
+    public Parent loadPage(String url)
+    {
+        try {
+            return FXMLLoader.load(getClass().getResource(url));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

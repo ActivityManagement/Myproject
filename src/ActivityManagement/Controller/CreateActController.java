@@ -5,6 +5,7 @@ import ActivityManagement.Model.DBConnection;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 
 public class CreateActController {
@@ -17,12 +18,14 @@ public class CreateActController {
     @FXML
     private Label create_status;
 
+    private final String hasActname = "HasActivity";
+    private final String hasactsql = "Create TABLE "+hasActname+" (UID varchar(10),AID varchar(6),Active INT,Role INT,memberOf INT)";
     private final String tableName = "Activitylist";
     private final String actdbsql = "Create TABLE "+tableName+" (AID varchar(6),ActName varchar(50),OrgName varchar(50),ActPassword varchar(16),Active INT)";
 
     @FXML
     void clickBackButton(ActionEvent event) {
-        MainProgram.primaryWindow.setScene(MainProgram.loginScene);
+        MainProgram.primaryWindow.getScene().setRoot(MainProgram.login);
     }
 
     @FXML
@@ -46,7 +49,11 @@ public class CreateActController {
             //TODO
             create_status.setText("ถูกแล้วจ้าาา");
             DBConnection bconnection = new DBConnection();
+            //create ActivityList Table
             bconnection.createTable(actdbsql);
+            //create hasActivity Table
+            bconnection.createTable(hasactsql);
+            //task of insert activity list to table
             int actid;
             String sgetid = bconnection.getLastValue(tableName,"AID");
             //if the first activity
@@ -61,6 +68,8 @@ public class CreateActController {
             }
             String sActid = String.format("%06d",actid);
             bconnection.insertToTable("INSERT INTO "+tableName+" Values ('"+sActid+"','"+actname+"','"+orgname+"','"+password+"',"+1+")");
+            //INSERT TO hasACT TABLE
+            bconnection.insertToTable("INSERT INTO "+hasActname+" Values ('"+MainProgram.UIDCurrent+"','"+sActid+"',"+1+","+-1+","+0+")");
         }
     }
 

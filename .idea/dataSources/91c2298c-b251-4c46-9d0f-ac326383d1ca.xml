@@ -17,40 +17,61 @@
     <schema id="11" parent="1" name="SYSPROC"/>
     <schema id="12" parent="1" name="SYSSTAT"/>
     <table id="13" parent="2" name="ACTIVITYLIST"/>
-    <table id="14" parent="2" name="LOGIN"/>
-    <column id="15" parent="13" name="AID">
+    <table id="14" parent="2" name="HASACTIVITY"/>
+    <table id="15" parent="2" name="LOGIN"/>
+    <column id="16" parent="13" name="AID">
       <Position>1</Position>
       <DataType>VARCHAR(6)|12</DataType>
     </column>
-    <column id="16" parent="13" name="ACTNAME">
+    <column id="17" parent="13" name="ACTNAME">
       <Position>2</Position>
       <DataType>VARCHAR(50)|12</DataType>
     </column>
-    <column id="17" parent="13" name="ORGNAME">
+    <column id="18" parent="13" name="ORGNAME">
       <Position>3</Position>
       <DataType>VARCHAR(50)|12</DataType>
     </column>
-    <column id="18" parent="13" name="ACTPASSWORD">
+    <column id="19" parent="13" name="ACTPASSWORD">
       <Position>4</Position>
       <DataType>VARCHAR(16)|12</DataType>
     </column>
-    <column id="19" parent="13" name="ACTIVE">
+    <column id="20" parent="13" name="ACTIVE">
       <Position>5</Position>
       <DataType>INTEGER(10)|4</DataType>
     </column>
-    <column id="20" parent="14" name="UID">
+    <column id="21" parent="14" name="UID">
       <Position>1</Position>
       <DataType>VARCHAR(10)|12</DataType>
     </column>
-    <column id="21" parent="14" name="FIRSTNAME">
+    <column id="22" parent="14" name="AID">
+      <Position>2</Position>
+      <DataType>VARCHAR(6)|12</DataType>
+    </column>
+    <column id="23" parent="14" name="ACTIVE">
+      <Position>3</Position>
+      <DataType>INTEGER(10)|4</DataType>
+    </column>
+    <column id="24" parent="14" name="ROLE">
+      <Position>4</Position>
+      <DataType>INTEGER(10)|4</DataType>
+    </column>
+    <column id="25" parent="14" name="MEMBEROF">
+      <Position>5</Position>
+      <DataType>INTEGER(10)|4</DataType>
+    </column>
+    <column id="26" parent="15" name="UID">
+      <Position>1</Position>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="27" parent="15" name="FIRSTNAME">
       <Position>2</Position>
       <DataType>VARCHAR(50)|12</DataType>
     </column>
-    <column id="22" parent="14" name="LASTNAME">
+    <column id="28" parent="15" name="LASTNAME">
       <Position>3</Position>
       <DataType>VARCHAR(50)|12</DataType>
     </column>
-    <column id="23" parent="14" name="PASSWORD">
+    <column id="29" parent="15" name="PASSWORD">
       <Position>4</Position>
       <DataType>VARCHAR(16)|12</DataType>
     </column>

@@ -1,20 +1,20 @@
-Wed Oct 25 02:05:52 ICT 2017 : Apache Derby Network Server - 10.14.1.0 - (1808820) started and ready to accept connections on port 1527
+Wed Oct 25 03:12:04 ICT 2017 : Apache Derby Network Server - 10.14.1.0 - (1808820) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Wed Oct 25 02:05:57 ICT 2017:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-015f-4fc6-d89b-0000673b8f3d 
-on database directory E:\work\SE\Program\src\derby\bin\ActivityManagementDB with class loader sun.misc.Launcher$AppClassLoader@42a57993 
-Loaded from file:/E:/work/SE/Program/src/derby/lib/derby.jar
+Wed Oct 25 03:12:13 ICT 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-015f-5003-739a-00005c0a5ec5 
+on database directory D:\KMITL\SE\Myproject\src\derby\bin\ActivityManagementDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@65ae6ba4 
+Loaded from file:/D:/KMITL/SE/Myproject/src/derby/lib/derby.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_144-b01
-user.dir=E:\work\SE\Program\src\derby\bin
-os.name=Windows 10
+java.runtime.version=9.0.1+11
+user.dir=D:\KMITL\SE\Myproject\src\derby\bin
+os.name=Windows 8.1
 os.arch=amd64
-os.version=10.0
-derby.system.home=E:\work\SE\Program\src\derby\bin
+os.version=6.3
+derby.system.home=D:\KMITL\SE\Myproject\src\derby\bin
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Wed Oct 25 02:13:47 ICT 2017: Shutting down Derby engine
+Wed Oct 25 04:00:15 ICT 2017: Shutting down Derby engine
 ----------------------------------------------------------------
-Wed Oct 25 02:13:47 ICT 2017:
-Shutting down instance a816c00e-015f-4fc6-d89b-0000673b8f3d on database directory E:\work\SE\Program\src\derby\bin\ActivityManagementDB with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+Wed Oct 25 04:00:15 ICT 2017:
+Shutting down instance a816c00e-015f-5003-739a-00005c0a5ec5 on database directory D:\KMITL\SE\Myproject\src\derby\bin\ActivityManagementDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@65ae6ba4 
 ----------------------------------------------------------------

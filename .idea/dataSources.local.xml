@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="ActivityManagementDB@localhost" uuid="eb31ffa5-b2ef-4b3f-87ec-a613481c376f">
+    <data-source name="ActivityManagementDB@localhost" uuid="91c2298c-b251-4c46-9d0f-ac326383d1ca">
       <database-info product="Apache Derby" version="10.14.1.0 - (1808820)" jdbc-version="4.2" driver-name="Apache Derby Network Client JDBC Driver" driver-version="10.13.1.1 - (1765088)">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>

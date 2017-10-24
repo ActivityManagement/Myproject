@@ -98,4 +98,21 @@ public class DBConnection {
         }
     }
 
+    public String getValueFromFreeStatement(String sqlcode,String get)
+    {
+        try {
+            Statement statement = this.conn.createStatement();
+            ResultSet res = statement.executeQuery(sqlcode);
+            if (!res.next()){
+                //ResultSet is empty
+                return null;
+            }
+            else
+                return res.getString(get);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 }

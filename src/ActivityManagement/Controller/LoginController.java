@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 
 public class LoginController {
@@ -29,7 +30,7 @@ public class LoginController {
             //TODO
             status_login.setText("");
             MainProgram.UIDCurrent = userid;
-            MainProgram.primaryWindow.setScene(MainProgram.createactScene);
+            MainProgram.primaryWindow.getScene().setRoot(MainProgram.createact);
         }
     }
     @FXML
