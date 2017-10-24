@@ -65,7 +65,7 @@ public class LoginController {
     {
         //TODO
         DBConnection bConnection = new DBConnection();
-        bConnection.printAll("Login");
+//        bConnection.printAll("Login");
         String getpass = bConnection.getValueinTable(tableName,"UID",userid,"Password");
         if (getpass!=null && getpass.equals(pass)) return true;
         status_login.setText("Username or Password invalid");

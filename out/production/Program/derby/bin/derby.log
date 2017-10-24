@@ -1,0 +1,107 @@
+Tue Oct 24 03:23:33 ICT 2017 : Apache Derby Network Server - 10.14.1.0 - (1808820) started and ready to accept connections on port 1527
+Tue Oct 24 03:24:55 ICT 2017 Thread[DRDAConnThread_2,5,main] Cleanup action starting
+java.sql.SQLException: Database 'MyDbTest' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+Caused by: ERROR XJ004: Database 'MyDbTest' not found.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 21 more
+============= begin nested exception, level (1) ===========
+ERROR XJ004: Database 'MyDbTest' not found.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+Tue Oct 24 03:24:55 ICT 2017 Thread[DRDAConnThread_2,5,main] (DATABASE = MyDbTest), (DRDAID = {1}), Database 'MyDbTest' not found.
+----------------------------------------------------------------
+Tue Oct 24 03:25:04 ICT 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-015f-4ae7-993c-0000673b8f3d 
+on database directory E:\work\SE\Program\src\derby\bin\MyDbTest with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+Loaded from file:/E:/work/SE/Program/src/derby/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_144-b01
+user.dir=E:\work\SE\Program\src\derby\bin
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=E:\work\SE\Program\src\derby\bin
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Oct 24 03:26:38 ICT 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance 5d3080f5-015f-4ae7-993c-0000673b8f3d 
+on database directory E:\work\SE\Program\src\derby\bin\ActivityManagementDB with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+Loaded from file:/E:/work/SE/Program/src/derby/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_144-b01
+user.dir=E:\work\SE\Program\src\derby\bin
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=E:\work\SE\Program\src\derby\bin
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Oct 24 03:27:26 ICT 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance 517b0199-015f-4ae7-993c-0000673b8f3d 
+on database directory E:\work\SE\Program\src\derby\bin\ActivityManagement with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+Loaded from file:/E:/work/SE/Program/src/derby/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_144-b01
+user.dir=E:\work\SE\Program\src\derby\bin
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=E:\work\SE\Program\src\derby\bin
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Oct 24 03:30:06 ICT 2017: Shutting down Derby engine
+----------------------------------------------------------------
+Tue Oct 24 03:30:06 ICT 2017:
+Shutting down instance 517b0199-015f-4ae7-993c-0000673b8f3d on database directory E:\work\SE\Program\src\derby\bin\ActivityManagement with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+----------------------------------------------------------------
+Tue Oct 24 03:30:06 ICT 2017:
+Shutting down instance 5d3080f5-015f-4ae7-993c-0000673b8f3d on database directory E:\work\SE\Program\src\derby\bin\ActivityManagementDB with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+----------------------------------------------------------------
+Tue Oct 24 03:30:06 ICT 2017:
+Shutting down instance a816c00e-015f-4ae7-993c-0000673b8f3d on database directory E:\work\SE\Program\src\derby\bin\MyDbTest with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+----------------------------------------------------------------
