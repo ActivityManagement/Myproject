@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ActivityManagement.LoginController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ActivityManagement.Controller.LoginController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="356.0" layoutX="430.0" layoutY="172.0" stroke="#909090" strokeLineCap="ROUND" strokeLineJoin="ROUND" width="409.0" />
       <Label fx:id="status_login" alignment="CENTER" contentDisplay="CENTER" layoutX="429.0" layoutY="428.0" prefHeight="21.0" prefWidth="411.0" textAlignment="CENTER" textFill="#e50202ce" textOverrun="CLIP">

@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 public class MainProgram extends Application {
 
-    static Stage primaryWindow;
+    public static Stage primaryWindow;
 
     public static void main(String[] args) {
         launch(args);
@@ -16,7 +16,7 @@ public class MainProgram extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent login = FXMLLoader.load(getClass().getResource("loginpage.fxml"));
+        Parent login = FXMLLoader.load(getClass().getResource("View/loginpage.fxml"));
         primaryWindow = primaryStage;
         primaryWindow.setTitle("Activity Management");
         Scene scene = new Scene(login);
