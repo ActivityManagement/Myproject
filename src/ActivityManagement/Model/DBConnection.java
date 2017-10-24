@@ -63,6 +63,24 @@ public class DBConnection {
 //        }
 //    }
 
+    public String getLastValue(String table,String col)
+    {
+        String lastvalue = null;
+        Statement statement = null;
+        try {
+            statement = this.conn.createStatement();
+            ResultSet res = statement.executeQuery("Select * FROM "+table+"");
+            while(res.next())
+            {
+                lastvalue = res.getString(col);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return lastvalue;
+
+    }
+
     public String getValueinTable(String table,String col,String key,String get)
     {
         try {

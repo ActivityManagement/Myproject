@@ -1,10 +1,10 @@
 package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
+import ActivityManagement.Model.DBConnection;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 
 public class CreateActController {
@@ -16,6 +16,9 @@ public class CreateActController {
     private JFXTextField password_box;
     @FXML
     private Label create_status;
+
+    private final String tableName = "Activitylist";
+    private final String actdbsql = "Create TABLE "+tableName+" (AID varchar(6),ActName varchar(50),OrgName varchar(50),ActPassword varchar(16),Active INT)";
 
     @FXML
     void clickBackButton(ActionEvent event) {
@@ -42,6 +45,22 @@ public class CreateActController {
         {
             //TODO
             create_status.setText("ถูกแล้วจ้าาา");
+            DBConnection bconnection = new DBConnection();
+            bconnection.createTable(actdbsql);
+            int actid;
+            //if the first activity
+            if (bconnection.getValueinTable(tableName,"AID","000000","AID")==null)
+            {
+                actid = 0;
+            }
+            else
+            {
+                String sgetid = bconnection.getLastValue(tableName,"AID");
+                actid = Integer.parseInt(sgetid);
+                actid++;
+            }
+            String sActid = String.format("%06d",actid);
+            bconnection.insertToTable("INSERT INTO "+tableName+" Values ('"+sActid+"','"+actname+"','"+orgname+"','"+password+"',"+1+")");
         }
     }
 

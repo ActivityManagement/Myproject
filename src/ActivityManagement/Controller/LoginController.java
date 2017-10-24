@@ -19,9 +19,6 @@ public class LoginController {
     private final String tableName = "Login";
     private final String createTBF = "Create TABLE "+tableName+" (UID varchar(10),FirstName varchar(50),LastName varchar(50),Password varchar(16))";
 
-    private String aid = "eakarin01";
-    private String apass= "123456789";
-
     @FXML
     void callLoginEvent(ActionEvent event) {
         String userid = userid_box.getText();

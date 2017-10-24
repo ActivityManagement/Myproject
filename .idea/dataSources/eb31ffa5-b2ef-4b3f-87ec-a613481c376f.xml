@@ -16,20 +16,41 @@
     <schema id="10" parent="1" name="SYSIBM"/>
     <schema id="11" parent="1" name="SYSPROC"/>
     <schema id="12" parent="1" name="SYSSTAT"/>
-    <table id="13" parent="2" name="LOGIN"/>
-    <column id="14" parent="13" name="UID">
+    <table id="13" parent="2" name="ACTIVITYLIST"/>
+    <table id="14" parent="2" name="LOGIN"/>
+    <column id="15" parent="13" name="AID">
       <Position>1</Position>
-      <DataType>VARCHAR(10)|12</DataType>
+      <DataType>VARCHAR(6)|12</DataType>
     </column>
-    <column id="15" parent="13" name="FIRSTNAME">
+    <column id="16" parent="13" name="ACTNAME">
       <Position>2</Position>
       <DataType>VARCHAR(50)|12</DataType>
     </column>
-    <column id="16" parent="13" name="LASTNAME">
+    <column id="17" parent="13" name="ORGNAME">
       <Position>3</Position>
       <DataType>VARCHAR(50)|12</DataType>
     </column>
-    <column id="17" parent="13" name="PASSWORD">
+    <column id="18" parent="13" name="ACTPASSWORD">
+      <Position>4</Position>
+      <DataType>VARCHAR(16)|12</DataType>
+    </column>
+    <column id="19" parent="13" name="ACTIVE">
+      <Position>5</Position>
+      <DataType>INTEGER(10)|4</DataType>
+    </column>
+    <column id="20" parent="14" name="UID">
+      <Position>1</Position>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="21" parent="14" name="FIRSTNAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="22" parent="14" name="LASTNAME">
+      <Position>3</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="23" parent="14" name="PASSWORD">
       <Position>4</Position>
       <DataType>VARCHAR(16)|12</DataType>
     </column>
