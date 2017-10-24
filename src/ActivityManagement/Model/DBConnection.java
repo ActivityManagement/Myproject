@@ -1,4 +1,4 @@
-package ActivityManagement;
+package ActivityManagement.Model;
 
 
 import java.sql.*;

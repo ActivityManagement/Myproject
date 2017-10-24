@@ -1,5 +1,6 @@
-package ActivityManagement;
+package ActivityManagement.Controller;
 
+import ActivityManagement.MainProgram;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

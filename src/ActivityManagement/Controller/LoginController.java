@@ -1,10 +1,11 @@
-package ActivityManagement;
+package ActivityManagement.Controller;
 
+import ActivityManagement.Model.DBConnection;
+import ActivityManagement.MainProgram;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 
 public class LoginController {
