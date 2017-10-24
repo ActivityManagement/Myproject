@@ -11,6 +11,7 @@ public class MainProgram extends Application {
     public static Stage primaryWindow;
     public static Scene loginScene;
     public static Scene createactScene;
+    public static String UIDCurrent;
 
     public static void main(String[] args) {
         launch(args);

@@ -28,8 +28,8 @@ public class LoginController {
             // go to main scene
             //TODO
             status_login.setText("");
+            MainProgram.UIDCurrent = userid;
             MainProgram.primaryWindow.setScene(MainProgram.createactScene);
-
         }
     }
     @FXML

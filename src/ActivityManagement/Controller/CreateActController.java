@@ -48,14 +48,14 @@ public class CreateActController {
             DBConnection bconnection = new DBConnection();
             bconnection.createTable(actdbsql);
             int actid;
+            String sgetid = bconnection.getLastValue(tableName,"AID");
             //if the first activity
-            if (bconnection.getValueinTable(tableName,"AID","000000","AID")==null)
+            if (sgetid==null)
             {
                 actid = 0;
             }
             else
             {
-                String sgetid = bconnection.getLastValue(tableName,"AID");
                 actid = Integer.parseInt(sgetid);
                 actid++;
             }
