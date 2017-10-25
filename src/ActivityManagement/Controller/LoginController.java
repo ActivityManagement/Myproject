@@ -36,11 +36,11 @@ public class LoginController implements Reloadable {
     }
     @FXML
     void callRegisterEvent(ActionEvent event) {
-        String userid = userid_box.getText();
-        String pass = pass_box.getText();
-
-        if (!userid.isEmpty() && !pass.isEmpty())
-        {
+//        String userid = userid_box.getText();
+//        String pass = pass_box.getText();
+//
+//        if (!userid.isEmpty() && !pass.isEmpty())
+//        {
             DBConnection bConnection = new DBConnection();
             bConnection.createTable(createTBF);
 //            if (bConnection.getValueinTable(tableName,"UID",userid,"Password")==null)
@@ -48,7 +48,7 @@ public class LoginController implements Reloadable {
 //            else
 ////                repeat UID
 //                System.out.println("Repeat");
-        }
+//        }
 
     }
 
