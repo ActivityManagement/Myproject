@@ -9,7 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 
-public class LoginController {
+public class LoginController implements Reloadable {
     @FXML
     private JFXTextField userid_box;
     @FXML
@@ -31,6 +31,7 @@ public class LoginController {
             status_login.setText("");
             MainProgram.UIDCurrent = userid;
             MainProgram.primaryWindow.getScene().setRoot(MainProgram.createact);
+            reloadPage(); //could reload when change scene
         }
     }
     @FXML
@@ -72,4 +73,10 @@ public class LoginController {
         return false;
     }
 
+    public void reloadPage()
+    {
+        userid_box.clear();
+        pass_box.clear();
+        status_login.setText("");
+    }
 }

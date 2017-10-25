@@ -1,7 +1,7 @@
-Wed Oct 25 03:12:04 ICT 2017 : Apache Derby Network Server - 10.14.1.0 - (1808820) started and ready to accept connections on port 1527
+Thu Oct 26 02:16:03 ICT 2017 : Apache Derby Network Server - 10.14.1.0 - (1808820) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Wed Oct 25 03:12:13 ICT 2017:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-015f-5003-739a-00005c0a5ec5 
+Thu Oct 26 02:19:27 ICT 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-015f-54f6-8156-00005c0a5ec5 
 on database directory D:\KMITL\SE\Myproject\src\derby\bin\ActivityManagementDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@65ae6ba4 
 Loaded from file:/D:/KMITL/SE/Myproject/src/derby/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -12,9 +12,3 @@ os.arch=amd64
 os.version=6.3
 derby.system.home=D:\KMITL\SE\Myproject\src\derby\bin
 Database Class Loader started - derby.database.classpath=''
-----------------------------------------------------------------
-Wed Oct 25 04:00:15 ICT 2017: Shutting down Derby engine
-----------------------------------------------------------------
-Wed Oct 25 04:00:15 ICT 2017:
-Shutting down instance a816c00e-015f-5003-739a-00005c0a5ec5 on database directory D:\KMITL\SE\Myproject\src\derby\bin\ActivityManagementDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@65ae6ba4 
-----------------------------------------------------------------

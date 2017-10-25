@@ -8,7 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 
-public class CreateActController {
+public class CreateActController implements Reloadable {
     @FXML
     private JFXTextField actname_box;
     @FXML
@@ -25,7 +25,9 @@ public class CreateActController {
 
     @FXML
     void clickBackButton(ActionEvent event) {
+        //TODO
         MainProgram.primaryWindow.getScene().setRoot(MainProgram.login);
+        reloadPage(); //could reload when change scene
     }
 
     @FXML
@@ -33,7 +35,6 @@ public class CreateActController {
         actname_box.clear();
         orgname_box.clear();
         password_box.clear();
-
     }
 
     @FXML
@@ -124,5 +125,13 @@ public class CreateActController {
                 return false;
         }
         return hascapital&&hasletter&&hasnumber;
+    }
+
+    public void reloadPage()
+    {
+        actname_box.clear();
+        orgname_box.clear();
+        password_box.clear();
+        create_status.setText("");
     }
 }
