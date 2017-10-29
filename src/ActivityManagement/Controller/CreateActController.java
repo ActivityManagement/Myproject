@@ -14,6 +14,8 @@ public class CreateActController implements Reloadable {
     @FXML
     private JFXTextField password_box;
     @FXML
+    private JFXTextField descript_box;
+    @FXML
     private Label create_status;
 
 
@@ -36,6 +38,7 @@ public class CreateActController implements Reloadable {
         String actname = actname_box.getText();
         String orgname = orgname_box.getText();
         String password = password_box.getText();
+        String desc = descript_box.getText();
         boolean check = false;
         check = checkName(actname)&&checkOrg(orgname)&&checkPassword(password);
 
@@ -43,6 +46,7 @@ public class CreateActController implements Reloadable {
         {
             //TODO
             create_status.setText("ถูกแล้วจ้าาา");
+
         }
     }
 
@@ -104,6 +108,7 @@ public class CreateActController implements Reloadable {
         actname_box.clear();
         orgname_box.clear();
         password_box.clear();
+        descript_box.clear();
         create_status.setText("");
     }
 }

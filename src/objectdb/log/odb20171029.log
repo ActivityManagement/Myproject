@@ -2093,3 +2093,21 @@ Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
 [2017-10-30 00:47:33 #46 store] 
 Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
 
+[2017-10-30 00:47:56 #47 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 00:47:56 #48 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 00:47:56 #49 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 00:49:04 #50 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 00:49:04 #51 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 00:49:09 #52 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
