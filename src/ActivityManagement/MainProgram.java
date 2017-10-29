@@ -1,6 +1,7 @@
 package ActivityManagement;
 
 import ActivityManagement.Controller.Activity;
+import ActivityManagement.Controller.HasActivity;
 import ActivityManagement.Model.ObjectDB;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -48,6 +49,7 @@ public class MainProgram extends Application {
         EntityManager em = odb.createConnection(DBName);
         em.getMetamodel().entity(Activity.class);
         em.getMetamodel().entity(Person.class);
+        em.getMetamodel().entity(HasActivity.class);
         odb.closeConnection();
 
     }

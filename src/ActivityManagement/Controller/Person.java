@@ -37,4 +37,9 @@ public class Person {
     {
         return password;
     }
+
+    public void addAct(HasActivity act)
+    {
+        myact.add(act);
+    }
 }
