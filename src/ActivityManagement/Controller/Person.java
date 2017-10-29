@@ -2,7 +2,8 @@ package ActivityManagement.Controller;
 
 import javax.persistence.*;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Person {
@@ -12,7 +13,8 @@ public class Person {
     private String firstname;
     private String lastname;
     private String password;
-    private Vector<HasActivity> myact;
+    @OneToMany(fetch=FetchType.EAGER)
+    List<HasActivity> myact = new ArrayList<HasActivity>();
 
     public Person(){}
     public Person(String id,String pass,String fname,String lname)
@@ -38,8 +40,18 @@ public class Person {
         return password;
     }
 
+    public long getId()
+    {
+        return id;
+    }
+
     public void addAct(HasActivity act)
     {
+//        System.out.println(act.getId());
         myact.add(act);
+    }
+    public List<HasActivity> getHasAct()
+    {
+        return myact;
     }
 }

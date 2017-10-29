@@ -68,6 +68,13 @@ public class CreateActController implements Reloadable {
             HasActivity hact = new HasActivity(act,1);
             odb.saveObject(hact);
             odb.saveObject(act);
+
+            // update hasact in person
+            //TODO
+            em.getTransaction().begin();
+            MainProgram.personCurrent.getHasAct().add(hact);
+            System.out.println(MainProgram.personCurrent.getHasAct().get(1).getActivity().getActname());
+            em.getTransaction().commit();
             odb.closeConnection();
             MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainpage);
         }

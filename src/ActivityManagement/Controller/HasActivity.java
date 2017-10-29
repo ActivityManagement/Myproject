@@ -10,9 +10,20 @@ public class HasActivity {
     private int approve;
     private Role role;
 
+
+    public HasActivity(){}
     public HasActivity(Activity act,int app)
     {
         this.activity = act;
         this.approve = app;
+    }
+
+    public long getId()
+    {
+        return id;
+    }
+
+    public Activity getActivity() {
+        return activity;
     }
 }
