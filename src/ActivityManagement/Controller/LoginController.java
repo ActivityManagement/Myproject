@@ -26,7 +26,6 @@ public class LoginController implements Reloadable {
         if (checkLogin(userid,pass))
         {
             // go to main scene
-            //TODO
             status_login.setText("");
             MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainpage);
             reloadPage(); //could reload when change scene
@@ -36,10 +35,9 @@ public class LoginController implements Reloadable {
     void callRegisterEvent(ActionEvent event) {
 //        String userid = userid_box.getText();
 //        String pass = pass_box.getText();
-        Person p = new Person();
         ObjectDB odb = new ObjectDB();
         odb.createConnection("persons.odb");
-        odb.saveObject(p);
+        odb.saveObject(new Person());
         odb.closeConnection();
     }
 
@@ -55,7 +53,6 @@ public class LoginController implements Reloadable {
 
     private boolean matchLoginDB(String userid,String pass)
     {
-        //TODO
         Person pobj = null;
         String getpass = null;
         // get object from database

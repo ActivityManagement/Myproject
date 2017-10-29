@@ -1,5 +1,7 @@
 package ActivityManagement;
 
+import ActivityManagement.Controller.Activity;
+import ActivityManagement.Model.ObjectDB;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 import ActivityManagement.Controller.Person;
+
+import javax.persistence.EntityManager;
 
 public class MainProgram extends Application {
 
@@ -38,6 +42,15 @@ public class MainProgram extends Application {
         primaryWindow.show();
 
         //program running
+        // Create Table of Activity Database
+        ObjectDB odb = new ObjectDB();
+        EntityManager em = odb.createConnection("activitylists.odb");
+        em.getMetamodel().entity(Activity.class);
+        odb.closeConnection();
+        // Create Table of Activity Database
+        em = odb.createConnection("persons.odb");
+        em.getMetamodel().entity(Person.class);
+        odb.closeConnection();
 
     }
 

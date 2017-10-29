@@ -1,10 +1,16 @@
 package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
+import ActivityManagement.Model.ObjectDB;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+import java.util.List;
+
 
 public class CreateActController implements Reloadable {
     @FXML
@@ -18,19 +24,16 @@ public class CreateActController implements Reloadable {
     @FXML
     private Label create_status;
 
-
     @FXML
     void clickBackButton(ActionEvent event) {
         //TODO
-        MainProgram.primaryWindow.getScene().setRoot(MainProgram.login);
+        MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainpage);
         reloadPage(); //could reload when change scene
     }
 
     @FXML
     void clickClearButton(ActionEvent event) {
-        actname_box.clear();
-        orgname_box.clear();
-        password_box.clear();
+        reloadPage();
     }
 
     @FXML
@@ -45,8 +48,26 @@ public class CreateActController implements Reloadable {
         if (check)
         {
             //TODO
-            create_status.setText("ถูกแล้วจ้าาา");
-
+//            create_status.setText("ถูกแล้วจ้าาา");
+            String actid = null;
+            ObjectDB odb = new ObjectDB();
+            EntityManager em = odb.createConnection("activitylists.odb");
+            if (!odb.isRecordExist("Activity")) // check if does't exists any act
+                actid = "000000";
+            else
+            {
+                int cid = 0;
+                TypedQuery<Activity> query = em.createQuery("SELECT a FROM Activity a", Activity.class);
+                List<Activity> results = query.getResultList();
+                for (Activity a : results) {
+                    cid = Integer.parseInt(a.getActid());
+                }
+                actid = String.format("%06d",cid+1);
+            }
+            Activity act = new Activity(actid,actname,orgname,password,desc);
+            odb.saveObject(act);
+            odb.closeConnection();
+            MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainpage);
         }
     }
 

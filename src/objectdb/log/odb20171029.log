@@ -2111,3 +2111,1071 @@ Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
 [2017-10-30 00:49:09 #52 store] 
 Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
 
+[2017-10-30 01:21:18 #53 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:21:18 #54 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:21:18 #55 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:21:53 #56 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:21:53 #57 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:22:00 #4 type.registry] 
+New type java.lang.Object[]
+
+[2017-10-30 01:22:12 #58 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:28:28 #59 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:28:28 #60 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:28:28 #61 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:29:51 #62 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:29:51 #63 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:29:51 #64 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:31:23 #65 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:31:23 #66 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:31:24 #67 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:35:44 #68 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:35:44 #69 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:35:44 #70 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:36:18 #71 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:36:18 #72 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:36:18 #73 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:37:23 #74 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:37:23 #75 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:37:23 #76 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:39:16 #77 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:39:16 #78 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:39:16 #79 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:51:08 #80 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:51:08 #81 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:51:09 #82 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:51:16 #83 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:51:16 #84 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:51:41 #85 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:52:00 #86 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:52:00 #87 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:52:00 #88 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:52:07 #89 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:52:07 #90 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:52:09 #91 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:52:48 #92 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:52:48 #93 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:52:48 #94 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:52:54 #95 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:52:54 #96 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:52:54 #97 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:52:57 #98 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:52:57 #99 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:52:57 #100 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:52:58 #101 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:52:58 #102 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:52:58 #103 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:52:58 #104 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:52:58 #105 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:52:58 #106 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:53:18 #107 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:53:18 #108 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:53:28 #109 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:53:28 #110 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:53:28 #111 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:53:41 #112 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:54:09 #113 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:54:09 #114 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:54:09 #115 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:54:16 #116 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:54:16 #117 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:54:16 #118 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:54:21 #119 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:54:21 #120 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:54:21 #121 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:54:21 #122 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:54:21 #123 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:54:21 #124 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:54:26 #125 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:54:26 #126 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:54:35 #127 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:54:35 #128 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:54:35 #129 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:54:42 #130 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:54:42 #131 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:54:42 #132 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:54:45 #133 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:55:01 #134 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:55:01 #135 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:55:01 #136 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:55:07 #137 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:55:07 #138 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:55:28 #139 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:10 #140 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:10 #141 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:10 #142 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:15 #143 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:15 #144 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:15 #145 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:17 #146 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:17 #147 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:17 #148 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:17 #149 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:17 #150 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:17 #151 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:17 #152 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:17 #153 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:17 #154 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:18 #155 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:18 #156 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:18 #157 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:18 #158 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:18 #159 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:18 #160 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:18 #161 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:18 #162 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:18 #163 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:19 #164 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:19 #165 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:19 #166 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:19 #167 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:19 #168 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:19 #169 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:20 #170 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:20 #171 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:20 #172 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:20 #173 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:20 #174 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:20 #175 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:21 #176 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:21 #177 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:21 #178 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:21 #179 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:21 #180 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:21 #181 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:21 #182 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:21 #183 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:21 #184 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:22 #185 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:22 #186 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:22 #187 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:22 #188 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:22 #189 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:22 #190 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:22 #191 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:22 #192 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:22 #193 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:22 #194 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:22 #195 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:22 #196 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:23 #197 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:23 #198 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:23 #199 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:23 #200 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:23 #201 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:23 #202 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:23 #203 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 01:56:23 #204 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 01:56:23 #205 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:02:22 #206 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:02:22 #207 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:02:22 #208 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:02:29 #209 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:02:29 #210 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:02:55 #211 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:04:17 #212 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:04:17 #213 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:04:17 #214 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:04:23 #215 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:04:23 #216 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:05:01 #217 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:05:30 #218 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:05:30 #219 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:05:30 #220 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:05:36 #221 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:05:36 #222 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:05:36 #223 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 02:07:07 #224 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:08:31 #225 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:08:31 #226 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:08:31 #227 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:08:38 #228 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:08:38 #229 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:08:38 #230 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:08:50 #231 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:08:50 #232 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:09:15 #233 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:09:18 #234 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:09:18 #235 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:09:25 #236 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:09:46 #237 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:09:46 #238 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:09:47 #239 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:09:52 #240 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:09:52 #241 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:09:56 #242 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:01 #243 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:01 #244 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:10:05 #245 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:10 #246 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:10 #247 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:10:13 #248 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:41 #249 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:41 #250 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:10:42 #251 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:47 #252 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:47 #253 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:10:47 #254 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:50 #255 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:50 #256 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:10:50 #257 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:50 #258 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:50 #259 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:10:50 #260 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:50 #261 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:50 #262 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:10:50 #263 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:50 #264 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:50 #265 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:10:50 #266 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:58 #267 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:10:58 #268 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:10:59 #269 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:15:38 #270 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:15:38 #271 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:15:38 #272 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:15:38 #273 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:15:38 #274 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:15:38 #275 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:15:53 #276 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:15:53 #277 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:15:53 #278 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:15:53 #279 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:15:53 #280 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:15:53 #281 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:16:02 #282 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:16:02 #283 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:16:10 #284 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:16:10 #285 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:16:10 #286 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:16:16 #287 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:16:16 #288 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:16:16 #289 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:16:22 #290 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:17:15 #291 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:17:15 #292 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:17:15 #293 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:17:15 #294 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:17:15 #295 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:17:15 #296 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:17:20 #297 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:17:20 #298 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:17:20 #299 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:17:25 #300 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:17:25 #301 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:17:25 #302 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:17:26 #303 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:17:26 #304 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:17:26 #305 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:18:41 #306 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:18:41 #307 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:18:45 #308 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:18:45 #309 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:18:45 #310 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:20:01 #311 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:20:07 #312 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:20:07 #313 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:20:07 #314 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:20:07 #315 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:20:07 #316 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:20:07 #317 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:20:12 #318 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:20:12 #319 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:20:12 #320 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:20:19 #321 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:20:19 #322 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:20:19 #323 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:32:30 #324 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:32:30 #325 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:32:30 #326 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:32:31 #327 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:32:31 #328 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:32:31 #329 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:32:36 #330 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:32:36 #331 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:32:36 #332 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:32:37 #333 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:32:37 #334 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:32:37 #335 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:32:46 #336 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:32:46 #337 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:33:01 #338 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:33:03 #339 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:33:03 #340 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:33:03 #341 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:33:09 #342 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:33:09 #343 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:33:45 #344 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:33:47 #345 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:33:47 #346 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:35:42 #347 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:36:05 #348 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:36:05 #349 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:36:06 #350 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:36:06 #351 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:36:06 #352 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:36:06 #353 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:36:16 #354 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:36:16 #355 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:36:24 #356 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:36:38 #357 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:36:38 #358 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:36:38 #359 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:36:38 #360 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:36:38 #361 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:36:38 #362 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:36:42 #363 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:36:42 #364 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:37:13 #365 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:37:17 #366 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:37:17 #367 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:37:21 #368 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:37:21 #369 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:37:21 #370 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:37:45 #371 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:38:24 #372 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:38:24 #373 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:38:24 #374 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:38:24 #375 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:38:24 #376 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:38:24 #377 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:38:28 #378 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:38:28 #379 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:38:28 #380 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:38:35 #381 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:38:35 #382 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:39:20 #383 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:39:27 #384 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:39:27 #385 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:39:27 #386 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:39:27 #387 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:39:27 #388 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:39:27 #389 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:39:53 #390 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:39:53 #391 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:39:53 #392 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:40:08 #393 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:40:08 #394 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:40:08 #395 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:40:08 #396 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:40:08 #397 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:40:08 #398 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:40:15 #399 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:40:15 #400 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:40:15 #401 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:40:16 #402 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:40:16 #403 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:40:16 #404 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:41:16 #405 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 02:41:16 #406 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 02:41:16 #407 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\activitylists.odb' is closed by 8212@DESKTOP-HLJNJ8I
+

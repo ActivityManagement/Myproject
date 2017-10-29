@@ -30,4 +30,11 @@ public class ObjectDB {
         em.getTransaction().commit();
     }
 
+    public boolean isRecordExist(String entity) {
+        String query = "select count(e) from "+entity+" e";
+        // you will always get a single result
+        Long count = (Long) em.createQuery( query ).getSingleResult();
+        return ( ( count.equals( 0L ) ) ? false : true );
+    }
+
 }

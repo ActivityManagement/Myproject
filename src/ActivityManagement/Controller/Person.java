@@ -6,7 +6,6 @@ import java.util.Vector;
 
 @Entity
 public class Person {
-
     @Id @GeneratedValue
     private long id;
     private String userid;

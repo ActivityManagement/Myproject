@@ -18,3 +18,642 @@ Type ActivityManagement.Controller.Person is not enhanced.
 [2017-10-30 00:47:56 #1 type] 
 Type ActivityManagement.Controller.Person is not enhanced.
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 01:21:18 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 01:28:28 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 01:29:51 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 01:31:24 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 01:35:44 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 01:36:18 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 01:37:23 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 01:39:16 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 01:51:08 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 01:52:00 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 01:52:48 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 01:54:09 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 01:55:01 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 01:56:10 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:02:22 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:04:17 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+[2017-10-30 02:04:23 #2 type.registry] 
+New type ActivityManagement.Controller.Activity
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:05:30 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+[2017-10-30 02:05:36 #2 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 02:05:36 #3 type.registry] 
+New type ActivityManagement.Controller.SubActivity
+
+[2017-10-30 02:05:36 #4 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.SubActivity>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:08:31 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+[2017-10-30 02:08:38 #2 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:08:54 #1 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:09:47 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:10:41 #1 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:15:38 #1 type.registry] 
+New type ActivityManagement.Controller.Activity
+
+[2017-10-30 02:15:38 #2 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 02:15:38 #3 type.registry] 
+New type ActivityManagement.Controller.SubActivity
+
+[2017-10-30 02:15:38 #4 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.SubActivity>
+
+[2017-10-30 02:15:38 #5 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:15:53 #1 type.registry] 
+New type ActivityManagement.Controller.Activity
+
+[2017-10-30 02:15:53 #2 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 02:15:53 #3 type.registry] 
+New type ActivityManagement.Controller.SubActivity
+
+[2017-10-30 02:15:53 #4 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.SubActivity>
+
+[2017-10-30 02:15:53 #5 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:17:15 #1 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 02:17:15 #2 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:18:58 #1 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2017-10-30 02:19:16 #2 explorer] 
+[ObjectDB 2.7.2_02] java.lang.IllegalArgumentException
+Attempt to lock a new (non stored yet) entity object [Activity:1] (error 635)
+	at java.desktop/javax.swing.plaf.basic.BasicTableUI$Handler.mousePressed(Unknown Source)
+	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(Unknown Source)
+	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(Unknown Source)
+	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue.access$500(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+
+[2017-10-30 02:19:28 #3 explorer] 
+[ObjectDB 2.7.2_02] java.lang.IllegalArgumentException
+Attempt to lock a new (non stored yet) entity object [Activity:1] (error 635)
+	at java.desktop/javax.swing.JTable.setValueAt(Unknown Source)
+	at java.desktop/javax.swing.JTable.editingStopped(Unknown Source)
+	at java.desktop/javax.swing.AbstractCellEditor.fireEditingStopped(Unknown Source)
+	at java.desktop/javax.swing.DefaultCellEditor$EditorDelegate.stopCellEditing(Unknown Source)
+	at java.desktop/javax.swing.DefaultCellEditor.stopCellEditing(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicTableUI$Handler.mousePressed(Unknown Source)
+	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(Unknown Source)
+	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(Unknown Source)
+	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue.access$500(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+
+[2017-10-30 02:19:38 #4 explorer] 
+[ObjectDB 2.7.2_02] java.lang.IllegalArgumentException
+Attempt to lock a new (non stored yet) entity object [Activity:1] (error 635)
+	at java.desktop/javax.swing.JTable.setValueAt(Unknown Source)
+	at java.desktop/javax.swing.JTable.editingStopped(Unknown Source)
+	at java.desktop/javax.swing.AbstractCellEditor.fireEditingStopped(Unknown Source)
+	at java.desktop/javax.swing.DefaultCellEditor$EditorDelegate.stopCellEditing(Unknown Source)
+	at java.desktop/javax.swing.DefaultCellEditor.stopCellEditing(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicTableUI$Handler.mousePressed(Unknown Source)
+	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(Unknown Source)
+	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(Unknown Source)
+	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue.access$500(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+
+[2017-10-30 02:19:41 #5 explorer] 
+[ObjectDB 2.7.2_02] java.lang.IllegalArgumentException
+Attempt to lock a new (non stored yet) entity object [Activity:1] (error 635)
+	at java.desktop/javax.swing.JTable.setValueAt(Unknown Source)
+	at java.desktop/javax.swing.JTable.editingStopped(Unknown Source)
+	at java.desktop/javax.swing.AbstractCellEditor.fireEditingStopped(Unknown Source)
+	at java.desktop/javax.swing.DefaultCellEditor$EditorDelegate.stopCellEditing(Unknown Source)
+	at java.desktop/javax.swing.DefaultCellEditor.stopCellEditing(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicTableUI$Handler.mousePressed(Unknown Source)
+	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(Unknown Source)
+	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(Unknown Source)
+	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue.access$500(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+
+[2017-10-30 02:19:46 #6 explorer] 
+[ObjectDB 2.7.2_02] java.lang.IllegalArgumentException
+Attempt to lock a new (non stored yet) entity object [Activity:1] (error 635)
+	at java.desktop/javax.swing.JTextField.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.JTextField.postActionEvent(Unknown Source)
+	at java.desktop/javax.swing.JTextField$NotifyAction.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.SwingUtilities.notifyAction(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processKeyBinding(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processKeyBindings(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processKeyEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue.access$500(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+
+[2017-10-30 02:19:49 #7 explorer] 
+[ObjectDB 2.7.2_02] java.lang.IllegalArgumentException
+Attempt to lock a new (non stored yet) entity object [Activity:1] (error 635)
+	at java.desktop/javax.swing.JTable.setValueAt(Unknown Source)
+	at java.desktop/javax.swing.JTable.editingStopped(Unknown Source)
+	at java.desktop/javax.swing.AbstractCellEditor.fireEditingStopped(Unknown Source)
+	at java.desktop/javax.swing.DefaultCellEditor$EditorDelegate.stopCellEditing(Unknown Source)
+	at java.desktop/javax.swing.DefaultCellEditor.stopCellEditing(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicTableUI$Handler.mousePressed(Unknown Source)
+	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(Unknown Source)
+	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(Unknown Source)
+	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue.access$500(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+
+[2017-10-30 02:19:51 #8 explorer] 
+[ObjectDB 2.7.2_02] java.lang.IllegalArgumentException
+Attempt to lock a new (non stored yet) entity object [Activity:1] (error 635)
+	at java.desktop/javax.swing.JTextField.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.JTextField.postActionEvent(Unknown Source)
+	at java.desktop/javax.swing.JTextField$NotifyAction.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.SwingUtilities.notifyAction(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processKeyBinding(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processKeyBindings(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processKeyEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue.access$500(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+
+[2017-10-30 02:19:52 #9 explorer] 
+[ObjectDB 2.7.2_02] java.lang.IllegalArgumentException
+Attempt to lock a new (non stored yet) entity object [Activity:1] (error 635)
+	at java.desktop/javax.swing.JTextField.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.JTextField.postActionEvent(Unknown Source)
+	at java.desktop/javax.swing.JTextField$NotifyAction.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.SwingUtilities.notifyAction(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processKeyBinding(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processKeyBindings(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processKeyEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue.access$500(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:20:07 #1 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 02:20:07 #2 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:32:30 #1 type.registry] 
+New type ActivityManagement.Controller.Activity
+
+[2017-10-30 02:32:30 #2 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 02:32:30 #3 type.registry] 
+New type ActivityManagement.Controller.SubActivity
+
+[2017-10-30 02:32:30 #4 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.SubActivity>
+
+[2017-10-30 02:32:31 #5 type.registry] 
+New type ActivityManagement.Controller.Person
+
+[2017-10-30 02:32:31 #6 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+[2017-10-30 02:32:31 #7 type.registry] 
+New type ActivityManagement.Controller.HasActivity
+
+[2017-10-30 02:32:31 #8 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.HasActivity>
+
+[2017-10-30 02:33:12 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:36:05 #1 type.registry] 
+New type ActivityManagement.Controller.Activity
+
+[2017-10-30 02:36:05 #2 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 02:36:05 #3 type.registry] 
+New type ActivityManagement.Controller.SubActivity
+
+[2017-10-30 02:36:05 #4 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.SubActivity>
+
+[2017-10-30 02:36:06 #5 type.registry] 
+New type ActivityManagement.Controller.Person
+
+[2017-10-30 02:36:06 #6 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+[2017-10-30 02:36:06 #7 type.registry] 
+New type ActivityManagement.Controller.HasActivity
+
+[2017-10-30 02:36:06 #8 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.HasActivity>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:36:38 #1 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 02:36:38 #2 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:36:52 #1 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:38:24 #1 type.registry] 
+New type ActivityManagement.Controller.Activity
+
+[2017-10-30 02:38:24 #2 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 02:38:24 #3 type.registry] 
+New type ActivityManagement.Controller.SubActivity
+
+[2017-10-30 02:38:24 #4 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.SubActivity>
+
+[2017-10-30 02:38:24 #5 type.registry] 
+New type ActivityManagement.Controller.Person
+
+[2017-10-30 02:38:24 #6 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+[2017-10-30 02:38:24 #7 type.registry] 
+New type ActivityManagement.Controller.HasActivity
+
+[2017-10-30 02:38:24 #8 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.HasActivity>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:38:38 #1 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:39:27 #1 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 02:39:27 #2 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:40:08 #1 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 02:40:08 #2 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:42:09 #1 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
