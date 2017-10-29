@@ -20,6 +20,7 @@ public class MainProgram extends Application {
     public static Parent createact;
     public static Parent mainpage;
     public static Person personCurrent;
+    public static String DBName = "ActivityManagementDB.odb";
 
     public static void main(String[] args) {
         launch(args);
@@ -44,7 +45,7 @@ public class MainProgram extends Application {
         //program running
         // Create Table of ActivityManagement
         ObjectDB odb = new ObjectDB();
-        EntityManager em = odb.createConnection("ActivityManagement.odb");
+        EntityManager em = odb.createConnection(DBName);
         em.getMetamodel().entity(Activity.class);
         em.getMetamodel().entity(Person.class);
         odb.closeConnection();

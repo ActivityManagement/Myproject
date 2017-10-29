@@ -59,6 +59,11 @@
                               <Font name="TH Sarabun New Bold" size="30.0" />
                            </font>
                         </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="223.0" prefHeight="51.0" prefWidth="197.0" text="คำอธิบายกิจกรรม :" textAlignment="RIGHT" textFill="#8d8d8d">
+                           <font>
+                              <Font name="TH Sarabun New Bold" size="30.0" />
+                           </font>
+                        </Label>
                         <JFXTextField fx:id="actname_box" focusColor="#43b58f" layoutX="210.0" layoutY="87.0" prefHeight="25.0" prefWidth="495.0" promptText="กรุณาระบุชื่อกิจกรรม">
                            <font>
                               <Font size="16.0" />
@@ -70,6 +75,11 @@
                            </font>
                         </JFXTextField>
                         <JFXTextField fx:id="password_box" focusColor="#43b58f" layoutX="209.0" layoutY="183.0" prefHeight="25.0" prefWidth="495.0" promptText="ความยาว 8-16 ตัว (ต้องประกอบด้วย a-z,A-Z,0-9)">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="descript_box" focusColor="#43b58f" layoutX="209.0" layoutY="227.0" prefHeight="25.0" prefWidth="495.0" promptText="สามารถกรอกคำอธิบายของกิจกรรม">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -94,16 +104,6 @@
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <Label alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="223.0" prefHeight="51.0" prefWidth="197.0" text="คำอธิบายกิจกรรม :" textAlignment="RIGHT" textFill="#8d8d8d">
-                           <font>
-                              <Font name="TH Sarabun New Bold" size="30.0" />
-                           </font>
-                        </Label>
-                        <JFXTextField fx:id="descript_box" focusColor="#43b58f" layoutX="209.0" layoutY="227.0" prefHeight="25.0" prefWidth="495.0" promptText="สามารถกรอกคำอธิบายของกิจกรรม">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </JFXTextField>
                      </children>
                   </AnchorPane>
                </children>

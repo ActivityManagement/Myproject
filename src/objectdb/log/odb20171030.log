@@ -688,3 +688,95 @@ New type java.util.Vector<ActivityManagement.Controller.HasActivity>
 [2017-10-30 02:58:28 #1 type.registry] 
 New type java.util.Vector<java.lang.Object>
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 03:03:01 #1 type.registry] 
+New type ActivityManagement.Controller.Activity
+
+[2017-10-30 03:03:01 #2 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 03:03:01 #3 type.registry] 
+New type ActivityManagement.Controller.SubActivity
+
+[2017-10-30 03:03:01 #4 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.SubActivity>
+
+[2017-10-30 03:03:01 #5 type.registry] 
+New type ActivityManagement.Controller.Person
+
+[2017-10-30 03:03:01 #6 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+[2017-10-30 03:03:01 #7 type.registry] 
+New type ActivityManagement.Controller.HasActivity
+
+[2017-10-30 03:03:01 #8 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.HasActivity>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 03:04:17 #1 type.registry] 
+New type ActivityManagement.Controller.Activity
+
+[2017-10-30 03:04:17 #2 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 03:04:17 #3 type.registry] 
+New type ActivityManagement.Controller.SubActivity
+
+[2017-10-30 03:04:17 #4 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.SubActivity>
+
+[2017-10-30 03:04:17 #5 type.registry] 
+New type ActivityManagement.Controller.Person
+
+[2017-10-30 03:04:17 #6 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+[2017-10-30 03:04:17 #7 type.registry] 
+New type ActivityManagement.Controller.HasActivity
+
+[2017-10-30 03:04:17 #8 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.HasActivity>
+
+[2017-10-30 03:04:41 #9 type.registry] 
+New type ActivityManagement.Controller.Person
+
+[2017-10-30 03:04:41 #10 type.registry] 
+New type ActivityManagement.Controller.HasActivity
+
+[2017-10-30 03:04:41 #11 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.HasActivity>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 03:05:28 #1 type.registry] 
+New type ActivityManagement.Controller.Activity
+
+[2017-10-30 03:05:28 #2 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 03:05:28 #3 type.registry] 
+New type ActivityManagement.Controller.SubActivity
+
+[2017-10-30 03:05:28 #4 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.SubActivity>
+
+[2017-10-30 03:05:28 #5 type.registry] 
+New type ActivityManagement.Controller.Person
+
+[2017-10-30 03:05:28 #6 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+[2017-10-30 03:05:28 #7 type.registry] 
+New type ActivityManagement.Controller.HasActivity
+
+[2017-10-30 03:05:28 #8 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.HasActivity>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 03:05:54 #1 type.registry] 
+New type java.util.Vector<java.lang.Object>
+

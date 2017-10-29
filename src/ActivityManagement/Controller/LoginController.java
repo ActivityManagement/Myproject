@@ -36,7 +36,7 @@ public class LoginController implements Reloadable {
 //        String userid = userid_box.getText();
 //        String pass = pass_box.getText();
         ObjectDB odb = new ObjectDB();
-        odb.createConnection("ActivityManagement.odb");
+        odb.createConnection(MainProgram.DBName);
         odb.saveObject(new Person());
         odb.closeConnection();
     }
@@ -57,7 +57,7 @@ public class LoginController implements Reloadable {
         String getpass = null;
         // get object from database
         ObjectDB odb = new ObjectDB();
-        EntityManager em = odb.createConnection("ActivityManagement.odb");
+        EntityManager em = odb.createConnection(MainProgram.DBName);
         TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p", Person.class);
         List<Person> results = query.getResultList();
         for (Person p : results) {

@@ -51,7 +51,7 @@ public class CreateActController implements Reloadable {
 //            create_status.setText("ถูกแล้วจ้าาา");
             String actid = null;
             ObjectDB odb = new ObjectDB();
-            EntityManager em = odb.createConnection("ActivityManagement.odb");
+            EntityManager em = odb.createConnection(MainProgram.DBName);
             if (!odb.isRecordExist("Activity")) // check if does't exists any act
                 actid = "000000";
             else
