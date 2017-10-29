@@ -14,6 +14,7 @@ public class MainProgram extends Application {
     public static Scene programScene;
     public static Parent login;
     public static Parent createact;
+    public static Parent mainpage;
     public static Person personCurrent;
 
     public static void main(String[] args) {
@@ -26,6 +27,7 @@ public class MainProgram extends Application {
 //        createact = FXMLLoader.load(getClass().getResource("View/createActPage.fxml"));
         login = loadPage("View/loginpage.fxml");
         createact = loadPage("View/createActPage.fxml");
+        mainpage = loadPage("View/mainpage.fxml");
         programScene = new Scene(login);
         primaryWindow = primaryStage;
         primaryWindow.setTitle("Activity Management");

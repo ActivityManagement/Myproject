@@ -2033,3 +2033,63 @@ Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESK
 [2017-10-29 23:57:55 #26 server] 
 Server on port 6136 has stopped by 8212@DESKTOP-HLJNJ8I
 
+[2017-10-29 23:59:42 #27 server] 
+Server on port 6136 has started by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-29 23:59:56 #28 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-29 23:59:56 #29 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 00:00:50 #30 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 00:00:58 #31 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 00:00:58 #32 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 00:02:35 #33 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 00:02:46 #34 server] 
+Server on port 6136 has stopped by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 00:02:46 #35 server] 
+Server on port 6136 has started by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 00:03:01 #36 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 00:03:01 #37 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 00:03:17 #38 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 00:03:28 #39 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 00:03:28 #40 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 00:03:35 #41 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 00:46:19 #42 server] 
+Server on port 6136 has stopped by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 00:46:19 #43 server] 
+Server on port 6136 has started by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 00:47:33 #44 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is opened by 8212@DESKTOP-HLJNJ8I
+
+[2017-10-30 00:47:33 #45 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-10-30 00:47:33 #46 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\persons.odb' is closed by 8212@DESKTOP-HLJNJ8I
+

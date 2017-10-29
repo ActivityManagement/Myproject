@@ -28,7 +28,7 @@ public class LoginController implements Reloadable {
             // go to main scene
             //TODO
             status_login.setText("");
-            MainProgram.primaryWindow.getScene().setRoot(MainProgram.createact);
+            MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainpage);
             reloadPage(); //could reload when change scene
         }
     }
