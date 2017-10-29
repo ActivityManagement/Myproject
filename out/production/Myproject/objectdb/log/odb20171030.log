@@ -644,3 +644,16 @@ Type ActivityManagement.Controller.Activity is not enhanced.
 [2017-10-30 02:39:27 #2 type] 
 Type ActivityManagement.Controller.Person is not enhanced.
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:40:08 #1 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 02:40:08 #2 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:42:09 #1 type.registry] 
+New type java.util.Vector<java.lang.Object>
+

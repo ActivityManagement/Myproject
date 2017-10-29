@@ -657,3 +657,34 @@ Type ActivityManagement.Controller.Person is not enhanced.
 [2017-10-30 02:42:09 #1 type.registry] 
 New type java.util.Vector<java.lang.Object>
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:58:04 #1 type.registry] 
+New type ActivityManagement.Controller.Activity
+
+[2017-10-30 02:58:04 #2 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-10-30 02:58:04 #3 type.registry] 
+New type ActivityManagement.Controller.SubActivity
+
+[2017-10-30 02:58:04 #4 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.SubActivity>
+
+[2017-10-30 02:58:04 #5 type.registry] 
+New type ActivityManagement.Controller.Person
+
+[2017-10-30 02:58:04 #6 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+[2017-10-30 02:58:04 #7 type.registry] 
+New type ActivityManagement.Controller.HasActivity
+
+[2017-10-30 02:58:04 #8 type.registry] 
+New type java.util.Vector<ActivityManagement.Controller.HasActivity>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-10-30 02:58:28 #1 type.registry] 
+New type java.util.Vector<java.lang.Object>
+

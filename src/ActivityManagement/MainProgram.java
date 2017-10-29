@@ -42,13 +42,10 @@ public class MainProgram extends Application {
         primaryWindow.show();
 
         //program running
-        // Create Table of Activity Database
+        // Create Table of ActivityManagement
         ObjectDB odb = new ObjectDB();
-        EntityManager em = odb.createConnection("activitylists.odb");
+        EntityManager em = odb.createConnection("ActivityManagement.odb");
         em.getMetamodel().entity(Activity.class);
-        odb.closeConnection();
-        // Create Table of Activity Database
-        em = odb.createConnection("persons.odb");
         em.getMetamodel().entity(Person.class);
         odb.closeConnection();
 
