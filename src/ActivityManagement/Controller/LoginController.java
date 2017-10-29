@@ -1,11 +1,15 @@
 package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
+import ActivityManagement.Model.ObjectDB;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+
+import javax.persistence.*;
+import java.util.List;
 
 public class LoginController implements Reloadable {
     @FXML
@@ -24,7 +28,6 @@ public class LoginController implements Reloadable {
             // go to main scene
             //TODO
             status_login.setText("");
-            MainProgram.UIDCurrent = userid;
             MainProgram.primaryWindow.getScene().setRoot(MainProgram.createact);
             reloadPage(); //could reload when change scene
         }
@@ -33,6 +36,11 @@ public class LoginController implements Reloadable {
     void callRegisterEvent(ActionEvent event) {
 //        String userid = userid_box.getText();
 //        String pass = pass_box.getText();
+        Person p = new Person();
+        ObjectDB odb = new ObjectDB();
+        odb.createConnection("persons.odb");
+        odb.saveObject(p);
+        odb.closeConnection();
     }
 
     private boolean checkLogin(String userid,String pass)
@@ -48,8 +56,26 @@ public class LoginController implements Reloadable {
     private boolean matchLoginDB(String userid,String pass)
     {
         //TODO
+        Person pobj = null;
         String getpass = null;
-        if (getpass!=null && getpass.equals(pass)) return true;
+        // get object from database
+        ObjectDB odb = new ObjectDB();
+        EntityManager em = odb.createConnection("persons.odb");
+        TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p", Person.class);
+        List<Person> results = query.getResultList();
+        for (Person p : results) {
+            if (p.getID().equals(userid))
+            {
+                pobj = p;
+                getpass = p.getPassword();
+            }
+        }
+        odb.closeConnection();
+        if (getpass!=null && getpass.equals(pass))
+        {
+            MainProgram.personCurrent = pobj;
+            return true;
+        }
         status_login.setText("Username or Password invalid");
         return false;
     }

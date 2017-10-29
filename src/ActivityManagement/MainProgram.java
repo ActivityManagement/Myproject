@@ -6,14 +6,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
+import ActivityManagement.Controller.Person;
 
 public class MainProgram extends Application {
 
     public static Stage primaryWindow;
     public static Scene programScene;
-    public static String UIDCurrent;
     public static Parent login;
     public static Parent createact;
+    public static Person personCurrent;
 
     public static void main(String[] args) {
         launch(args);
@@ -33,6 +34,9 @@ public class MainProgram extends Application {
         primaryWindow.setMinWidth(1280);
         primaryWindow.setMinHeight(720);
         primaryWindow.show();
+
+        //program running
+
     }
 
     public Parent loadPage(String url)
