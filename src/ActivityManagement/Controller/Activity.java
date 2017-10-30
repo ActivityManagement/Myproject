@@ -36,4 +36,14 @@ public class Activity {
     {
         return actname;
     }
+
+    public String getOrgname()
+    {
+        return orgname;
+    }
+
+    public String getActdes()
+    {
+        return actdes;
+    }
 }

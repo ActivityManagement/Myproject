@@ -32,6 +32,7 @@ public class LoginController implements Reloadable {
             reloadPage(); //could reload when change scene
             MainProgram.stageMainPage.setFnameLabel(MainProgram.personCurrent.getFirstName());
             MainProgram.stageMainPage.setLnameLabel(MainProgram.personCurrent.getLastName());
+            MainProgram.stageMainPage.reloadPage(); //reload to refresh act
         }
     }
     @FXML
