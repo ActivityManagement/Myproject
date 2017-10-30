@@ -14,7 +14,7 @@ public class Person {
     private String lastname;
     private String password;
     @OneToMany(fetch=FetchType.EAGER)
-    List<HasActivity> myact = new ArrayList<HasActivity>();
+    private ArrayList<HasActivity> myact = new ArrayList<HasActivity>();
 
     public Person(){}
     public Person(String id,String pass,String fname,String lname)
@@ -47,11 +47,11 @@ public class Person {
 
     public void addAct(HasActivity act)
     {
-//        System.out.println(act.getId());
         myact.add(act);
     }
-    public List<HasActivity> getHasAct()
+
+    public void setFirstname(String name)
     {
-        return myact;
+        firstname = name;
     }
 }
