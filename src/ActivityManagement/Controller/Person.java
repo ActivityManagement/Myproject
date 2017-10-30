@@ -25,9 +25,13 @@ public class Person {
         this.lastname = lname;
     }
 
-    public String getName()
+    public String getFirstName()
     {
         return firstname;
+    }
+    public String getLastName()
+    {
+        return lastname;
     }
 
     public String getID()

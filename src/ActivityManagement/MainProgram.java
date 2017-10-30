@@ -1,7 +1,6 @@
 package ActivityManagement;
 
-import ActivityManagement.Controller.Activity;
-import ActivityManagement.Controller.HasActivity;
+import ActivityManagement.Controller.*;
 import ActivityManagement.Model.ObjectDB;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
-import ActivityManagement.Controller.Person;
 
 import javax.persistence.EntityManager;
 
@@ -23,17 +21,33 @@ public class MainProgram extends Application {
     public static Person personCurrent;
     public static String DBName = "ActivityManagementDB.odb";
 
+    public static MainPageController stageMainPage;
+    public static LoginController stageLoginPage;
+    public static CreateActController stageCreateActPage;
+
     public static void main(String[] args) {
         launch(args);
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-//        login = FXMLLoader.load(getClass().getResource("View/loginpage.fxml"));
-//        createact = FXMLLoader.load(getClass().getResource("View/createActPage.fxml"));
-        login = loadPage("View/loginpage.fxml");
-        createact = loadPage("View/createActPage.fxml");
-        mainpage = loadPage("View/mainpage.fxml");
+        FXMLLoader loader;
+        //------------------------------------------------------------------------------------------
+        loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("View/loginpage.fxml"));
+        login = loader.load();
+        stageLoginPage = loader.getController();
+        //------------------------------------------------------------------------------------------
+        loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("View/createActPage.fxml"));
+        createact = loader.load();
+        stageCreateActPage = loader.getController();
+        //------------------------------------------------------------------------------------------
+        loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("View/mainpage.fxml"));
+        mainpage = loader.load();
+        stageMainPage = loader.getController();
+        //------------------------------------------------------------------------------------------
         programScene = new Scene(login);
         primaryWindow = primaryStage;
         primaryWindow.setTitle("Activity Management");
@@ -52,15 +66,5 @@ public class MainProgram extends Application {
         em.getMetamodel().entity(HasActivity.class);
         odb.closeConnection();
 
-    }
-
-    public Parent loadPage(String url)
-    {
-        try {
-            return FXMLLoader.load(getClass().getResource(url));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 }

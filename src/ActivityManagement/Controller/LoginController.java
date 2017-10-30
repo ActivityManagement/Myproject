@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 
 import javax.persistence.*;
@@ -29,6 +30,8 @@ public class LoginController implements Reloadable {
             status_login.setText("");
             MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainpage);
             reloadPage(); //could reload when change scene
+            MainProgram.stageMainPage.setFnameLabel(MainProgram.personCurrent.getFirstName());
+            MainProgram.stageMainPage.setLnameLabel(MainProgram.personCurrent.getLastName());
         }
     }
     @FXML
