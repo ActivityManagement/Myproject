@@ -157,6 +157,7 @@ public class MainPageController implements Reloadable {
     @FXML
     void clickItem(MouseEvent event) {
 
+        //TODO
         if (acttable.getSelectionModel().isEmpty() && myacttable.getSelectionModel().isEmpty())
         {
             System.out.println("both empty");
