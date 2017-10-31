@@ -156,5 +156,8 @@ public class MainPageController implements Reloadable {
         useridLabel.setText(MainProgram.personCurrent.getUserid());
         fnameLabel.setText(MainProgram.personCurrent.getFirstname());
         lnameLabel.setText(MainProgram.personCurrent.getLastname());
+        loadTableActivity();
+        currentselectact = null;
+        join_button.setDisable(true);
     }
 }

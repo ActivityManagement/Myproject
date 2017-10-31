@@ -1038,3 +1038,151 @@ Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
 [2017-11-01 02:52:53 #136 store] 
 Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is closed by 8736@DESKTOP-HLJNJ8I
 
+[2017-11-01 02:55:42 #137 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is opened by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:42 #138 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-11-01 02:55:42 #1 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-11-01 02:55:42 #2 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+[2017-11-01 02:55:42 #3 type] 
+Type ActivityManagement.Controller.HasActivity is not enhanced.
+
+[2017-11-01 02:55:42 #139 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is closed by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:47 #140 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is opened by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:47 #141 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-11-01 02:55:47 #142 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is closed by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:47 #143 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is opened by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:47 #144 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-11-01 02:55:47 #145 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is closed by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:47 #146 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is opened by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:47 #147 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-11-01 02:55:47 #148 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is closed by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:50 #149 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is opened by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:50 #150 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-11-01 02:55:50 #151 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is closed by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:50 #152 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is opened by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:50 #153 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-11-01 02:55:50 #154 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is closed by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:55 #155 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is opened by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:55 #156 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-11-01 02:55:55 #157 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is closed by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:55 #158 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is opened by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:55 #159 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-11-01 02:55:55 #160 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is closed by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:59 #161 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is opened by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:59 #162 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-11-01 02:55:59 #163 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is closed by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:59 #164 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is opened by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:55:59 #165 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-11-01 02:55:59 #166 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is closed by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:56:03 #167 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is opened by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:56:03 #168 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-11-01 02:56:03 #169 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is closed by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:56:03 #170 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is opened by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:56:03 #171 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-11-01 02:56:03 #172 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is closed by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:56:03 #173 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is opened by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:56:03 #174 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+[2017-11-01 02:56:03 #175 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is closed by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:56:09 #176 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is opened by 8736@DESKTOP-HLJNJ8I
+
+[2017-11-01 02:56:09 #177 store] 
+Configuration path: E:\work\SE\Program\src\objectdb\objectdb.conf
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-11-01 02:56:09 #1 type] 
+Type ActivityManagement.Controller.Activity is not enhanced.
+
+[2017-11-01 02:56:09 #2 type] 
+Type ActivityManagement.Controller.Person is not enhanced.
+
+[2017-11-01 02:56:09 #3 type] 
+Type ActivityManagement.Controller.HasActivity is not enhanced.
+
+[2017-11-01 02:56:09 #178 store] 
+Database 'E:\work\SE\Program\src\objectdb\db\ActivityManagementDB.odb' is closed by 8736@DESKTOP-HLJNJ8I
+
