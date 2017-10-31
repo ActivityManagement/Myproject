@@ -25,6 +25,9 @@ public class MainProgram extends Application {
     public static LoginController stageLoginPage;
     public static CreateActController stageCreateActPage;
 
+    private double winWidth = 1280;
+    private double winHeigth = 720;
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -53,8 +56,10 @@ public class MainProgram extends Application {
         primaryWindow.setTitle("Activity Management");
         primaryWindow.setScene(programScene);
         primaryWindow.getScene().setRoot(login);
-        primaryWindow.setMinWidth(1280);
-        primaryWindow.setMinHeight(720);
+        primaryWindow.setWidth(winWidth);
+        primaryWindow.setHeight(winHeigth);
+        primaryWindow.setMinWidth(winWidth);
+        primaryWindow.setMinHeight(winHeigth);
         primaryWindow.show();
 
         //program running
