@@ -3,16 +3,20 @@ package ActivityManagement.Controller;
 import ActivityManagement.MainProgram;
 import ActivityManagement.Model.ObjectDB;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXDialog;
+import com.jfoenix.controls.JFXDialogLayout;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
+
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
@@ -57,6 +61,9 @@ public class MainPageController implements Reloadable {
     @FXML
     private TableColumn<Activity, String> myactstatusColumn;
 
+    @FXML
+    private StackPane joinPane;
+
     private Activity currentselectact;
 
 
@@ -77,6 +84,17 @@ public class MainPageController implements Reloadable {
     @FXML
     void callJoinEvent(ActionEvent event) {
         //TODO
+        joinPane.setVisible(true);
+        JFXDialogLayout content = new JFXDialogLayout();
+        content.setHeading(new Text("Join"));
+        content.setBody(new Text("Test sadjlksdjaklsddsf"));
+        JFXDialog dialog = new JFXDialog(joinPane,content,JFXDialog.DialogTransition.CENTER);
+        dialog.show();
+    }
+
+    @FXML
+    void callCancelJoin(MouseEvent event) {
+        joinPane.setVisible(false);
     }
 
     public ObservableList<Activity> getAllActivity()
@@ -147,6 +165,7 @@ public class MainPageController implements Reloadable {
         loadTableActivity();
         currentselectact = null;
         join_button.setDisable(true);
+        joinPane.setVisible(false);
     }
 
 
@@ -159,5 +178,6 @@ public class MainPageController implements Reloadable {
         loadTableActivity();
         currentselectact = null;
         join_button.setDisable(true);
+        joinPane.setVisible(false);
     }
 }
