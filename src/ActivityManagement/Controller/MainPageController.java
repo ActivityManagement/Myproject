@@ -2,6 +2,7 @@ package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
 import ActivityManagement.Model.ObjectDB;
+import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -16,6 +17,12 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 public class MainPageController implements Reloadable {
+
+    @FXML
+    private Label useridLabel;
+
+    @FXML
+    private JFXButton join_button;
 
     @FXML
     private Label fnameLabel;
@@ -86,6 +93,7 @@ public class MainPageController implements Reloadable {
     @Override
     public void reloadPage() {
         loadTableActivity();
+        useridLabel.setText(MainProgram.personCurrent.getUserid());
         fnameLabel.setText(MainProgram.personCurrent.getFirstname());
         lnameLabel.setText(MainProgram.personCurrent.getLastname());
     }

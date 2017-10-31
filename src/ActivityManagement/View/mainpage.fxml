@@ -63,7 +63,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="fnameLabel1" layoutX="120.0" layoutY="33.0" text="58010203" textAlignment="RIGHT" textFill="WHITE">
+                  <Label fx:id="useridLabel" layoutX="120.0" layoutY="33.0" text="58010203" textAlignment="RIGHT" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -87,7 +87,7 @@
             <DropShadow />
          </effect>
       </VBox>
-      <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#callCreateAct" prefHeight="50.0" prefWidth="234.0" ripplerFill="#7bdcff" style="-fx-background-color: #11425a;" text="Join" textFill="WHITE" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="14.0">
+      <JFXButton fx:id="join_button" alignment="CENTER" buttonType="RAISED" disable="true" prefHeight="50.0" prefWidth="234.0" ripplerFill="#7bdcff" style="-fx-background-color: #11425a;" text="Join" textFill="WHITE" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="14.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font>
@@ -111,7 +111,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton layoutX="1001.0" layoutY="63.0" prefHeight="37.0" prefWidth="112.0" style="-fx-background-color: #78c591;" text="refresh" textFill="WHITE" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="63.0">
+      <JFXButton layoutX="1001.0" layoutY="63.0" onAction="#callRefreshTable" prefHeight="37.0" prefWidth="112.0" style="-fx-background-color: #78c591;" text="refresh" textFill="WHITE" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="63.0">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -129,12 +129,12 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="367.0" prefWidth="966.0">
                      <children>
-                        <TableView fx:id="acttable111" prefHeight="554.0" prefWidth="1020.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                        <TableView fx:id="acttable" prefHeight="554.0" prefWidth="1020.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                            <columns>
-                              <TableColumn fx:id="actidColumn111" prefWidth="131.0" text="ID" />
-                              <TableColumn fx:id="actnameColumn111" prefWidth="440.0" text="Name" />
-                              <TableColumn fx:id="actorColumn111" prefWidth="255.3333740234375" text="Organization" />
-                              <TableColumn fx:id="actdescColumn111" prefWidth="189.6666259765625" text="Description" />
+                              <TableColumn fx:id="actidColumn" prefWidth="131.0" text="ID" />
+                              <TableColumn fx:id="actnameColumn" prefWidth="262.6666259765625" text="Name" />
+                              <TableColumn fx:id="actorColumn" prefWidth="180.66668701171875" text="Organization" />
+                              <TableColumn fx:id="actdescColumn" prefWidth="443.33331298828125" text="Description" />
                            </columns>
                         </TableView>
                      </children>
@@ -145,12 +145,12 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="474.0" prefWidth="966.0">
                      <children>
-                        <TableView fx:id="acttable11" prefHeight="554.0" prefWidth="1018.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                        <TableView fx:id="myacttable" prefHeight="554.0" prefWidth="1018.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                            <columns>
-                              <TableColumn fx:id="actidColumn11" prefWidth="131.0" text="ID" />
-                              <TableColumn fx:id="actnameColumn11" prefWidth="440.0" text="Name" />
-                              <TableColumn fx:id="actorColumn11" prefWidth="255.3333740234375" text="Organization" />
-                              <TableColumn fx:id="actdescColumn11" prefWidth="189.6666259765625" text="Description" />
+                              <TableColumn fx:id="myactidColumn" prefWidth="131.0" text="ID" />
+                              <TableColumn fx:id="myactnameColumn" prefWidth="440.0" text="Name" />
+                              <TableColumn fx:id="myactorColumn" prefWidth="255.3333740234375" text="Organization" />
+                              <TableColumn fx:id="myactdescColumn" prefWidth="189.6666259765625" text="Description" />
                            </columns>
                         </TableView>
                      </children>
