@@ -63,6 +63,10 @@ public class MainPageController implements Reloadable {
 
     @FXML
     private StackPane joinPane;
+    @FXML
+    private JFXDialogLayout contentofjoin;
+
+    private JFXDialog joindialog = null;
 
     private Activity currentselectact;
 
@@ -85,11 +89,11 @@ public class MainPageController implements Reloadable {
     void callJoinEvent(ActionEvent event) {
         //TODO
         joinPane.setVisible(true);
-        JFXDialogLayout content = new JFXDialogLayout();
-        content.setHeading(new Text("Join"));
-        content.setBody(new Text("Test sadjlksdjaklsddsf"));
-        JFXDialog dialog = new JFXDialog(joinPane,content,JFXDialog.DialogTransition.CENTER);
-        dialog.show();
+        if (joindialog==null) {
+            joindialog = new JFXDialog(joinPane, contentofjoin, JFXDialog.DialogTransition.CENTER);
+        }
+        joindialog.show();
+        System.out.println(currentselectact.getActname());
     }
 
     @FXML
@@ -152,12 +156,25 @@ public class MainPageController implements Reloadable {
 
     @FXML
     void clickItem(MouseEvent event) {
-        if (!acttable.getSelectionModel().isEmpty())
-        {
-            currentselectact = acttable.getSelectionModel().getSelectedItem();
-            join_button.setDisable(false);
-        }
 
+        if (acttable.getSelectionModel().isEmpty() && myacttable.getSelectionModel().isEmpty())
+        {
+            System.out.println("both empty");
+//            currentselectact = acttable.getSelectionModel().getSelectedItem();
+//            join_button.setDisable(false);
+        }
+        else if (!acttable.getSelectionModel().isEmpty() && myacttable.getSelectionModel().isEmpty())
+        {
+            System.out.println("select act");
+        }
+        else if (acttable.getSelectionModel().isEmpty() && !myacttable.getSelectionModel().isEmpty())
+        {
+            System.out.println("select myact");
+        }
+        else if (acttable.getSelectionModel().isEmpty() && myacttable.getSelectionModel().isEmpty())
+        {
+            System.out.println("select both act");
+        }
     }
 
     @FXML
@@ -175,7 +192,6 @@ public class MainPageController implements Reloadable {
         useridLabel.setText(MainProgram.personCurrent.getUserid());
         fnameLabel.setText(MainProgram.personCurrent.getFirstname());
         lnameLabel.setText(MainProgram.personCurrent.getLastname());
-        loadTableActivity();
         currentselectact = null;
         join_button.setDisable(true);
         joinPane.setVisible(false);
