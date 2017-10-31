@@ -131,10 +131,10 @@
                      <children>
                         <TableView fx:id="acttable" onMouseClicked="#clickItem" prefHeight="554.0" prefWidth="1020.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                            <columns>
-                              <TableColumn fx:id="actidColumn" prefWidth="131.0" text="ID" />
-                              <TableColumn fx:id="actnameColumn" prefWidth="262.6666259765625" text="Name" />
-                              <TableColumn fx:id="actorColumn" prefWidth="180.66668701171875" text="Organization" />
-                              <TableColumn fx:id="actdescColumn" prefWidth="443.33331298828125" text="Description" />
+                              <TableColumn fx:id="actidColumn" prefWidth="130.0" text="ID" />
+                              <TableColumn fx:id="actnameColumn" prefWidth="260.0" text="Name" />
+                              <TableColumn fx:id="actorColumn" prefWidth="180.0" text="Organization" />
+                              <TableColumn fx:id="actdescColumn" prefWidth="450.0" text="Description" />
                            </columns>
                         </TableView>
                      </children>
@@ -147,10 +147,11 @@
                      <children>
                         <TableView fx:id="myacttable" prefHeight="554.0" prefWidth="1018.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                            <columns>
-                              <TableColumn fx:id="myactidColumn" prefWidth="131.0" text="ID" />
-                              <TableColumn fx:id="myactnameColumn" prefWidth="440.0" text="Name" />
-                              <TableColumn fx:id="myactorColumn" prefWidth="255.3333740234375" text="Organization" />
-                              <TableColumn fx:id="myactdescColumn" prefWidth="189.6666259765625" text="Description" />
+                              <TableColumn fx:id="myactidColumn" prefWidth="130.0" text="ID" />
+                              <TableColumn fx:id="myactnameColumn" prefWidth="260.0" text="Name" />
+                              <TableColumn fx:id="myactorColumn" prefWidth="180.0" text="Organization" />
+                              <TableColumn fx:id="myactdescColumn" prefWidth="340.0" text="Description" />
+                              <TableColumn fx:id="myactstatusColumn" prefWidth="107.0" text="Status" />
                            </columns>
                         </TableView>
                      </children>

@@ -92,7 +92,7 @@ public class CreateActController implements Reloadable {
     {
         if (actname.length()==0)
         {
-            create_status.setText("กรุณาใส่ชื่อกิจกรรม");
+            create_status.setText("Enter activity name");
             return false;
         }
         return true;
@@ -102,7 +102,7 @@ public class CreateActController implements Reloadable {
     {
         if (orgname.length()==0)
         {
-            create_status.setText("กรุณาใส่ชื่อองค์กร");
+            create_status.setText("Enter organize name");
             return false;
         }
         return true;
@@ -112,11 +112,11 @@ public class CreateActController implements Reloadable {
     {
         boolean value = false;
         if (password.length() < 8)
-            create_status.setText("รหัสกิจกรรมต้องมีความยาวอย่างน้อย 8 ตัว");
+            create_status.setText("Password must be at least 8 characters");
         else if (password.length() > 16)
-            create_status.setText("รหัสกิจกรรมต้องไม่เกิน 16 ตัว");
+            create_status.setText("Password must be less than 16 characters ");
         else if (!truePassword(password))
-            create_status.setText("รหัสผ่านต้องประกอบด้วยทุกรูปแบบใน a-z, A-Z, 0-9 เท่านั้น");
+            create_status.setText("Password must be include A-Z and a-z and 0-9");
         else
             value = true;
         return value;

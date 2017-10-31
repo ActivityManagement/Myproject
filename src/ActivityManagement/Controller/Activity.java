@@ -13,6 +13,7 @@ public class Activity {
     private String password;
     private String actdes;
     private int active;
+    private String actstatus;
     @OneToMany(fetch=FetchType.EAGER)
     private ArrayList<SubActivity> subact = new ArrayList<SubActivity>();;
 
@@ -25,6 +26,7 @@ public class Activity {
         this.password = pass;
         this.actdes = ades;
         this.active = 1;
+        actstatus = getStatusText();
     }
 
     public String getActid()
@@ -45,5 +47,16 @@ public class Activity {
     public String getActdes()
     {
         return actdes;
+    }
+
+    public String getActstatus()
+    {
+        return actstatus;
+    }
+
+    public String getStatusText()
+    {
+        if (active==0) return "Waiting";
+        return "Joined";
     }
 }
