@@ -14,8 +14,6 @@ import javax.persistence.EntityManager;
 public class MainProgram extends Application {
 
     public static Stage primaryWindow;
-<<<<<<< HEAD
-=======
     public static Scene programScene;
     public static Parent login;
     public static Parent createact;
@@ -29,7 +27,6 @@ public class MainProgram extends Application {
 
     private double winWidth = 1280;
     private double winHeigth = 720;
->>>>>>> create_act
 
     public static void main(String[] args) {
         launch(args);
@@ -37,15 +34,6 @@ public class MainProgram extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-<<<<<<< HEAD
-        Parent login = FXMLLoader.load(getClass().getResource("View/loginpage.fxml"));
-        primaryWindow = primaryStage;
-        primaryWindow.setTitle("Activity Management");
-        Scene scene = new Scene(login);
-        primaryWindow.setScene(scene);
-        primaryWindow.setMinWidth(1280);
-        primaryWindow.setMinHeight(720);
-=======
         FXMLLoader loader;
         //------------------------------------------------------------------------------------------
         loader = new FXMLLoader();
@@ -72,7 +60,6 @@ public class MainProgram extends Application {
         primaryWindow.setHeight(winHeigth);
         primaryWindow.setMinWidth(winWidth);
         primaryWindow.setMinHeight(winHeigth);
->>>>>>> create_act
         primaryWindow.show();
 
         //program running

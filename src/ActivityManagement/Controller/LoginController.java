@@ -1,24 +1,23 @@
 package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
+import ActivityManagement.Model.ObjectDB;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 
-public class LoginController {
+import javax.persistence.*;
+import java.util.List;
+
+public class LoginController implements Reloadable {
     @FXML
     private JFXTextField userid_box;
     @FXML
     private JFXPasswordField pass_box;
     @FXML
     private Label status_login;
-
-    private String aid = "eakarin01";
-    private String apass= "123456789";
 
     @FXML
     void callLoginEvent(ActionEvent event) {
@@ -27,9 +26,20 @@ public class LoginController {
         if (checkLogin(userid,pass))
         {
             // go to main scene
-            //TODO
-            MainProgram.primaryWindow.setTitle("New Manage");
+            status_login.setText("");
+            MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainpage);
+            reloadPage(); //could reload when change scene
+            MainProgram.stageMainPage.reloadPage(); //reload to refresh act
         }
+    }
+    @FXML
+    void callRegisterEvent(ActionEvent event) {
+//        String userid = userid_box.getText();
+//        String pass = pass_box.getText();
+        ObjectDB odb = new ObjectDB();
+        odb.createConnection(MainProgram.DBName);
+        odb.saveObject(new Person());
+        odb.closeConnection();
     }
 
     private boolean checkLogin(String userid,String pass)
@@ -44,10 +54,34 @@ public class LoginController {
 
     private boolean matchLoginDB(String userid,String pass)
     {
-        //TODO
-        if (userid.equals(this.aid) && pass.equals(this.apass)) return true;
+        Person pobj = null;
+        String getpass = null;
+        // get object from database
+        ObjectDB odb = new ObjectDB();
+        EntityManager em = odb.createConnection(MainProgram.DBName);
+        TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p", Person.class);
+        List<Person> results = query.getResultList();
+        for (Person p : results) {
+            if (p.getUserid().equals(userid))
+            {
+                pobj = p;
+                getpass = p.getPassword();
+            }
+        }
+        odb.closeConnection();
+        if (getpass!=null && getpass.equals(pass))
+        {
+            MainProgram.personCurrent = pobj;
+            return true;
+        }
         status_login.setText("Username or Password invalid");
         return false;
     }
 
+    public void reloadPage()
+    {
+        userid_box.clear();
+        pass_box.clear();
+        status_login.setText("");
+    }
 }
