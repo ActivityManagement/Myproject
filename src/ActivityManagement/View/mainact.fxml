@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="60.0" prefHeight="670.0" prefWidth="262.0" style="-fx-background-color: #b3b4bb;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <AnchorPane prefHeight="178.0" prefWidth="262.0" style="-fx-background-color: #11425a;">
+               <children>
+                  <Label layoutX="14.0" layoutY="69.0" text="First Name :" textAlignment="RIGHT" textFill="WHITE" AnchorPane.rightAnchor="167.0">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="100.0" text="Last Name :" textAlignment="RIGHT" textFill="WHITE" AnchorPane.rightAnchor="167.0">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="fnameLabel" layoutX="103.0" layoutY="69.0" text="firstname" textAlignment="RIGHT" textFill="WHITE" AnchorPane.leftAnchor="103.0">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lnameLabel" layoutX="103.0" layoutY="100.0" text="lastname" textAlignment="RIGHT" textFill="WHITE" AnchorPane.leftAnchor="103.0">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="161.0" layoutY="133.0" onAction="#callLogout" style="-fx-background-color: #ff5858;" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="14.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/newuser.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="56.0" layoutY="32.0" text="User ID :" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="useridLabel" layoutX="120.0" layoutY="33.0" text="58010203" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <MenuButton mnemonicParsing="false" popupSide="RIGHT" prefHeight="43.0" prefWidth="287.0" style="-fx-background-color: #f9ebd1;" text="Team">
+              <items>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="185.0" style="-fx-background-color: #a46969;" text="Add Team">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/plus1600.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </graphic>
+                  </MenuItem>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="185.0" style="-fx-background-color: #a46969;" text="Head">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="185.0" style="-fx-background-color: #a46969;" text="Document">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="185.0" style="-fx-background-color: #a46969;" text="Activity">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="185.0" style="-fx-background-color: #a46969;" text="PR">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </MenuItem>
+              </items>
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </MenuButton>
+            <MenuButton mnemonicParsing="false" popupSide="RIGHT" prefHeight="43.0" prefWidth="287.0" style="-fx-background-color: #f9ebd1;" text="Time Table">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="185.0" style="-fx-background-color: #a46969;" text="Create Table">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/plus1600.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="185.0" style="-fx-background-color: #a46969;" text="All">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="185.0" style="-fx-background-color: #a46969;" text="Pre Act">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="185.0" style="-fx-background-color: #a46969;" text="During Act">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </MenuItem>
+               </items>
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </MenuButton>
+            <MenuButton mnemonicParsing="false" popupSide="RIGHT" prefHeight="43.0" prefWidth="287.0" style="-fx-background-color: #f9ebd1;" text="Note">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="185.0" style="-fx-background-color: #a46969;" text="Create Note">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/plus1600.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="185.0" style="-fx-background-color: #a46969;" text="Place Act">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </MenuItem>
+               </items>
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </MenuButton>
+            <MenuButton mnemonicParsing="false" popupSide="RIGHT" prefHeight="43.0" prefWidth="287.0" style="-fx-background-color: #f9ebd1;" text="Member">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="185.0" style="-fx-background-color: #a46969;" text="Join Request">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/plus1600.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="185.0" style="-fx-background-color: #a46969;" text="Member Data">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </MenuItem>
+               </items>
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </MenuButton>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="50.0" style="-fx-background-color: #11425a;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1280.0" text="Activity Name" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+   </children>
+</AnchorPane>
