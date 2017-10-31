@@ -48,14 +48,14 @@
                      <graphic>
                         <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@logout.png" />
+                              <Image url="@image/logout.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </JFXButton>
                   <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="14.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@newuser.png" />
+                        <Image url="@image/newuser.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="56.0" layoutY="32.0" text="User ID :" textAlignment="RIGHT" textFill="WHITE">
@@ -94,7 +94,7 @@
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@plus1600.png" />
+                  <Image url="@image/plus1600.png" />
                </image>
             </ImageView>
          </graphic>
@@ -106,7 +106,7 @@
          <graphic>
             <ImageView fitHeight="86.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@316586-200.png" />
+                  <Image url="@image/316586-200.png" />
                </image>
             </ImageView>
          </graphic>
@@ -118,12 +118,12 @@
          <graphic>
             <ImageView fitHeight="21.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@5651-200%20(1).png" />
+                  <Image url="@image/5651-200%20(1).png" />
                </image>
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXTabPane id="bgtab" layoutX="262.0" layoutY="109.0" prefHeight="589.0" prefWidth="1018.0" stylesheets="@tabPaneCSS.css" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="109.0">
+      <JFXTabPane id="bgtab" layoutX="262.0" layoutY="109.0" prefHeight="589.0" prefWidth="1018.0" stylesheets="@css/tabPaneCSS.css" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="109.0">
          <tabs>
             <Tab text="Activity List">
               <content>
@@ -162,7 +162,7 @@
       <TextField layoutX="1065.0" layoutY="71.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="71.0" />
       <ImageView fitHeight="25.0" fitWidth="34.0" layoutX="1226.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="68.0">
          <image>
-            <Image url="@search-icon-23710.png" />
+            <Image url="@image/search-icon-23710.png" />
          </image>
       </ImageView>
    </children>
