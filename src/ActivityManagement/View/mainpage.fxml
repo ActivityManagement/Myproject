@@ -87,7 +87,7 @@
             <DropShadow />
          </effect>
       </VBox>
-      <JFXButton fx:id="join_button" alignment="CENTER" buttonType="RAISED" disable="true" prefHeight="50.0" prefWidth="234.0" ripplerFill="#7bdcff" style="-fx-background-color: #11425a;" text="Join" textFill="WHITE" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="14.0">
+      <JFXButton fx:id="join_button" alignment="CENTER" buttonType="RAISED" disable="true" onAction="#callJoinEvent" prefHeight="50.0" prefWidth="234.0" ripplerFill="#7bdcff" style="-fx-background-color: #11425a;" text="Join" textFill="WHITE" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="14.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font>
@@ -123,13 +123,13 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXTabPane id="bgtab" layoutX="262.0" layoutY="109.0" prefHeight="589.0" prefWidth="1018.0" style="-fx-background-color: #743491;" stylesheets="@tabPaneCSS.css" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="109.0">
+      <JFXTabPane id="bgtab" layoutX="262.0" layoutY="109.0" prefHeight="589.0" prefWidth="1018.0" stylesheets="@tabPaneCSS.css" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="109.0">
          <tabs>
             <Tab text="Activity List">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="367.0" prefWidth="966.0">
                      <children>
-                        <TableView fx:id="acttable" prefHeight="554.0" prefWidth="1020.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                        <TableView fx:id="acttable" onMouseClicked="#clickItem" prefHeight="554.0" prefWidth="1020.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                            <columns>
                               <TableColumn fx:id="actidColumn" prefWidth="131.0" text="ID" />
                               <TableColumn fx:id="actnameColumn" prefWidth="262.6666259765625" text="Name" />
