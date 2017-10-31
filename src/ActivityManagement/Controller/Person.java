@@ -1,5 +1,8 @@
 package ActivityManagement.Controller;
 
+import ActivityManagement.MainProgram;
+import ActivityManagement.Model.ObjectDB;
+
 import javax.persistence.*;
 
 import java.util.ArrayList;
@@ -25,37 +28,45 @@ public class Person {
         this.lastname = lname;
     }
 
-    public String getFirstName()
+    public void joinAct(Activity a)
+    {
+        HasActivity ha = new HasActivity(a,0);
+        ObjectDB odb = new ObjectDB();
+        EntityManager em = odb.createConnection(MainProgram.DBName);
+        odb.saveObject(ha);
+        TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+MainProgram.personCurrent.getId()+"", Person.class);
+        List<Person> results = query.getResultList();
+        em.getTransaction().begin();
+        for (Person p : results) {
+            MainProgram.personCurrent = p;
+            MainProgram.personCurrent.addAct(ha);
+        }
+        em.getTransaction().commit();
+        odb.closeConnection();
+    }
+
+    public String getFirstname()
     {
         return firstname;
     }
-    public String getLastName()
+    public String getLastname()
     {
         return lastname;
     }
-
-    public String getID()
+    public String getUserid()
     {
         return userid;
     }
-
     public String getPassword()
     {
         return password;
     }
-
     public long getId()
     {
         return id;
     }
-
     public void addAct(HasActivity act)
     {
         myact.add(act);
-    }
-
-    public void setFirstname(String name)
-    {
-        firstname = name;
     }
 }

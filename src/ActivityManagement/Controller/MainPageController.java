@@ -53,15 +53,6 @@ public class MainPageController implements Reloadable {
 
     }
 
-    public void setFnameLabel(String name)
-    {
-        fnameLabel.setText(name);
-    }
-    public void setLnameLabel(String name)
-    {
-        lnameLabel.setText(name);
-    }
-
     public ObservableList<Activity> getAllActivity()
     {
         ObservableList<Activity> activity = FXCollections.observableArrayList();
@@ -95,6 +86,7 @@ public class MainPageController implements Reloadable {
     @Override
     public void reloadPage() {
         loadTableActivity();
-
+        fnameLabel.setText(MainProgram.personCurrent.getFirstname());
+        lnameLabel.setText(MainProgram.personCurrent.getLastname());
     }
 }

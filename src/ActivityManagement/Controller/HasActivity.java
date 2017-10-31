@@ -23,6 +23,11 @@ public class HasActivity {
         return id;
     }
 
+    public void setApprove(int value)
+    {
+        approve = value;
+    }
+
     public Activity getActivity() {
         return activity;
     }
