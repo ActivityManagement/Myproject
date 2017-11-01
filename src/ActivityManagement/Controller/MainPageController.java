@@ -153,28 +153,33 @@ public class MainPageController implements Reloadable {
         return activity;
     }
 
-
     @FXML
-    void clickItem(MouseEvent event) {
+    void clickActItem(MouseEvent event) {
 
         //TODO
-        if (acttable.getSelectionModel().isEmpty() && myacttable.getSelectionModel().isEmpty())
+        if (!acttable.getSelectionModel().isEmpty())
         {
-            System.out.println("both empty");
-//            currentselectact = acttable.getSelectionModel().getSelectedItem();
-//            join_button.setDisable(false);
+            currentselectact = acttable.getSelectionModel().getSelectedItem();
+            join_button.setDisable(false);
+            if (!myacttable.getSelectionModel().isEmpty()) //if another table had selected
+            {
+                myacttable.getSelectionModel().clearSelection();
+            }
         }
-        else if (!acttable.getSelectionModel().isEmpty() && myacttable.getSelectionModel().isEmpty())
+    }
+
+    @FXML
+    void clickMyActItem(MouseEvent event) {
+
+        //TODO
+        if (!myacttable.getSelectionModel().isEmpty())
         {
-            System.out.println("select act");
-        }
-        else if (acttable.getSelectionModel().isEmpty() && !myacttable.getSelectionModel().isEmpty())
-        {
-            System.out.println("select myact");
-        }
-        else if (acttable.getSelectionModel().isEmpty() && myacttable.getSelectionModel().isEmpty())
-        {
-            System.out.println("select both act");
+            currentselectact = myacttable.getSelectionModel().getSelectedItem();
+            join_button.setDisable(false);
+            if (!acttable.getSelectionModel().isEmpty()) //if another table had selected
+            {
+                acttable.getSelectionModel().clearSelection();
+            }
         }
     }
 

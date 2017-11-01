@@ -133,7 +133,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="367.0" prefWidth="966.0">
                      <children>
-                        <TableView fx:id="acttable" onMouseClicked="#clickItem" prefHeight="554.0" prefWidth="1020.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                        <TableView fx:id="acttable" onMouseClicked="#clickActItem" prefHeight="554.0" prefWidth="1020.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                            <columns>
                               <TableColumn fx:id="actidColumn" prefWidth="130.0" text="ID" />
                               <TableColumn fx:id="actnameColumn" prefWidth="260.0" text="Name" />
@@ -149,7 +149,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="474.0" prefWidth="966.0">
                      <children>
-                        <TableView fx:id="myacttable" onMouseClicked="#clickItem" prefHeight="554.0" prefWidth="1018.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                        <TableView fx:id="myacttable" onMouseClicked="#clickMyActItem" prefHeight="554.0" prefWidth="1018.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                            <columns>
                               <TableColumn fx:id="myactidColumn" prefWidth="130.0" text="ID" />
                               <TableColumn fx:id="myactnameColumn" prefWidth="260.0" text="Name" />
