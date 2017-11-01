@@ -71,14 +71,13 @@ public class CreateActController implements Reloadable {
             odb.closeConnection();
 
             // update hasact in person
-            //TODO
             em = odb.createConnection(MainProgram.DBName);
             TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+MainProgram.personCurrent.getId()+"", Person.class);
             List<Person> results = query.getResultList();
             em.getTransaction().begin();
             for (Person p : results) {
+                p.addAct(hact);
                 MainProgram.personCurrent = p;
-                MainProgram.personCurrent.addAct(hact);
             }
             em.getTransaction().commit();
             odb.closeConnection();

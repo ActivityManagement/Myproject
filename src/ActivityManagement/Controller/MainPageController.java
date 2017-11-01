@@ -59,7 +59,7 @@ public class MainPageController implements Reloadable {
     @FXML
     private TableColumn<Activity, String> myactdescColumn;
     @FXML
-    private TableColumn<HasActivity, String> myactstatusColumn;
+    private TableColumn<Activity, String> myactstatusColumn;
 
     @FXML
     private StackPane joinPane;
@@ -91,22 +91,41 @@ public class MainPageController implements Reloadable {
         //add condition
         if (isDoNotJoin(currentselectact)) //don't join yet
         {
-            joinPane.setVisible(true);
-            if (joindialog == null) {
-                joindialog = new JFXDialog(joinPane, contentofjoin, JFXDialog.DialogTransition.CENTER);
+//            joinPane.setVisible(true);
+//            if (joindialog == null) {
+//                joindialog = new JFXDialog(joinPane, contentofjoin, JFXDialog.DialogTransition.CENTER);
+//            }
+//            joindialog.show();
+
+            ObjectDB odb = new ObjectDB();
+            odb.createConnection(MainProgram.DBName);
+            HasActivity hact = new HasActivity(currentselectact,0);
+            odb.saveObject(hact);
+            odb.closeConnection();
+            // update hasact in person
+            EntityManager em = odb.createConnection(MainProgram.DBName);
+            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+MainProgram.personCurrent.getId()+"", Person.class);
+            List<Person> results = query.getResultList();
+            em.getTransaction().begin();
+            for (Person p : results) {
+                p.addAct(hact);
+                MainProgram.personCurrent = p;
             }
-            joindialog.show();
+            em.getTransaction().commit();
+            odb.closeConnection();
             System.out.println(currentselectact.getActname());
         }
         else //in hasActivity
         {
             if (isApprove(currentselectact)) //wait to approve
             {
-
+                System.out.println("gogo");
+                System.out.println(currentselectact.getActname());
             }
             else
             {
-
+                System.out.println("waiting");
+                System.out.println(currentselectact.getActname());
             }
         }
     }
@@ -115,7 +134,7 @@ public class MainPageController implements Reloadable {
     {
         ArrayList<HasActivity> hact = MainProgram.personCurrent.getMyact();
         for (int i = 0; i < hact.size() ; i++) {
-            if (a.equals(hact.get(i).getActivity()))
+            if (a.getActid().equals(hact.get(i).getActivity().getActid()))
                 return false;
         }
         return true;
@@ -125,9 +144,11 @@ public class MainPageController implements Reloadable {
     {
         ArrayList<HasActivity> hact = MainProgram.personCurrent.getMyact();
         for (int i = 0; i < hact.size() ; i++) {
-            if (a.equals(hact.get(i).getActivity()))
+            if (a.getActid().equals(hact.get(i).getActivity().getActid()))
             {
-                return true;
+                if (hact.get(i).getApprove()==1) {
+                    return true;
+                }
             }
         }
         return false;

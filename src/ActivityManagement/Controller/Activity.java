@@ -1,5 +1,7 @@
 package ActivityManagement.Controller;
 
+import ActivityManagement.MainProgram;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -47,9 +49,17 @@ public class Activity {
         return actdes;
     }
 
+    //get act status for person in column
     public String getActstatus()
     {
-        return "waiting";
+        ArrayList<HasActivity> hact = MainProgram.personCurrent.getMyact();
+        for (int i = 0; i < hact.size() ; i++) {
+            if (actid.equals(hact.get(i).getActivity().getActid()))
+            {
+                return hact.get(i).getActstatus();
+            }
+        }
+        return "Valid";
     }
 
 }
