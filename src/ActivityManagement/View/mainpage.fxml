@@ -169,11 +169,11 @@
             <Image url="@image/search-icon-23710.png" />
          </image>
       </ImageView>
-      <StackPane fx:id="joinPane" onMouseClicked="#callCancelJoin" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <StackPane fx:id="joinPane" onMouseClicked="#callCancelJoin" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane prefHeight="231.0" prefWidth="505.0">
                <children>
-                  <JFXDialogLayout fx:id="contentofjoin" prefHeight="300.0" prefWidth="359.0" style="-fx-background-color: #d6d6cd;" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="250.0">
+                  <JFXDialogLayout fx:id="contentofjoin" prefHeight="300.0" prefWidth="359.0" style="-fx-background-color: f1edd0;" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="250.0">
                      <children>
                         <AnchorPane prefHeight="305.0" prefWidth="368.0" style="-fx-background-color: f1edd0;">
                            <children>
@@ -210,26 +210,47 @@
                                  <font>
                                     <Font name="Arial" size="16.0" />
                                  </font></Label>
-                              <JFXButton layoutX="95.0" layoutY="219.0" onAction="#callcanclejoinAct" ripplerFill="#90483f" style="-fx-background-color: #ff5858;" text="Cancle" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="140.0">
+                              <JFXButton buttonType="RAISED" layoutX="95.0" layoutY="219.0" onAction="#callcanclejoinAct" prefHeight="32.0" prefWidth="77.0" ripplerFill="#90483f" style="-fx-background-color: #ff5858;" text="Cancle" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="140.0">
                                  <font>
                                     <Font name="Arial Bold" size="16.0" />
                                  </font>
-                                 <effect>
-                                    <DropShadow />
-                                 </effect>
                               </JFXButton>
-                              <JFXButton layoutX="182.0" layoutY="219.0" onAction="#callsubmitjoinAct" ripplerFill="#3b793a" style="-fx-background-color: #b0cc5c;" text="Submit" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="52.0">
+                              <JFXButton buttonType="RAISED" layoutX="178.0" layoutY="219.0" onAction="#callsubmitjoinAct" ripplerFill="#3b793a" style="-fx-background-color: #78c591;" text="Submit" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="40.0">
                                  <font>
                                     <Font name="Arial Bold" size="16.0" />
                                  </font>
-                                 <effect>
-                                    <DropShadow />
-                                 </effect>
                               </JFXButton>
+                              <Label layoutX="112.0" layoutY="201.0" prefHeight="17.0" prefWidth="149.0" text="*Password invalid " textFill="RED" />
                            </children>
-                           <effect>
-                              <DropShadow blurType="GAUSSIAN" />
-                           </effect>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                  </JFXDialogLayout>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <JFXDialogLayout style="-fx-background-color: f1edd0;" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="295.0">
+                     <children>
+                        <AnchorPane prefHeight="52.0" prefWidth="452.0">
+                           <children>
+                              <Label alignment="CENTER" layoutX="26.0" layoutY="72.0" prefHeight="50.0" prefWidth="407.0" text="Wating for approve ." AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="37.0" fitWidth="41.0" layoutX="363.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="8.0">
+                                 <image>
+                                    <Image url="@image/256-256-7a1b32bc6cee8e58f09af677cbfb0255.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
                         </AnchorPane>
                      </children>
                      <effect>
