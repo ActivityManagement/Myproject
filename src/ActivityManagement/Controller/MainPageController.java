@@ -59,7 +59,7 @@ public class MainPageController implements Reloadable {
     @FXML
     private TableColumn<Activity, String> myactdescColumn;
     @FXML
-    private TableColumn<Activity, String> myactstatusColumn;
+    private TableColumn<HasActivity, String> myactstatusColumn;
 
     @FXML
     private StackPane joinPane;
@@ -88,12 +88,49 @@ public class MainPageController implements Reloadable {
     @FXML
     void callJoinEvent(ActionEvent event) {
         //TODO
-        joinPane.setVisible(true);
-        if (joindialog==null) {
-            joindialog = new JFXDialog(joinPane, contentofjoin, JFXDialog.DialogTransition.CENTER);
+        //add condition
+        if (isDoNotJoin(currentselectact)) //don't join yet
+        {
+            joinPane.setVisible(true);
+            if (joindialog == null) {
+                joindialog = new JFXDialog(joinPane, contentofjoin, JFXDialog.DialogTransition.CENTER);
+            }
+            joindialog.show();
+            System.out.println(currentselectact.getActname());
         }
-        joindialog.show();
-        System.out.println(currentselectact.getActname());
+        else //in hasActivity
+        {
+            if (isApprove(currentselectact)) //wait to approve
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+    }
+
+    public boolean isDoNotJoin(Activity a)
+    {
+        ArrayList<HasActivity> hact = MainProgram.personCurrent.getMyact();
+        for (int i = 0; i < hact.size() ; i++) {
+            if (a.equals(hact.get(i).getActivity()))
+                return false;
+        }
+        return true;
+    }
+
+    public boolean isApprove(Activity a)
+    {
+        ArrayList<HasActivity> hact = MainProgram.personCurrent.getMyact();
+        for (int i = 0; i < hact.size() ; i++) {
+            if (a.equals(hact.get(i).getActivity()))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     @FXML

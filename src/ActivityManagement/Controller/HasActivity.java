@@ -8,6 +8,7 @@ public class HasActivity {
     private long id;
     private Activity activity;
     private int approve;
+    private String actstatus;
     private Role role;
 
 
@@ -16,6 +17,12 @@ public class HasActivity {
     {
         this.activity = act;
         this.approve = app;
+        actstatus = getStatusText();
+    }
+
+    public int getApprove()
+    {
+        return approve;
     }
 
     public long getId()
@@ -26,6 +33,18 @@ public class HasActivity {
     public void setApprove(int value)
     {
         approve = value;
+    }
+
+    public String getActstatus()
+    {
+        return actstatus;
+    }
+
+
+    public String getStatusText()
+    {
+        if (approve==0) return "Waiting";
+        return "Joined";
     }
 
     public Activity getActivity() {
