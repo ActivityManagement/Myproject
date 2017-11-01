@@ -169,7 +169,7 @@
             <Image url="@image/search-icon-23710.png" />
          </image>
       </ImageView>
-      <StackPane fx:id="joinPane" onMouseClicked="#callCancelJoin" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <StackPane fx:id="joinPane" onMouseClicked="#callCancelJoin" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane prefHeight="231.0" prefWidth="505.0">
                <children>
@@ -232,19 +232,24 @@
             </AnchorPane>
          </children>
       </StackPane>
-      <StackPane prefHeight="720.0" prefWidth="1280.0" visible="false">
+      <StackPane prefHeight="720.0" prefWidth="1280.0">
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <JFXDialogLayout prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: f1edd0;" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="295.0">
+                  <JFXDialogLayout style="-fx-background-color: f1edd0;" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="295.0">
                      <children>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                        <AnchorPane prefHeight="52.0" prefWidth="452.0">
                            <children>
-                              <Label layoutX="26.0" layoutY="72.0" prefHeight="50.0" prefWidth="407.0" text="Your request has been sent already please wating master approve you to join activity">
+                              <Label alignment="CENTER" layoutX="26.0" layoutY="72.0" prefHeight="50.0" prefWidth="407.0" text="Wating for approve ." AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <font>
-                                    <Font name="Arial Bold" size="10.0" />
+                                    <Font name="Arial Bold" size="30.0" />
                                  </font>
                               </Label>
+                              <ImageView fitHeight="37.0" fitWidth="41.0" layoutX="363.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="8.0">
+                                 <image>
+                                    <Image url="@image/256-256-7a1b32bc6cee8e58f09af677cbfb0255.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </AnchorPane>
                      </children>
