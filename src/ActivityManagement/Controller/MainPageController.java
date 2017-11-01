@@ -76,6 +76,17 @@ public class MainPageController implements Reloadable {
     @FXML
     private Label joinOrgName;
 
+    @FXML
+    private Label statusjointext;
+
+    @FXML
+    private StackPane waitPane;
+
+    @FXML
+    private JFXDialogLayout contentofwaiting;
+
+    private JFXDialog waitdialog = null;
+
     private JFXDialog joindialog = null;
 
     private Activity currentselectact;
@@ -94,10 +105,11 @@ public class MainPageController implements Reloadable {
     }
 
     @FXML
-    void callcanclejoinAct(ActionEvent event) {
+    void callcanceljoinAct(ActionEvent event) {
         joindialog.close();
         joinPane.setVisible(false);
         JoinPassField.clear();
+        statusjointext.setText("");
     }
 
     @FXML
@@ -131,7 +143,7 @@ public class MainPageController implements Reloadable {
         }
         else //when password is false
         {
-            System.out.println("password invalid");
+            statusjointext.setText("*Password invalid ");
         }
 
     }
@@ -141,7 +153,6 @@ public class MainPageController implements Reloadable {
         //add condition
         if (isDoNotJoin(currentselectact)) //don't join yet
         {
-            //TODO
             joinActID.setText(currentselectact.getActid());
             joinActName.setText(currentselectact.getActname());
             joinOrgName.setText(currentselectact.getOrgname());
@@ -161,6 +172,11 @@ public class MainPageController implements Reloadable {
             else
             {
                 //TODO
+                waitPane.setVisible(true);
+                if (waitdialog == null) {
+                    waitdialog = new JFXDialog(waitPane, contentofwaiting, JFXDialog.DialogTransition.CENTER);
+                }
+                waitdialog.show();
                 System.out.println("waiting");
             }
         }
@@ -193,7 +209,9 @@ public class MainPageController implements Reloadable {
     @FXML
     void callCancelJoin(MouseEvent event) {
         joinPane.setVisible(false);
+        waitPane.setVisible(false);
         JoinPassField.clear();
+        statusjointext.setText("");
     }
 
     public ObservableList<Activity> getAllActivity()
@@ -283,6 +301,7 @@ public class MainPageController implements Reloadable {
         join_button.setDisable(true);
         joinPane.setVisible(false);
         JoinPassField.clear();
+        statusjointext.setText("");
     }
 
 
@@ -296,5 +315,6 @@ public class MainPageController implements Reloadable {
         join_button.setDisable(true);
         joinPane.setVisible(false);
         JoinPassField.clear();
+        statusjointext.setText("");
     }
 }
