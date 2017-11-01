@@ -87,45 +87,48 @@ public class MainPageController implements Reloadable {
 
     @FXML
     void callJoinEvent(ActionEvent event) {
-        //TODO
         //add condition
         if (isDoNotJoin(currentselectact)) //don't join yet
         {
-//            joinPane.setVisible(true);
-//            if (joindialog == null) {
-//                joindialog = new JFXDialog(joinPane, contentofjoin, JFXDialog.DialogTransition.CENTER);
-//            }
-//            joindialog.show();
-
-            ObjectDB odb = new ObjectDB();
-            odb.createConnection(MainProgram.DBName);
-            HasActivity hact = new HasActivity(currentselectact,0);
-            odb.saveObject(hact);
-            odb.closeConnection();
-            // update hasact in person
-            EntityManager em = odb.createConnection(MainProgram.DBName);
-            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+MainProgram.personCurrent.getId()+"", Person.class);
-            List<Person> results = query.getResultList();
-            em.getTransaction().begin();
-            for (Person p : results) {
-                p.addAct(hact);
-                MainProgram.personCurrent = p;
+            //TODO
+            joinPane.setVisible(true);
+            if (joindialog == null) {
+                joindialog = new JFXDialog(joinPane, contentofjoin, JFXDialog.DialogTransition.CENTER);
             }
-            em.getTransaction().commit();
-            odb.closeConnection();
-            System.out.println(currentselectact.getActname());
+            joindialog.show();
+
+            // join act when pass valid
+//            ObjectDB odb = new ObjectDB();
+//            odb.createConnection(MainProgram.DBName);
+//            HasActivity hact = new HasActivity(currentselectact,0);
+//            odb.saveObject(hact);
+//            odb.closeConnection();
+//            // update hasact in person
+//            EntityManager em = odb.createConnection(MainProgram.DBName);
+//            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+MainProgram.personCurrent.getId()+"", Person.class);
+//            List<Person> results = query.getResultList();
+//            em.getTransaction().begin();
+//            for (Person p : results) {
+//                p.addAct(hact);
+//                MainProgram.personCurrent = p;
+//            }
+//            em.getTransaction().commit();
+//            odb.closeConnection();
+//            System.out.println(currentselectact.getActname());
+//            reloadPage();
+
         }
         else //in hasActivity
         {
             if (isApprove(currentselectact)) //wait to approve
             {
+                //TODO
                 System.out.println("gogo");
-                System.out.println(currentselectact.getActname());
             }
             else
             {
+                //TODO
                 System.out.println("waiting");
-                System.out.println(currentselectact.getActname());
             }
         }
     }
