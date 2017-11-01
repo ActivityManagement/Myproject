@@ -156,7 +156,6 @@ public class MainPageController implements Reloadable {
     @FXML
     void clickActItem(MouseEvent event) {
 
-        //TODO
         if (!acttable.getSelectionModel().isEmpty())
         {
             currentselectact = acttable.getSelectionModel().getSelectedItem();
@@ -171,7 +170,6 @@ public class MainPageController implements Reloadable {
     @FXML
     void clickMyActItem(MouseEvent event) {
 
-        //TODO
         if (!myacttable.getSelectionModel().isEmpty())
         {
             currentselectact = myacttable.getSelectionModel().getSelectedItem();
