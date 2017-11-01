@@ -174,21 +174,36 @@
          <children>
             <AnchorPane prefHeight="231.0" prefWidth="505.0">
                <children>
-                  <JFXDialogLayout fx:id="contentofjoin" prefHeight="300.0" prefWidth="359.0" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="250.0">
+                  <JFXDialogLayout fx:id="contentofjoin" prefHeight="300.0" prefWidth="359.0" style="-fx-background-color: #f4b9b9;" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="250.0">
                      <children>
-                        <AnchorPane>
+                        <AnchorPane style="-fx-background-color: #f4b9b9;">
                            <children>
-                              <Label layoutX="8.0" layoutY="54.0" text="Label" />
-                              <Label layoutX="8.0" layoutY="95.0" text="Label" />
-                              <Label layoutX="8.0" layoutY="139.0" text="Label" />
-                              <Label layoutX="8.0" layoutY="180.0" text="Label" />
-                              <PasswordField layoutX="91.0" layoutY="176.0" />
-                              <Button layoutX="249.0" layoutY="252.0" mnemonicParsing="false" text="Button" />
-                              <Button layoutX="174.0" layoutY="252.0" mnemonicParsing="false" text="Button" />
-                              <Label layoutX="152.0" layoutY="8.0" text="Label" />
-                              <Label layoutX="77.0" layoutY="54.0" text="Label" />
-                              <Label layoutX="77.0" layoutY="95.0" text="Label" />
-                              <Label layoutX="77.0" layoutY="139.0" text="Label" />
+                              <Label layoutX="16.0" layoutY="54.0" text="Act ID :" AnchorPane.rightAnchor="210.0" AnchorPane.topAnchor="54.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font></Label>
+                              <Label layoutX="8.0" layoutY="95.0" text="Act Name :" AnchorPane.rightAnchor="210.0" AnchorPane.topAnchor="95.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font></Label>
+                              <Label layoutX="8.0" layoutY="139.0" text="Organize :" AnchorPane.rightAnchor="210.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font></Label>
+                              <Label layoutX="8.0" layoutY="180.0" text="Password :" AnchorPane.rightAnchor="210.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font></Label>
+                              <PasswordField fx:id="JoinPassField" layoutX="109.0" layoutY="176.0" />
+                              <Button layoutX="181.0" layoutY="219.0" mnemonicParsing="false" onAction="#callsubmitjoinAct" text="Button" />
+                              <Button layoutX="83.0" layoutY="219.0" mnemonicParsing="false" onAction="#callcanclejoinAct" text="Button" />
+                              <Label layoutX="135.0" layoutY="8.0" text="Profile" AnchorPane.leftAnchor="130.5" AnchorPane.topAnchor="15.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="joinActID" layoutX="110.0" layoutY="54.0" prefHeight="17.0" prefWidth="63.0" text="Act ID" AnchorPane.leftAnchor="112.0" />
+                              <Label fx:id="joinActName" layoutX="112.0" layoutY="95.0" text="Act Name" AnchorPane.leftAnchor="112.0" />
+                              <Label fx:id="joinOrgName" layoutX="112.0" layoutY="139.0" text="Organize Name" />
                            </children>
                         </AnchorPane>
                      </children>

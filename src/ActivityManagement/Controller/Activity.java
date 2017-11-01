@@ -49,6 +49,11 @@ public class Activity {
         return actdes;
     }
 
+    public String getPassword()
+    {
+        return password;
+    }
+
     //get act status for person in column
     public String getActstatus()
     {

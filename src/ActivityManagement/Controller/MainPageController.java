@@ -9,14 +9,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
+import javafx.scene.control.*;
 
-import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
-import javafx.scene.text.Text;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
@@ -66,6 +63,19 @@ public class MainPageController implements Reloadable {
     @FXML
     private JFXDialogLayout contentofjoin;
 
+    @FXML
+    private PasswordField JoinPassField;
+
+
+    @FXML
+    private Label joinActID;
+
+    @FXML
+    private Label joinActName;
+
+    @FXML
+    private Label joinOrgName;
+
     private JFXDialog joindialog = null;
 
     private Activity currentselectact;
@@ -75,13 +85,54 @@ public class MainPageController implements Reloadable {
     void callCreateAct(ActionEvent event) {
         MainProgram.primaryWindow.getScene().setRoot(MainProgram.createact);
         reloadPage();
-
     }
 
     @FXML
     void callLogout(ActionEvent event) {
         MainProgram.primaryWindow.getScene().setRoot(MainProgram.login);
         reloadPage();
+    }
+
+    @FXML
+    void callcanclejoinAct(ActionEvent event) {
+        joindialog.close();
+        joinPane.setVisible(false);
+        JoinPassField.clear();
+    }
+
+    @FXML
+    void callsubmitjoinAct(ActionEvent event) {
+
+        //check join act password
+        String pass = JoinPassField.getText();
+        if (pass.equals(currentselectact.getPassword()))
+        {
+            // join act when pass valid
+            ObjectDB odb = new ObjectDB();
+            odb.createConnection(MainProgram.DBName);
+            HasActivity hact = new HasActivity(currentselectact,0);
+            odb.saveObject(hact);
+            odb.closeConnection();
+            // update hasact in person
+            EntityManager em = odb.createConnection(MainProgram.DBName);
+            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+MainProgram.personCurrent.getId()+"", Person.class);
+            List<Person> results = query.getResultList();
+            em.getTransaction().begin();
+            for (Person p : results) {
+                p.addAct(hact);
+                MainProgram.personCurrent = p;
+            }
+            em.getTransaction().commit();
+            odb.closeConnection();
+            joindialog.close();
+            joinPane.setVisible(false);
+            JoinPassField.clear();
+            reloadPage();
+        }
+        else //when password is false
+        {
+            System.out.println("password invalid");
+        }
 
     }
 
@@ -91,32 +142,14 @@ public class MainPageController implements Reloadable {
         if (isDoNotJoin(currentselectact)) //don't join yet
         {
             //TODO
+            joinActID.setText(currentselectact.getActid());
+            joinActName.setText(currentselectact.getActname());
+            joinOrgName.setText(currentselectact.getOrgname());
             joinPane.setVisible(true);
             if (joindialog == null) {
                 joindialog = new JFXDialog(joinPane, contentofjoin, JFXDialog.DialogTransition.CENTER);
             }
             joindialog.show();
-
-            // join act when pass valid
-//            ObjectDB odb = new ObjectDB();
-//            odb.createConnection(MainProgram.DBName);
-//            HasActivity hact = new HasActivity(currentselectact,0);
-//            odb.saveObject(hact);
-//            odb.closeConnection();
-//            // update hasact in person
-//            EntityManager em = odb.createConnection(MainProgram.DBName);
-//            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+MainProgram.personCurrent.getId()+"", Person.class);
-//            List<Person> results = query.getResultList();
-//            em.getTransaction().begin();
-//            for (Person p : results) {
-//                p.addAct(hact);
-//                MainProgram.personCurrent = p;
-//            }
-//            em.getTransaction().commit();
-//            odb.closeConnection();
-//            System.out.println(currentselectact.getActname());
-//            reloadPage();
-
         }
         else //in hasActivity
         {
@@ -160,6 +193,7 @@ public class MainPageController implements Reloadable {
     @FXML
     void callCancelJoin(MouseEvent event) {
         joinPane.setVisible(false);
+        JoinPassField.clear();
     }
 
     public ObservableList<Activity> getAllActivity()
@@ -248,6 +282,7 @@ public class MainPageController implements Reloadable {
         currentselectact = null;
         join_button.setDisable(true);
         joinPane.setVisible(false);
+        JoinPassField.clear();
     }
 
 
@@ -260,5 +295,6 @@ public class MainPageController implements Reloadable {
         currentselectact = null;
         join_button.setDisable(true);
         joinPane.setVisible(false);
+        JoinPassField.clear();
     }
 }
