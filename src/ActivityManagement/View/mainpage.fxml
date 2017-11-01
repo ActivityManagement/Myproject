@@ -220,6 +220,31 @@
                                     <Font name="Arial Bold" size="16.0" />
                                  </font>
                               </JFXButton>
+                              <Label layoutX="112.0" layoutY="201.0" prefHeight="17.0" prefWidth="149.0" text="*Password invalid " textFill="RED" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                  </JFXDialogLayout>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="720.0" prefWidth="1280.0" visible="false">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <JFXDialogLayout prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: f1edd0;" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="295.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="26.0" layoutY="72.0" prefHeight="50.0" prefWidth="407.0" text="Your request has been sent already please wating master approve you to join activity">
+                                 <font>
+                                    <Font name="Arial Bold" size="10.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </AnchorPane>
                      </children>
