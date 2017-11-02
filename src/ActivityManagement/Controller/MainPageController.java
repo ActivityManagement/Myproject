@@ -106,10 +106,7 @@ public class MainPageController implements Reloadable {
 
     @FXML
     void callcanceljoinAct(ActionEvent event) {
-        joindialog.close();
-        joinPane.setVisible(false);
-        JoinPassField.clear();
-        statusjointext.setText("");
+        closeAllDialogPane();
     }
 
     @FXML
@@ -206,10 +203,20 @@ public class MainPageController implements Reloadable {
         return false;
     }
 
+    //cancle stack pane with click on pane
     @FXML
     void callCancelJoin(MouseEvent event) {
+        closeAllDialogPane();
+    }
+
+    void closeAllDialogPane()
+    {
         joinPane.setVisible(false);
         waitPane.setVisible(false);
+        if (joindialog != null)
+            joindialog.close();
+        if (waitdialog != null)
+            waitdialog.close();
         JoinPassField.clear();
         statusjointext.setText("");
     }
@@ -266,44 +273,33 @@ public class MainPageController implements Reloadable {
         return activity;
     }
 
-    @FXML
-    void clickActItem(MouseEvent event) {
-
-        if (!acttable.getSelectionModel().isEmpty())
+    void clickActSelect(TableView<Activity> actset,TableView<Activity> actreset)
+    {
+        if (!actset.getSelectionModel().isEmpty())
         {
-            currentselectact = acttable.getSelectionModel().getSelectedItem();
+            currentselectact = actset.getSelectionModel().getSelectedItem();
             join_button.setDisable(false);
-            if (!myacttable.getSelectionModel().isEmpty()) //if another table had selected
+            if (!actreset.getSelectionModel().isEmpty()) //if another table had selected
             {
-                myacttable.getSelectionModel().clearSelection();
+                actreset.getSelectionModel().clearSelection();
             }
         }
+    }
+
+    @FXML
+    void clickActItem(MouseEvent event) {
+        clickActSelect(acttable,myacttable);
     }
 
     @FXML
     void clickMyActItem(MouseEvent event) {
-
-        if (!myacttable.getSelectionModel().isEmpty())
-        {
-            currentselectact = myacttable.getSelectionModel().getSelectedItem();
-            join_button.setDisable(false);
-            if (!acttable.getSelectionModel().isEmpty()) //if another table had selected
-            {
-                acttable.getSelectionModel().clearSelection();
-            }
-        }
+        clickActSelect(myacttable,acttable);
     }
 
     @FXML
     void callRefreshTable(ActionEvent event) {
-        loadTableActivity();
-        currentselectact = null;
-        join_button.setDisable(true);
-        joinPane.setVisible(false);
-        JoinPassField.clear();
-        statusjointext.setText("");
+        MainProgram.stageMainPage.reloadPage();
     }
-
 
     @Override
     public void reloadPage() {
@@ -313,8 +309,8 @@ public class MainPageController implements Reloadable {
         lnameLabel.setText(MainProgram.personCurrent.getLastname());
         currentselectact = null;
         join_button.setDisable(true);
+        statusjointext.setText("");
         joinPane.setVisible(false);
         JoinPassField.clear();
-        statusjointext.setText("");
     }
 }
