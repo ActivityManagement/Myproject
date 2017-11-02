@@ -281,8 +281,8 @@ public class MainPageController implements Reloadable {
             join_button.setDisable(false);
             //TODO
             // edit disable join button when waiting to join
-            if (currentselectact.getActstatus().equals("Waiting"))
-                join_button.setDisable(true);
+//            if (currentselectact.getActstatus().equals("Waiting"))
+//                join_button.setDisable(true);
 
             if (!actreset.getSelectionModel().isEmpty()) //if another table had selected
             {
