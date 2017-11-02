@@ -18,12 +18,14 @@ public class MainProgram extends Application {
     public static Parent login;
     public static Parent createact;
     public static Parent mainpage;
+    public static Parent mainactpage;
     public static Person personCurrent;
     public static String DBName = "ActivityManagementDB.odb";
 
     public static MainPageController stageMainPage;
     public static LoginController stageLoginPage;
     public static CreateActController stageCreateActPage;
+    public static ActPageController stageMainActPage;
 
     private double winWidth = 1280;
     private double winHeigth = 720;
@@ -50,6 +52,12 @@ public class MainProgram extends Application {
         loader.setLocation(getClass().getResource("View/mainpage.fxml"));
         mainpage = loader.load();
         stageMainPage = loader.getController();
+        //------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------
+        loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("View/mainact.fxml"));
+        mainactpage = loader.load();
+        stageMainActPage = loader.getController();
         //------------------------------------------------------------------------------------------
         programScene = new Scene(login);
         primaryWindow = primaryStage;

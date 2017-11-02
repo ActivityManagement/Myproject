@@ -164,11 +164,11 @@ public class MainPageController implements Reloadable {
             if (isApprove(currentselectact)) //wait to approve
             {
                 //TODO
+                MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainactpage);
                 System.out.println("gogo");
             }
             else
             {
-                //TODO
                 waitPane.setVisible(true);
                 if (waitdialog == null) {
                     waitdialog = new JFXDialog(waitPane, contentofwaiting, JFXDialog.DialogTransition.CENTER);
