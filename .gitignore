@@ -1,4 +1,5 @@
 out/
 \.idea/
 
-src/objectdb/log/odb20171031\.log
+src/objectdb/log/
+src/objectdb/db/ActivityManagementDB.odb
