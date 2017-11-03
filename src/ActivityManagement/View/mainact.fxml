@@ -16,6 +16,18 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ActivityManagement.Controller.ActPageController">
    <children>
+      <VBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #ffe3bc;" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1018.0" style="-fx-background-color: #ffe3bc;" text="Title">
+               <font>
+                  <Font name="Arial Bold" size="21.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
       <VBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #11425a;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label alignment="CENTER" prefHeight="50.0" prefWidth="1280.0" text="Activity Management" textFill="WHITE">
@@ -59,18 +71,6 @@
       </JFXButton>
       <AnchorPane layoutX="436.0" layoutY="100.0" prefHeight="670.0" prefWidth="1018.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
          <children>
-            <VBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #ffe3bc;" AnchorPane.bottomAnchor="620.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="1018.0" style="-fx-background-color: #ffe3bc;" text="Title">
-                     <font>
-                        <Font name="Arial Bold" size="21.0" />
-                     </font>
-                  </Label>
-               </children>
-               <effect>
-                  <DropShadow />
-               </effect>
-            </VBox>
             <JFXTabPane layoutX="24.0" layoutY="6.0" prefHeight="670.0" prefWidth="1018.0" stylesheets="@css/tabmainact.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
                <tabs>
                   <Tab text="Joined">
