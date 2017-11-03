@@ -30,7 +30,7 @@
       </VBox>
       <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="60.0" prefHeight="670.0" prefWidth="262.0" style="-fx-background-color: #b3b4bb;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
          <children>
-            <JFXButton alignment="TOP_LEFT" buttonType="RAISED" prefHeight="39.0" prefWidth="262.0" style="-fx-background-color: #7fccb5;" text="Team" textFill="WHITE">
+            <JFXButton alignment="TOP_LEFT" buttonType="RAISED" prefHeight="39.0" prefWidth="262.0" style="-fx-background-color: #7fccb5;" text="Department" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
@@ -59,7 +59,19 @@
       </JFXButton>
       <AnchorPane layoutX="436.0" layoutY="100.0" prefHeight="670.0" prefWidth="1018.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
          <children>
-            <JFXTabPane layoutX="24.0" layoutY="6.0" prefHeight="670.0" prefWidth="1018.0" stylesheets="@css/tabmainact.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #ffe3bc;" AnchorPane.bottomAnchor="620.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="1018.0" style="-fx-background-color: #ffe3bc;" text="Title">
+                     <font>
+                        <Font name="Arial Bold" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </VBox>
+            <JFXTabPane layoutX="24.0" layoutY="6.0" prefHeight="670.0" prefWidth="1018.0" stylesheets="@css/tabmainact.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
                <tabs>
                   <Tab text="Joined">
                     <content>
