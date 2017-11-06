@@ -31,7 +31,7 @@ public class MainProgram extends Application {
     public static ActPageController stageMainActPage;
 
     private double winWidth = 1280;
-    private double winHeigth = 720;
+    private double winHeigth = 720+40;
 
     public static void main(String[] args) {
         launch(args);
