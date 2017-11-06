@@ -22,6 +22,11 @@ public class ActPageController implements Reloadable{
     @Override
     public void reloadPage() {
         mainactpane.getChildren().clear();
+    }
 
+    @FXML
+    void calltoShowMemberPane(ActionEvent event) {
+        mainactpane.getChildren().clear();
+        mainactpane.getChildren().add(MainProgram.memberactpane);
     }
 }

@@ -35,7 +35,7 @@
                   <Font name="System Bold" size="22.0" />
                </font>
             </JFXButton>
-            <JFXButton alignment="TOP_LEFT" buttonType="RAISED" prefHeight="39.0" prefWidth="262.0" style="-fx-background-color: #7fccb5;" text="Member" textFill="WHITE">
+            <JFXButton alignment="TOP_LEFT" buttonType="RAISED" onAction="#calltoShowMemberPane" prefHeight="39.0" prefWidth="262.0" style="-fx-background-color: #7fccb5;" text="Member" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
