@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="620.0" prefWidth="1018.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="620.0" prefWidth="1018.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ActivityManagement.Controller.MemberActPaneController">
    <children>
       <JFXTabPane layoutX="24.0" layoutY="6.0" stylesheets="@css/tabmainact.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <tabs>
@@ -21,10 +21,10 @@
                               <Font name="Arial Bold" size="16.0" />
                            </font>
                         </JFXButton>
-                        <TableView fx:id="myacttable" prefHeight="554.0" prefWidth="1018.0" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="joinedTable" prefHeight="554.0" prefWidth="1018.0" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <columns>
-                              <TableColumn fx:id="myactidColumn" prefWidth="131.0" text="User ID" />
-                              <TableColumn fx:id="myactnameColumn" prefWidth="440.0" text="Name" />
+                              <TableColumn fx:id="joinedpidColumn" prefWidth="131.0" text="User ID" />
+                              <TableColumn fx:id="joinedpnameColumn" prefWidth="440.0" text="Name" />
                            </columns>
                         </TableView>
                      </children>
@@ -45,10 +45,10 @@
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </JFXButton>
-                        <TableView fx:id="myacttable1" prefHeight="554.0" prefWidth="1018.0" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="reqTable" prefHeight="554.0" prefWidth="1018.0" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <columns>
-                              <TableColumn fx:id="myactidColumn1" prefWidth="131.0" text="User ID" />
-                              <TableColumn fx:id="myactnameColumn1" prefWidth="440.0" text="Name" />
+                              <TableColumn fx:id="reqpidColumn" prefWidth="131.0" text="User ID" />
+                              <TableColumn fx:id="reqpnameColumn" prefWidth="440.0" text="Name" />
                            </columns>
                         </TableView>
                      </children>

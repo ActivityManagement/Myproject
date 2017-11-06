@@ -29,6 +29,7 @@ public class MainProgram extends Application {
     public static LoginController stageLoginPage;
     public static CreateActController stageCreateActPage;
     public static ActPageController stageMainActPage;
+    public static MemberActPaneController stageMemberActPane;
 
     private double winWidth = 1280;
     private double winHeigth = 720+40;
@@ -64,7 +65,7 @@ public class MainProgram extends Application {
         loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("View/memberactpane.fxml"));
         memberactpane = loader.load();
-//        stageMemberActPane = loader.getController();
+        stageMemberActPane = loader.getController();
         //------------------------------------------------------------------------------------------
         programScene = new Scene(login);
         primaryWindow = primaryStage;

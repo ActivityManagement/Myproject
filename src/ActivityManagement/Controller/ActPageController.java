@@ -34,6 +34,7 @@ public class ActPageController implements Reloadable{
         // remain anchor with children when add new node
         mainactpane.getChildren().clear();
         mainactpane.getChildren().add(MainProgram.memberactpane);
+        MainProgram.stageMemberActPane.reloadPage();
     }
 
     @FXML

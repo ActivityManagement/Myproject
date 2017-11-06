@@ -66,7 +66,7 @@ public class Activity {
                 return hact.get(i).getActstatus();
             }
         }
-        return "Valid";
+        return "Invalid";
     }
 
     public void addMember(Person p)
@@ -74,4 +74,47 @@ public class Activity {
         actmember.add(p);
     }
 
+    public ArrayList<Person> getActmember() {
+        return actmember;
+    }
+
+    public ArrayList<Person> getJoinedMember()
+    {
+        ArrayList<Person> p = new ArrayList<>();
+        for (int i = 0; i < actmember.size(); i++) {
+            Person person = actmember.get(i);
+            for (int j = 0; j < person.getMyact().size(); j++) {
+                HasActivity actperson = person.getMyact().get(j);
+                if (actperson.getActivity().getActid().equals(actid)) // check person has act
+                {
+                    if (actperson.getApprove()==1) // check if joined
+                    {
+                        p.add(person);
+                    }
+                }
+
+            }
+        }
+        return p;
+    }
+
+    public ArrayList<Person> getRequestMember()
+    {
+        ArrayList<Person> p = new ArrayList<>();
+        for (int i = 0; i < actmember.size(); i++) {
+            Person person = actmember.get(i);
+            for (int j = 0; j < person.getMyact().size(); j++) {
+                HasActivity actperson = person.getMyact().get(j);
+                if (actperson.getActivity().getActid().equals(actid)) // check person has act
+                {
+                    if (actperson.getApprove()==0) // check if request
+                    {
+                        p.add(person);
+                    }
+                }
+
+            }
+        }
+        return p;
+    }
 }
