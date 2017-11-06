@@ -69,4 +69,9 @@ public class Activity {
         return "Valid";
     }
 
+    public void addMember(Person p)
+    {
+        actmember.add(p);
+    }
+
 }

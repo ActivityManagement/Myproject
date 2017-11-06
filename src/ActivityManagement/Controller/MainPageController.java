@@ -128,7 +128,7 @@ public class MainPageController implements Reloadable {
             HasActivity hact = new HasActivity(currentselectact,0);
             odb.saveObject(hact);
             odb.closeConnection();
-            // update hasact in person
+            //-------------------------- update hasact in person--------------------------
             EntityManager em = odb.createConnection(MainProgram.DBName);
             TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+MainProgram.personCurrent.getId()+"", Person.class);
             List<Person> results = query.getResultList();
@@ -138,6 +138,18 @@ public class MainPageController implements Reloadable {
                 MainProgram.personCurrent = p;
             }
             em.getTransaction().commit();
+            //----------------------------------------------------------------------------
+            //-------------------------- update hasact in person--------------------------
+            em = odb.createConnection(MainProgram.DBName);
+            TypedQuery<Activity> actquery = em.createQuery("SELECT a FROM Activity a where a.actid = '"+currentselectact.getActid()+"'", Activity.class);
+            List<Activity> actresults = actquery.getResultList();
+            em.getTransaction().begin();
+            for (Activity a : actresults) {
+                a.addMember(MainProgram.personCurrent);
+                currentselectact = a;
+            }
+            em.getTransaction().commit();
+            //-----------------------------------------------------------------------------
             odb.closeConnection();
             joindialog.close();
             joinPane.setVisible(false);
