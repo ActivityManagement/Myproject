@@ -4,6 +4,7 @@ import ActivityManagement.Controller.*;
 import ActivityManagement.Model.ObjectDB;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -19,6 +20,8 @@ public class MainProgram extends Application {
     public static Parent createact;
     public static Parent mainpage;
     public static Parent mainactpage;
+    public static Node memberactpane;
+
     public static Person personCurrent;
     public static String DBName = "ActivityManagementDB.odb";
 
@@ -53,11 +56,15 @@ public class MainProgram extends Application {
         mainpage = loader.load();
         stageMainPage = loader.getController();
         //------------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------------
         loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("View/mainact.fxml"));
         mainactpage = loader.load();
         stageMainActPage = loader.getController();
+        //------------------------------------------------------------------------------------------
+        loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("View/NewActPane.fxml"));
+        memberactpane = loader.load();
+//        stageMemberActPane = loader.getController();
         //------------------------------------------------------------------------------------------
         programScene = new Scene(login);
         primaryWindow = primaryStage;
