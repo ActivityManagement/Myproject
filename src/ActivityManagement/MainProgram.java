@@ -62,7 +62,7 @@ public class MainProgram extends Application {
         stageMainActPage = loader.getController();
         //------------------------------------------------------------------------------------------
         loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("View/NewActPane.fxml"));
+        loader.setLocation(getClass().getResource("View/mainactpane.fxml"));
         memberactpane = loader.load();
 //        stageMemberActPane = loader.getController();
         //------------------------------------------------------------------------------------------
