@@ -3,12 +3,15 @@ package ActivityManagement.Controller;
 import ActivityManagement.MainProgram;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 public class ActPageController implements Reloadable{
 
     @FXML
     private AnchorPane mainactpane;
+    @FXML
+    private Label titleact;
 
     @FXML
     void callBacktoHome(ActionEvent event) {
@@ -22,6 +25,7 @@ public class ActPageController implements Reloadable{
     @Override
     public void reloadPage() {
         mainactpane.getChildren().clear();
+        titleact.setText(MainProgram.stageMainPage.getCurrentselectact().getActname());
     }
 
     @FXML

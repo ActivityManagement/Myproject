@@ -18,7 +18,7 @@
    <children>
       <VBox alignment="CENTER" maxWidth="1018.0" prefHeight="50.0" style="-fx-background-color: #ffe3bc;" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
          <children>
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1018.0" style="-fx-background-color: #ffe3bc;" text="Title">
+            <Label fx:id="titleact" alignment="CENTER" prefHeight="50.0" prefWidth="1018.0" style="-fx-background-color: #ffe3bc;" text="Title">
                <font>
                   <Font name="Arial Bold" size="21.0" />
                </font>

@@ -93,6 +93,11 @@ public class MainPageController implements Reloadable {
     private Activity currentselectact;
 
 
+    public Activity getCurrentselectact()
+    {
+        return currentselectact;
+    }
+
     @FXML
     void callCreateAct(ActionEvent event) {
         MainProgram.primaryWindow.getScene().setRoot(MainProgram.createact);
