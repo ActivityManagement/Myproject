@@ -26,7 +26,15 @@ public class ActPageController implements Reloadable{
 
     @FXML
     void calltoShowMemberPane(ActionEvent event) {
+        //TODO
+        // remain anchor with children when add new node
         mainactpane.getChildren().clear();
         mainactpane.getChildren().add(MainProgram.memberactpane);
+    }
+
+    @FXML
+    void calltoShowDepartmentPane(ActionEvent event) {
+        mainactpane.getChildren().clear();
+
     }
 }
