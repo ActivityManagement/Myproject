@@ -21,6 +21,7 @@ public class ActPageController implements Reloadable{
 
     @Override
     public void reloadPage() {
+        mainactpane.getChildren().clear();
 
     }
 }
