@@ -13,6 +13,7 @@ import javafx.scene.control.*;
 
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 
 import javax.persistence.EntityManager;
@@ -165,6 +166,7 @@ public class MainPageController implements Reloadable {
             {
                 //TODO
                 MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainactpage);
+                MainProgram.stageMainActPage.reloadPage();
                 System.out.println("gogo");
             }
             else
@@ -318,4 +320,5 @@ public class MainPageController implements Reloadable {
         joinPane.setVisible(false);
         JoinPassField.clear();
     }
+
 }
