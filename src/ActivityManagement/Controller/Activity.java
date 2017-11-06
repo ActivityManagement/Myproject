@@ -16,7 +16,9 @@ public class Activity {
     private String actdes;
     private int active;
     @OneToMany(fetch=FetchType.EAGER)
-    private ArrayList<SubActivity> subact = new ArrayList<SubActivity>();;
+    private ArrayList<SubActivity> subact = new ArrayList<SubActivity>();
+    @OneToMany(fetch=FetchType.EAGER)
+    private ArrayList<Person> actmember = new ArrayList<>();
 
     public Activity(){}
     public Activity(String aid,String aname,String oname,String pass,String ades)
