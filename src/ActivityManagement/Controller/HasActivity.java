@@ -10,6 +10,12 @@ public class HasActivity {
     private int approve;
     private String actstatus;
     private Role role;
+    /*
+    status approve :
+    0 = waiting
+    1 = joined
+    2 = rejected
+     */
 
 
     public HasActivity(){}

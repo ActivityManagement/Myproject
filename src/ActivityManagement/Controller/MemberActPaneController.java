@@ -82,32 +82,47 @@ public class MemberActPaneController implements Reloadable{
     @FXML
     void callApproveSelect(ActionEvent event) {
         if (currentselectReqPerson!=null) {
-            //TODO
-            System.out.println(currentselectReqPerson.getFirstname());
-            ObjectDB odb = new ObjectDB();
-            EntityManager em = odb.createConnection(MainProgram.DBName);
-            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+currentselectReqPerson.getId()+"", Person.class);
-            List<Person> results = query.getResultList();
-            em.getTransaction().begin();
-            for (Person p : results) {
-                ArrayList<HasActivity> hact = p.getMyact();
-                for (HasActivity ha : hact) {
-                    //search has act of this activity
-                    if (ha.getActivity().getActid().equals(MainProgram.stageMainPage.getCurrentselectact().getActid()))
-                    {
-                        ha.setApprove(1);
-                    }
-                }
-                currentselectReqPerson = p;
-            }
-            em.getTransaction().commit();
-            odb.closeConnection();
+            setStatus(1);
         }
         reloadPage();
     }
 
+    @FXML
+    void callRejectMember(ActionEvent event) {
+        if (currentselectReqPerson!=null) {
+            setStatus(2);
+        }
+        reloadPage();
+    }
+
+    public void setStatus(int status)
+    {
+        //TODO
+        System.out.println(currentselectReqPerson.getFirstname());
+        ObjectDB odb = new ObjectDB();
+        EntityManager em = odb.createConnection(MainProgram.DBName);
+        TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+currentselectReqPerson.getId()+"", Person.class);
+        List<Person> results = query.getResultList();
+        em.getTransaction().begin();
+        for (Person p : results) {
+            ArrayList<HasActivity> hact = p.getMyact();
+            for (HasActivity ha : hact) {
+                //search has act of this activity
+                if (ha.getActivity().getActid().equals(MainProgram.stageMainPage.getCurrentselectact().getActid()))
+                {
+                    ha.setApprove(status);
+                }
+            }
+            currentselectReqPerson = p;
+        }
+        em.getTransaction().commit();
+        odb.closeConnection();
+    }
+
     @Override
     public void reloadPage() {
+        MainProgram.updatePerson();
+        MainProgram.updateActivity();
         loadMemberTable();
     }
 }
