@@ -9,8 +9,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
 
 public class MainProgram extends Application {
 
@@ -87,5 +89,33 @@ public class MainProgram extends Application {
         em.getMetamodel().entity(HasActivity.class);
         odb.closeConnection();
 
+    }
+
+    public static void updateActivity()
+    {
+        ObjectDB odb = new ObjectDB();
+        EntityManager em = odb.createConnection(DBName);
+        TypedQuery<Activity> query = em.createQuery("SELECT a FROM Activity a where a.actid = '"+stageMainPage.getCurrentselectact().getActid()+"'", Activity.class);
+        List<Activity> results = query.getResultList();
+        em.getTransaction().begin();
+        for (Activity a : results) {
+            stageMainPage.setCurrentselectact(a);
+        }
+        em.getTransaction().commit();
+        odb.closeConnection();
+    }
+
+    public static void updatePerson()
+    {
+        ObjectDB odb = new ObjectDB();
+        EntityManager em = odb.createConnection(DBName);
+        TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = '"+personCurrent.getId()+"'", Person.class);
+        List<Person> results = query.getResultList();
+        em.getTransaction().begin();
+        for (Person p : results) {
+            personCurrent = p;
+        }
+        em.getTransaction().commit();
+        odb.closeConnection();
     }
 }

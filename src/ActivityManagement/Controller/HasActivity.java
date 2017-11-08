@@ -16,8 +16,7 @@ public class HasActivity {
     public HasActivity(Activity act,int app)
     {
         this.activity = act;
-        this.approve = app;
-        actstatus = getStatusText();
+        setApprove(app);
     }
 
     public int getApprove()
@@ -33,6 +32,7 @@ public class HasActivity {
     public void setApprove(int value)
     {
         approve = value;
+        actstatus = getStatusText();
     }
 
     public String getActstatus()
@@ -44,7 +44,9 @@ public class HasActivity {
     public String getStatusText()
     {
         if (approve==0) return "Waiting";
-        return "Joined";
+        else if (approve==1) return "Joined";
+        else
+            return "Rejected";
     }
 
     public Activity getActivity() {
