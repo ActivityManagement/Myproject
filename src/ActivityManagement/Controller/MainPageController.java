@@ -3,19 +3,22 @@ package ActivityManagement.Controller;
 import ActivityManagement.MainProgram;
 import ActivityManagement.Model.ObjectDB;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXDialog;
+import com.jfoenix.controls.JFXDialogLayout;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
+
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.StackPane;
 
+import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainPageController implements Reloadable {
@@ -34,39 +37,255 @@ public class MainPageController implements Reloadable {
 
     @FXML
     private TableView<Activity> acttable;
-
     @FXML
     private TableColumn<Activity, String> actidColumn;
-
     @FXML
     private TableColumn<Activity, String> actnameColumn;
-
     @FXML
     private TableColumn<Activity, String> actorColumn;
-
     @FXML
     private TableColumn<Activity, String> actdescColumn;
 
+    @FXML
+    private TableView<Activity> myacttable;
+    @FXML
+    private TableColumn<Activity, String> myactidColumn;
+    @FXML
+    private TableColumn<Activity, String> myactnameColumn;
+    @FXML
+    private TableColumn<Activity, String> myactorColumn;
+    @FXML
+    private TableColumn<Activity, String> myactdescColumn;
+    @FXML
+    private TableColumn<Activity, String> myactstatusColumn;
+
+    @FXML
+    private StackPane joinPane;
+    @FXML
+    private JFXDialogLayout contentofjoin;
+
+    @FXML
+    private PasswordField JoinPassField;
+
+
+    @FXML
+    private Label joinActID;
+
+    @FXML
+    private Label joinActName;
+
+    @FXML
+    private Label joinOrgName;
+
+    @FXML
+    private Label statusjointext;
+
+    @FXML
+    private StackPane waitPane;
+
+    @FXML
+    private JFXDialogLayout contentofwaiting;
+
+    private JFXDialog waitdialog = null;
+
+    private JFXDialog joindialog = null;
+
     private Activity currentselectact;
 
+
+    public Activity getCurrentselectact()
+    {
+        return currentselectact;
+    }
+
+    public void setCurrentselectact(Activity a)
+    {
+        currentselectact = a;
+    }
 
     @FXML
     void callCreateAct(ActionEvent event) {
         MainProgram.primaryWindow.getScene().setRoot(MainProgram.createact);
         reloadPage();
-
     }
 
     @FXML
     void callLogout(ActionEvent event) {
         MainProgram.primaryWindow.getScene().setRoot(MainProgram.login);
         reloadPage();
+    }
+
+    @FXML
+    void callcanceljoinAct(ActionEvent event) {
+        closeAllDialogPane();
+    }
+
+    @FXML
+    void callsubmitjoinAct(ActionEvent event) {
+
+        //check join act password
+        String pass = JoinPassField.getText();
+        if (pass.equals(currentselectact.getPassword()))
+        {
+            // join act when pass valid
+            //TODO
+            // check if join again
+            boolean found = false;
+            MainProgram.updatePerson();
+            MainProgram.updateActivity();
+            ArrayList<HasActivity> myact = MainProgram.personCurrent.getMyact();
+            for (HasActivity ha : myact) {
+                // check if has act
+                if (ha.getActivity().getActid().equals(currentselectact.getActid()))
+                {
+                    found = true;
+                }
+            }
+
+            if (found)
+            {
+                //TODO
+                ObjectDB odb = new ObjectDB();
+                EntityManager em = odb.createConnection(MainProgram.DBName);
+                TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = " + MainProgram.personCurrent.getId() + "", Person.class);
+                List<Person> results = query.getResultList();
+                em.getTransaction().begin();
+                for (Person p : results) {
+                    ArrayList<HasActivity> hact = p.getMyact();
+                    for (HasActivity ha : hact) {
+                        //search has act of this activity
+                        if (ha.getActivity().getActid().equals(MainProgram.stageMainPage.getCurrentselectact().getActid()))
+                        {
+                            ha.setApprove(0);
+                        }
+                    }
+                    MainProgram.personCurrent = p;
+                }
+                em.getTransaction().commit();
+                odb.closeConnection();
+            }
+            else {
+                ObjectDB odb = new ObjectDB();
+                odb.createConnection(MainProgram.DBName);
+                HasActivity hact = new HasActivity(currentselectact, 0);
+                odb.saveObject(hact);
+                odb.closeConnection();
+                //-------------------------- update hasact in person--------------------------
+                EntityManager em = odb.createConnection(MainProgram.DBName);
+                TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = " + MainProgram.personCurrent.getId() + "", Person.class);
+                List<Person> results = query.getResultList();
+                em.getTransaction().begin();
+                for (Person p : results) {
+                    p.addAct(hact);
+                    MainProgram.personCurrent = p;
+                }
+                em.getTransaction().commit();
+                //----------------------------------------------------------------------------
+                //-------------------------- update member to activity--------------------------
+                em = odb.createConnection(MainProgram.DBName);
+                TypedQuery<Activity> actquery = em.createQuery("SELECT a FROM Activity a where a.actid = '" + currentselectact.getActid() + "'", Activity.class);
+                List<Activity> actresults = actquery.getResultList();
+                em.getTransaction().begin();
+                for (Activity a : actresults) {
+                    a.addMember(MainProgram.personCurrent);
+                    currentselectact = a;
+                }
+                em.getTransaction().commit();
+                //-----------------------------------------------------------------------------
+                odb.closeConnection();
+            }
+            MainProgram.updateActivity();
+            MainProgram.updatePerson();
+            joindialog.close();
+            joinPane.setVisible(false);
+            JoinPassField.clear();
+            reloadPage();
+        }
+        else //when password is false
+        {
+            statusjointext.setText("*Password invalid ");
+        }
 
     }
 
     @FXML
     void callJoinEvent(ActionEvent event) {
-        //TODO
+        //add condition
+        if (isDoNotJoin(currentselectact)) //don't join yet
+        {
+            joinActID.setText(currentselectact.getActid());
+            joinActName.setText(currentselectact.getActname());
+            joinOrgName.setText(currentselectact.getOrgname());
+            joinPane.setVisible(true);
+            if (joindialog == null) {
+                joindialog = new JFXDialog(joinPane, contentofjoin, JFXDialog.DialogTransition.CENTER);
+            }
+            joindialog.show();
+        }
+        else //in hasActivity
+        {
+            if (isApprove(currentselectact))
+            {
+                //TODO
+                MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainactpage);
+                MainProgram.stageMainActPage.reloadPage();
+                System.out.println("gogo");
+            }
+            else //wait to approve
+            {
+                waitPane.setVisible(true);
+                if (waitdialog == null) {
+                    waitdialog = new JFXDialog(waitPane, contentofwaiting, JFXDialog.DialogTransition.CENTER);
+                }
+                waitdialog.show();
+                System.out.println("waiting");
+            }
+        }
+    }
+
+    public boolean isDoNotJoin(Activity a)
+    {
+        ArrayList<HasActivity> hact = MainProgram.personCurrent.getMyact();
+        for (int i = 0; i < hact.size() ; i++) {
+            if (a.getActid().equals(hact.get(i).getActivity().getActid()))
+            {
+                if (hact.get(i).getApprove()!=2) // if not rejected
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean isApprove(Activity a)
+    {
+        ArrayList<HasActivity> hact = MainProgram.personCurrent.getMyact();
+        for (int i = 0; i < hact.size() ; i++) {
+            if (a.getActid().equals(hact.get(i).getActivity().getActid()))
+            {
+                if (hact.get(i).getApprove()==1) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    //cancle stack pane with click on pane
+    @FXML
+    void callCancelJoin(MouseEvent event) {
+        closeAllDialogPane();
+    }
+
+    void closeAllDialogPane()
+    {
+        joinPane.setVisible(false);
+        waitPane.setVisible(false);
+        if (joindialog != null)
+            joindialog.close();
+        if (waitdialog != null)
+            waitdialog.close();
+        JoinPassField.clear();
+        statusjointext.setText("");
     }
 
     public ObservableList<Activity> getAllActivity()
@@ -92,6 +311,13 @@ public class MainPageController implements Reloadable {
         actdescColumn.setCellValueFactory(new PropertyValueFactory<>("actdes"));
         acttable.setItems(getAllActivity());
 
+        myactidColumn.setCellValueFactory(new PropertyValueFactory<>("actid"));
+        myactnameColumn.setCellValueFactory(new PropertyValueFactory<>("actname"));
+        myactorColumn.setCellValueFactory(new PropertyValueFactory<>("orgname"));
+        myactdescColumn.setCellValueFactory(new PropertyValueFactory<>("actdes"));
+        myactstatusColumn.setCellValueFactory(new PropertyValueFactory<>("actstatus"));
+        myacttable.setItems(getMyActivity());
+
 //        acttable.setRowFactory( tv -> {
 //            TableRow<Activity> arow = new TableRow<>();
 //            arow.setOnMouseClicked(event -> {
@@ -104,23 +330,51 @@ public class MainPageController implements Reloadable {
 
     }
 
-    @FXML
-    void clickItem(MouseEvent event) {
-        if (!acttable.getSelectionModel().isEmpty())
-        {
-            currentselectact = acttable.getSelectionModel().getSelectedItem();
-            join_button.setDisable(false);
+    public ObservableList<Activity> getMyActivity()
+    {
+        //TODO
+        //Remain remove Rejected from table
+        ObservableList<Activity> activity = FXCollections.observableArrayList();
+        ArrayList<HasActivity> hact = MainProgram.personCurrent.getMyact();
+        for (int i = 0; i < hact.size() ; i++) {
+            if (hact.get(i).getApprove()!=2) // except Rejected
+                activity.add(hact.get(i).getActivity());
         }
+        return activity;
+    }
 
+    void clickActSelect(TableView<Activity> actset,TableView<Activity> actreset)
+    {
+        if (!actset.getSelectionModel().isEmpty())
+        {
+            currentselectact = actset.getSelectionModel().getSelectedItem();
+            join_button.setDisable(false);
+            //TODO
+            // edit disable join button when waiting to join
+//            if (currentselectact.getActstatus().equals("Waiting"))
+//                join_button.setDisable(true);
+
+            if (!actreset.getSelectionModel().isEmpty()) //if another table had selected
+            {
+                actreset.getSelectionModel().clearSelection();
+            }
+        }
+    }
+
+    @FXML
+    void clickActItem(MouseEvent event) {
+        clickActSelect(acttable,myacttable);
+    }
+
+    @FXML
+    void clickMyActItem(MouseEvent event) {
+        clickActSelect(myacttable,acttable);
     }
 
     @FXML
     void callRefreshTable(ActionEvent event) {
-        loadTableActivity();
-        currentselectact = null;
-        join_button.setDisable(true);
+        MainProgram.stageMainPage.reloadPage();
     }
-
 
     @Override
     public void reloadPage() {
@@ -128,5 +382,11 @@ public class MainPageController implements Reloadable {
         useridLabel.setText(MainProgram.personCurrent.getUserid());
         fnameLabel.setText(MainProgram.personCurrent.getFirstname());
         lnameLabel.setText(MainProgram.personCurrent.getLastname());
+        currentselectact = null;
+        join_button.setDisable(true);
+        statusjointext.setText("");
+        joinPane.setVisible(false);
+        JoinPassField.clear();
     }
+
 }

@@ -69,4 +69,8 @@ public class Person {
     {
         myact.add(act);
     }
+
+    public ArrayList<HasActivity> getMyact() {
+        return myact;
+    }
 }

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -12,6 +14,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -129,12 +132,12 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="367.0" prefWidth="966.0">
                      <children>
-                        <TableView fx:id="acttable" onMouseClicked="#clickItem" prefHeight="554.0" prefWidth="1020.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                        <TableView fx:id="acttable" onMouseClicked="#clickActItem" prefHeight="554.0" prefWidth="1020.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                            <columns>
-                              <TableColumn fx:id="actidColumn" prefWidth="131.0" text="ID" />
-                              <TableColumn fx:id="actnameColumn" prefWidth="262.6666259765625" text="Name" />
-                              <TableColumn fx:id="actorColumn" prefWidth="180.66668701171875" text="Organization" />
-                              <TableColumn fx:id="actdescColumn" prefWidth="443.33331298828125" text="Description" />
+                              <TableColumn fx:id="actidColumn" prefWidth="130.0" text="ID" />
+                              <TableColumn fx:id="actnameColumn" prefWidth="260.0" text="Name" />
+                              <TableColumn fx:id="actorColumn" prefWidth="180.0" text="Organization" />
+                              <TableColumn fx:id="actdescColumn" prefWidth="450.0" text="Description" />
                            </columns>
                         </TableView>
                      </children>
@@ -145,12 +148,13 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="474.0" prefWidth="966.0">
                      <children>
-                        <TableView fx:id="myacttable" prefHeight="554.0" prefWidth="1018.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                        <TableView fx:id="myacttable" onMouseClicked="#clickMyActItem" prefHeight="554.0" prefWidth="1018.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                            <columns>
-                              <TableColumn fx:id="myactidColumn" prefWidth="131.0" text="ID" />
-                              <TableColumn fx:id="myactnameColumn" prefWidth="440.0" text="Name" />
-                              <TableColumn fx:id="myactorColumn" prefWidth="255.3333740234375" text="Organization" />
-                              <TableColumn fx:id="myactdescColumn" prefWidth="189.6666259765625" text="Description" />
+                              <TableColumn fx:id="myactidColumn" prefWidth="130.0" text="ID" />
+                              <TableColumn fx:id="myactnameColumn" prefWidth="260.0" text="Name" />
+                              <TableColumn fx:id="myactorColumn" prefWidth="180.0" text="Organization" />
+                              <TableColumn fx:id="myactdescColumn" prefWidth="340.0" text="Description" />
+                              <TableColumn fx:id="myactstatusColumn" prefWidth="107.0" text="Status" />
                            </columns>
                         </TableView>
                      </children>
@@ -165,5 +169,97 @@
             <Image url="@image/search-icon-23710.png" />
          </image>
       </ImageView>
+      <StackPane fx:id="joinPane" onMouseClicked="#callCancelJoin" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="231.0" prefWidth="505.0">
+               <children>
+                  <JFXDialogLayout fx:id="contentofjoin" prefHeight="300.0" prefWidth="359.0" style="-fx-background-color: f1edd0;" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="250.0">
+                     <children>
+                        <AnchorPane prefHeight="305.0" prefWidth="368.0" style="-fx-background-color: f1edd0;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="54.0" text="Act ID :" AnchorPane.rightAnchor="210.0" AnchorPane.topAnchor="54.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font></Label>
+                              <Label layoutX="8.0" layoutY="95.0" text="Act Name :" AnchorPane.rightAnchor="210.0" AnchorPane.topAnchor="95.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font></Label>
+                              <Label layoutX="8.0" layoutY="139.0" text="Organize :" AnchorPane.rightAnchor="210.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font></Label>
+                              <Label layoutX="8.0" layoutY="180.0" text="Password :" AnchorPane.rightAnchor="210.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font></Label>
+                              <PasswordField fx:id="JoinPassField" layoutX="109.0" layoutY="176.0" />
+                              <Label fx:id="joinActName" layoutX="135.0" layoutY="8.0" text="-Activity Management-" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="8.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="joinActID" layoutX="110.0" layoutY="54.0" prefHeight="17.0" prefWidth="63.0" text="Act ID" AnchorPane.leftAnchor="112.0">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="joinActName" layoutX="112.0" layoutY="95.0" text="Act Name" AnchorPane.leftAnchor="112.0">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="joinOrgName" layoutX="112.0" layoutY="139.0" text="Organize Name">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font></Label>
+                              <JFXButton buttonType="RAISED" layoutX="95.0" layoutY="219.0" onAction="#callcanceljoinAct" prefHeight="32.0" prefWidth="77.0" ripplerFill="#90483f" style="-fx-background-color: #ff5858;" text="Cancel" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="140.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="178.0" layoutY="219.0" onAction="#callsubmitjoinAct" ripplerFill="#3b793a" style="-fx-background-color: #78c591;" text="Submit" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="40.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label fx:id="statusjointext" layoutX="112.0" layoutY="201.0" prefHeight="17.0" prefWidth="149.0" text="*Password invalid " textFill="RED" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                  </JFXDialogLayout>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <StackPane fx:id="waitPane" onMouseClicked="#callCancelJoin" prefHeight="720.0" prefWidth="1280.0" visible="false">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <JFXDialogLayout fx:id="contentofwaiting" style="-fx-background-color: f1edd0;" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="295.0">
+                     <children>
+                        <AnchorPane prefHeight="52.0" prefWidth="452.0">
+                           <children>
+                              <Label alignment="CENTER" layoutX="26.0" layoutY="72.0" prefHeight="50.0" prefWidth="407.0" text="Wating for approve ." AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="13.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="75.0" fitWidth="120.0" layoutX="413.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="-3.0">
+                                 <image>
+                                    <Image url="@image/Loading_icon1.gif" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                  </JFXDialogLayout>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
    </children>
 </AnchorPane>
