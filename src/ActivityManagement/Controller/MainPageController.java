@@ -373,7 +373,8 @@ public class MainPageController implements Reloadable {
 
     @FXML
     void callRefreshTable(ActionEvent event) {
-        MainProgram.stageMainPage.reloadPage();
+        MainProgram.updatePerson();
+        loadTableActivity();
     }
 
     @Override

@@ -109,7 +109,7 @@ public class MainProgram extends Application {
     {
         ObjectDB odb = new ObjectDB();
         EntityManager em = odb.createConnection(DBName);
-        TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = '"+personCurrent.getId()+"'", Person.class);
+        TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+personCurrent.getId()+"", Person.class);
         List<Person> results = query.getResultList();
         em.getTransaction().begin();
         for (Person p : results) {
