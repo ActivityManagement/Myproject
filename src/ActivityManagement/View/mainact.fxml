@@ -69,7 +69,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <AnchorPane fx:id="mainactpane" layoutX="436.0" layoutY="102.0" prefHeight="620.0" prefWidth="1018.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+      <AnchorPane fx:id="mainactpane" layoutX="436.0" layoutY="102.0" prefHeight="620.0" prefWidth="1018.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
          <children>
             <JFXTabPane layoutX="24.0" layoutY="6.0" prefHeight="670.0" prefWidth="1018.0" stylesheets="@css/tabmainact.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <tabs>
