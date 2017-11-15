@@ -22,6 +22,8 @@ public class MainProgram extends Application {
     public static Parent createact;
     public static Parent mainpage;
     public static Parent mainactpage;
+    public static Parent mainDept;
+    public static Node DeptPane;
     public static Node memberactpane;
 
     public static Person personCurrent;
@@ -32,6 +34,8 @@ public class MainProgram extends Application {
     public static CreateActController stageCreateActPage;
     public static ActPageController stageMainActPage;
     public static MemberActPaneController stageMemberActPane;
+    public static MainDeptController stageMainDeptController;
+    public static DeptPaneController stageDeptPane;
 
     private double winWidth = 1280;
     private double winHeigth = 720+40;
@@ -69,6 +73,16 @@ public class MainProgram extends Application {
         memberactpane = loader.load();
         stageMemberActPane = loader.getController();
         //------------------------------------------------------------------------------------------
+        loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("View/Department.fxml"));
+        DeptPane = loader.load();
+        stageDeptPane = loader.getController();
+        //------------------------------------------------------------------------------------------
+        loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("View/MasterDepartment.fxml"));
+        mainDept = loader.load();
+        stageMainDeptController = loader.getController();
+        //------------------------------------------------------------------------------------------
         programScene = new Scene(login);
         primaryWindow = primaryStage;
         primaryWindow.setTitle("Activity Management");
@@ -87,6 +101,7 @@ public class MainProgram extends Application {
         em.getMetamodel().entity(Activity.class);
         em.getMetamodel().entity(Person.class);
         em.getMetamodel().entity(HasActivity.class);
+        em.getMetamodel().entity(Department.class);
         odb.closeConnection();
 
     }

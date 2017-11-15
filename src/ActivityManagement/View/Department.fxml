@@ -7,23 +7,23 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="620.0" prefWidth="1018.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="620.0" prefWidth="1018.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ActivityManagement.Controller.DeptPaneController">
    <children>
-      <JFXTabPane layoutX="24.0" layoutY="6.0" prefHeight="620.0" prefWidth="1018.0" stylesheets="@css/tabmainact.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <JFXTabPane layoutX="24.0" layoutY="6.0" prefHeight="620.0" prefWidth="1018.0" stylesheets="@css/tabmainact.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
          <tabs>
             <Tab text="Department">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView fx:id="myacttable1" prefHeight="554.0" prefWidth="1018.0" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="DeptTable" prefHeight="554.0" prefWidth="1018.0" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <columns>
-                              <TableColumn fx:id="myactidColumn1" prefWidth="385.0" text="Department" />
-                              <TableColumn fx:id="myactnameColumn1" prefWidth="360.0" text="Master of Department" />
-                              <TableColumn fx:id="myactidColumn11" prefWidth="271.0" text="No. member" />
+                              <TableColumn fx:id="DeptName" prefWidth="385.0" text="Department" />
+                              <TableColumn fx:id="DeptHead" prefWidth="360.0" text="Master of Department" />
+                              <TableColumn fx:id="DeptMember" prefWidth="271.0" text="No. member" />
                            </columns>
                         </TableView>
-                        <Button id="record-sales" layoutX="815.0" layoutY="519.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="71.0" stylesheets="@css/Enterbutton.css" text="Enter" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="50.0" />
-                        <Button id="record-sales" mnemonicParsing="false" prefHeight="37.0" prefWidth="71.0" stylesheets="@css/Createbutton.css" text="Create" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="150.0" />
+                        <Button id="record-sales" fx:id="enter_button" layoutX="815.0" layoutY="519.0" mnemonicParsing="false" onAction="#callEnterDept" prefHeight="37.0" prefWidth="71.0" stylesheets="@css/Enterbutton.css" text="Enter" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="50.0" />
+                        <Button id="record-sales" fx:id="create_button" mnemonicParsing="false" onAction="#callCreateDept" prefHeight="37.0" prefWidth="71.0" stylesheets="@css/Createbutton.css" text="Create" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="150.0" />
                      </children>
                   </AnchorPane>
                </content>

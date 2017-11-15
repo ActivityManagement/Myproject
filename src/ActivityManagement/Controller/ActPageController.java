@@ -40,6 +40,8 @@ public class ActPageController implements Reloadable{
     @FXML
     void calltoShowDepartmentPane(ActionEvent event) {
         mainactpane.getChildren().clear();
+        mainactpane.getChildren().add(MainProgram.DeptPane);
+        MainProgram.stageDeptPane.reloadPage();
 
     }
 }
