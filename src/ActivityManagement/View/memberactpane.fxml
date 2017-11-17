@@ -23,7 +23,7 @@
                               <Font name="Arial Bold" size="16.0" />
                            </font>
                         </JFXButton>
-                        <TableView fx:id="joinedTable" layoutX="-6.0" layoutY="-6.0" prefHeight="554.0" prefWidth="1018.0" AnchorPane.bottomAnchor="87.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="-6.0">
+                        <TableView fx:id="joinedTable" layoutX="-6.0" layoutY="-6.0" prefHeight="554.0" prefWidth="1018.0" AnchorPane.bottomAnchor="87.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <columns>
                               <TableColumn fx:id="joinedpidColumn" prefWidth="131.0" text="User ID" />
                               <TableColumn fx:id="joinedpnameColumn" prefWidth="440.0" text="Name" />
@@ -59,9 +59,9 @@
             </Tab>
          </tabs>
       </JFXTabPane>
-      <VBox prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #b54444;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1500.0" style="-fx-background-color: #b54444;" text="Member" textFill="WHITE">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" style="-fx-background-color: #b54444;" text="Member" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
