@@ -23,10 +23,12 @@ public class MainProgram extends Application {
     public static Parent mainpage;
     public static Parent mainactpage;
     public static Parent mainDept;
+    public static Parent createDept;
     public static Node DeptPane;
     public static Node memberactpane;
 
     public static Person personCurrent;
+    public static Department dept;
     public static String DBName = "ActivityManagementDB.odb";
 
     public static MainPageController stageMainPage;
@@ -36,6 +38,7 @@ public class MainProgram extends Application {
     public static MemberActPaneController stageMemberActPane;
     public static MainDeptController stageMainDeptController;
     public static DeptPaneController stageDeptPane;
+    public static CreateDeptController stageCreateDeptPage;
 
     private double winWidth = 1280;
     private double winHeigth = 720+40;
@@ -83,6 +86,11 @@ public class MainProgram extends Application {
         mainDept = loader.load();
         stageMainDeptController = loader.getController();
         //------------------------------------------------------------------------------------------
+        loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("View/CreateDeptPage.fxml"));
+        createDept = loader.load();
+        stageCreateDeptPage = loader.getController();
+        //------------------------------------------------------------------------------------------
         programScene = new Scene(login);
         primaryWindow = primaryStage;
         primaryWindow.setTitle("Activity Management");
@@ -129,6 +137,20 @@ public class MainProgram extends Application {
         em.getTransaction().begin();
         for (Person p : results) {
             personCurrent = p;
+        }
+        em.getTransaction().commit();
+        odb.closeConnection();
+    }
+
+    public static void updateDepartment()
+    {
+        ObjectDB odb = new ObjectDB();
+        EntityManager em = odb.createConnection(DBName);
+        TypedQuery<Department> query = em.createQuery("SELECT d FROM Department d where d.id = '"+dept.getId()+"'", Department.class);
+        List<Department> results = query.getResultList();
+        em.getTransaction().begin();
+        for (Department d : results) {
+            dept = d;
         }
         em.getTransaction().commit();
         odb.closeConnection();

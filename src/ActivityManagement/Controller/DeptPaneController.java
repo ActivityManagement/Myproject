@@ -29,17 +29,20 @@ public class DeptPaneController implements Reloadable{
     private TableView<Department> DeptTable;
 
     @FXML
-    private TableColumn<Department, String> DeptName;
+    private TableColumn<Department, String> DeptNameColumn;
 
     @FXML
-    private TableColumn<Department, String> DeptHead;
+    private TableColumn<Department, String> DeptHeadColumn;
 
     @FXML
-    private TableColumn<Department, Integer> DeptMember;
+    private TableColumn<Department, Integer> DeptMemberColumn;
+
+    private Department currenselect;
 
     @FXML
     void callCreateDept(ActionEvent event) {
-
+        MainProgram.primaryWindow.getScene().setRoot(MainProgram.createDept);
+        MainProgram.stageCreateDeptPage.reloadPage();
     }
 
     @FXML
@@ -50,9 +53,32 @@ public class DeptPaneController implements Reloadable{
     }
 
 
+    public void LoadTable(){
+        DeptNameColumn.setCellValueFactory(new PropertyValueFactory<>("DeptName"));
+        DeptHeadColumn.setCellValueFactory(new PropertyValueFactory<>("DeptMaster"));
+        DeptMemberColumn.setCellValueFactory(new PropertyValueFactory<>("Member"));
+        DeptTable.setItems(getAllDepartment());
+    }
+
+    public ObservableList<Department> getAllDepartment()
+    {
+        ObservableList<Department> dept = FXCollections.observableArrayList();
+        ObjectDB odb = new ObjectDB();
+        EntityManager em = odb.createConnection(MainProgram.DBName);
+        TypedQuery<Department> query = em.createQuery("SELECT a FROM Department a", Department.class);
+        List<Department> results = query.getResultList();
+        em.getTransaction().begin();
+        for (Department a : results) {
+            dept.add(a);
+        }
+        odb.closeConnection();
+        return dept;
+    }
+
     @Override
     public void reloadPage() {
-        enter_button.setDisable(true);
+        enter_button.setDisable(false);
+        LoadTable();
     }
 }
 

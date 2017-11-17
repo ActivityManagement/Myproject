@@ -11,25 +11,32 @@ import java.util.List;
 @Entity
 public class Department {
 
-    @Id
+    @Id @GeneratedValue
     private int id;
     private String DeptName;
-    private String DeptMaster;
+    private long DeptMaster;
     private int Member;
+
+
 
     public Department() {}
 
-    public Department(String Deptname,String Deptmaster,int member) {
+    public Department(String Deptname,long Deptmaster,int member) {
         this.DeptName = Deptname;
         this.DeptMaster = Deptmaster;
         this.Member = member;
     }
 
+    public int getId() {
+        return id;
+    }
+
+
     public String getDeptName() {
         return DeptName;
     }
 
-    public String getDeptMaster() {
+    public long getDeptMaster() {
         return DeptMaster;
     }
 
