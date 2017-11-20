@@ -11,11 +11,13 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-public class CreateDeptController implements Reloadable{
+public class CreateDeptController implements Reloadable {
 
     @FXML
     private JFXTextField deptname_box;
-    
+
+    @FXML
+    private Label ValidationText;
 
     @FXML
     private Label create_status;
@@ -35,50 +37,53 @@ public class CreateDeptController implements Reloadable{
     @FXML
     void clickConfirmButton(ActionEvent event) {
         String deptname = deptname_box.getText();
-
-        String deptid = null;
-        ObjectDB odb = new ObjectDB();
-        EntityManager em = odb.createConnection(MainProgram.DBName);
-        if (!odb.isRecordExist("Department")) // check if does't exists any act
-            deptid = "000000";
-        else
-        {
-            int cid = 0;
-            TypedQuery<Department> query = em.createQuery("SELECT a FROM Department a", Department.class);
-            List<Department> results = query.getResultList();
-            for (Department a : results) {
-                cid = a.getId();
+        if (deptname.length() != 0) {
+            String deptid = null;
+            ObjectDB odb = new ObjectDB();
+            EntityManager em = odb.createConnection(MainProgram.DBName);
+            if (!odb.isRecordExist("Department")) // check if does't exists any act
+                deptid = "000000";
+            else {
+                int cid = 0;
+                TypedQuery<Department> query = em.createQuery("SELECT a FROM Department a", Department.class);
+                List<Department> results = query.getResultList();
+                for (Department a : results) {
+                    cid = a.getId();
+                }
+                deptid = String.format("%06d", cid + 1);
             }
-            deptid = String.format("%06d",cid+1);
-        }
-        Department dept = new Department(deptname,MainProgram.personCurrent.getId(),1);
-        //MainProgram.stageMainPage.getCurrentselectact().addDept(dept);
-        odb.saveObject(dept);
-        odb.closeConnection();
+            Department dept = new Department(deptname, MainProgram.personCurrent.getId(), 1);
+            //MainProgram.stageMainPage.getCurrentselectact().addDept(dept);
+            odb.saveObject(dept);
+            odb.closeConnection();
 
-        // update hasact in person
-        em = odb.createConnection(MainProgram.DBName);
-        TypedQuery<Activity> actquery = em.createQuery("SELECT a FROM Activity a where a.actid = '" + MainProgram.stageMainPage.getCurrentselectact().getActid() + "'", Activity.class);
-        List<Activity> actresults = actquery.getResultList();
-        em.getTransaction().begin();
-        for (Activity a : actresults) {
-            a.addDept(dept);
-            MainProgram.stageMainPage.setCurrentselectact(a);
-            //MainProgram.stageMainPage.getCurrentselectact() = a;
-        }
-        em.getTransaction().commit();
-        odb.closeConnection();
+            // update hasact in person
+            em = odb.createConnection(MainProgram.DBName);
+            TypedQuery<Activity> actquery = em.createQuery("SELECT a FROM Activity a where a.actid = '" + MainProgram.stageMainPage.getCurrentselectact().getActid() + "'", Activity.class);
+            List<Activity> actresults = actquery.getResultList();
+            em.getTransaction().begin();
+            for (Activity a : actresults) {
+                a.addDept(dept);
+                MainProgram.stageMainPage.setCurrentselectact(a);
+                //MainProgram.stageMainPage.getCurrentselectact() = a;
+            }
+            em.getTransaction().commit();
+            odb.closeConnection();
 
-        MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainactpage);
-        MainProgram.stageMainActPage.reloadPage();
-        MainProgram.stageMainActPage.calltoShowDepartmentPane(null);
-        reloadPage(); //could reload when change scene
+            MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainactpage);
+            MainProgram.stageMainActPage.reloadPage();
+            MainProgram.stageMainActPage.calltoShowDepartmentPane(null);
+            reloadPage(); //could reload when change scene
+        }
+        else{
+            ValidationText.setText("Enter department name");
+        }
     }
 
     @Override
     public void reloadPage() {
         //MainProgram.updateDepartment();
         deptname_box.clear();
-        create_status.setText("");
+        ValidationText.setText("");
     }
 }
