@@ -12,6 +12,7 @@ import java.util.List;
 public class Department {
 
     @Id @GeneratedValue
+    //private Department department;
     private int id;
     private String DeptName;
     private long DeptMaster;
@@ -42,5 +43,9 @@ public class Department {
 
     public int getMember() {
         return Member;
+    }
+
+    public Department getDepartment() {
+        return this;
     }
 }

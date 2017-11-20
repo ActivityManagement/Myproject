@@ -82,6 +82,7 @@ public class CreateActController implements Reloadable {
             }
             em.getTransaction().commit();
             odb.closeConnection();
+
             MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainpage);
             MainProgram.stageMainPage.reloadPage(); //reload to refresh act
             reloadPage(); //could reload when change scene

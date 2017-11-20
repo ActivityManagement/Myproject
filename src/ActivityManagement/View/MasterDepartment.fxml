@@ -12,7 +12,7 @@
    <children>
       <VBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #11425a;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1280.0" text="Activity Name : Department Name" textFill="WHITE">
+            <Label fx:id="titleactdept" alignment="CENTER" prefHeight="50.0" prefWidth="1280.0" text="Activity Name : Department Name" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="24.0" />
                </font>

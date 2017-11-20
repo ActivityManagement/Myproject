@@ -37,7 +37,12 @@ public class DeptPaneController implements Reloadable{
     @FXML
     private TableColumn<Department, Integer> DeptMemberColumn;
 
-    private Department currenselect;
+    private Department currenselectdept;
+
+    public Department getCurrentselectdept()
+    {
+        return currenselectdept;
+    }
 
     @FXML
     void callCreateDept(ActionEvent event) {
@@ -57,7 +62,8 @@ public class DeptPaneController implements Reloadable{
         DeptNameColumn.setCellValueFactory(new PropertyValueFactory<>("DeptName"));
         DeptHeadColumn.setCellValueFactory(new PropertyValueFactory<>("DeptMaster"));
         DeptMemberColumn.setCellValueFactory(new PropertyValueFactory<>("Member"));
-        DeptTable.setItems(getAllDepartment());
+        //DeptTable.setItems(getAllDepartment());
+        DeptTable.setItems(getActivityDepartment());
     }
 
     public ObservableList<Department> getAllDepartment()
@@ -75,9 +81,40 @@ public class DeptPaneController implements Reloadable{
         return dept;
     }
 
+    public ObservableList<Department> getActivityDepartment()
+    {
+        //TODO
+        //Remain remove Rejected from table
+        ObservableList<Department> dept = FXCollections.observableArrayList();
+        //ArrayList<HasActivity> hact = MainProgram.personCurrent.getMyact();
+        ArrayList<Department> hact = MainProgram.stageMainPage.getCurrentselectact().getMyActivityDept();
+        for (int i = 0; i < hact.size() ; i++) {
+           // if (hact.get(i).getApprove()!=2) // except Rejected
+               // activity.add(hact.get(i).getActivity());
+            dept.add(hact.get(i).getDepartment());
+        }
+        return dept;
+    }
+
+    void clickDeptSelect(TableView<Department> deptset)
+    {
+        if (!deptset.getSelectionModel().isEmpty())
+        {
+            currenselectdept = deptset.getSelectionModel().getSelectedItem();
+            enter_button.setDisable(false);
+        }
+    }
+
+    @FXML
+    void clickDeptItem(MouseEvent event) {
+        clickDeptSelect(DeptTable);
+    }
+
+
     @Override
     public void reloadPage() {
-        enter_button.setDisable(false);
+        //MainProgram.updateDepartment();
+        enter_button.setDisable(true);
         LoadTable();
     }
 }

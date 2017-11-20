@@ -23,6 +23,10 @@ import java.util.List;
 
 
 public class MainDeptController implements Reloadable {
+
+    @FXML
+    private Label titleactdept;
+
     @FXML
     void callBacktoAct(ActionEvent event) {
         MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainactpage);
@@ -37,6 +41,6 @@ public class MainDeptController implements Reloadable {
 
     @Override
     public void reloadPage() {
-
+        titleactdept.setText(MainProgram.stageDeptPane.getCurrentselectdept().getDeptName());
     }
 }

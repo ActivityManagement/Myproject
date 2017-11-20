@@ -15,7 +15,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView fx:id="DeptTable" prefHeight="554.0" prefWidth="1018.0" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="DeptTable" onMouseClicked="#clickDeptItem" prefHeight="554.0" prefWidth="1018.0" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <columns>
                               <TableColumn fx:id="DeptNameColumn" prefWidth="385.0" text="Department" />
                               <TableColumn fx:id="DeptHeadColumn" prefWidth="360.0" text="Master of Department" />

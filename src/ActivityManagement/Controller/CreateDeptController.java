@@ -52,30 +52,32 @@ public class CreateDeptController implements Reloadable{
             deptid = String.format("%06d",cid+1);
         }
         Department dept = new Department(deptname,MainProgram.personCurrent.getId(),1);
-        //dept.addMember(MainProgram.personCurrent);
-        //HasActivity hact = new HasActivity(dept,1);
-        //odb.saveObject(dept);
-        //odb.saveObject(hact);
+        //MainProgram.stageMainPage.getCurrentselectact().addDept(dept);
+        odb.saveObject(dept);
         odb.closeConnection();
 
         // update hasact in person
         em = odb.createConnection(MainProgram.DBName);
-        TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+MainProgram.personCurrent.getId()+"", Person.class);
-        List<Person> results = query.getResultList();
+        TypedQuery<Activity> actquery = em.createQuery("SELECT a FROM Activity a where a.actid = '" + MainProgram.stageMainPage.getCurrentselectact().getActid() + "'", Activity.class);
+        List<Activity> actresults = actquery.getResultList();
         em.getTransaction().begin();
-        for (Person p : results) {
-           // p.addAct(hact);
-            MainProgram.personCurrent = p;
+        for (Activity a : actresults) {
+            a.addDept(dept);
+            MainProgram.stageMainPage.setCurrentselectact(a);
+            //MainProgram.stageMainPage.getCurrentselectact() = a;
         }
         em.getTransaction().commit();
         odb.closeConnection();
-        MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainpage);
-        MainProgram.stageMainPage.reloadPage(); //reload to refresh act
+
+        MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainactpage);
+        MainProgram.stageMainActPage.reloadPage();
+        MainProgram.stageMainActPage.calltoShowDepartmentPane(null);
         reloadPage(); //could reload when change scene
     }
 
     @Override
     public void reloadPage() {
+        //MainProgram.updateDepartment();
         deptname_box.clear();
         create_status.setText("");
     }

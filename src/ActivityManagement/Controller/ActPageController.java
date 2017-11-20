@@ -42,6 +42,5 @@ public class ActPageController implements Reloadable{
         mainactpane.getChildren().clear();
         mainactpane.getChildren().add(MainProgram.DeptPane);
         MainProgram.stageDeptPane.reloadPage();
-
     }
 }

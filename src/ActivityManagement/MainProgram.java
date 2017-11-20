@@ -28,7 +28,7 @@ public class MainProgram extends Application {
     public static Node memberactpane;
 
     public static Person personCurrent;
-    public static Department dept;
+    public static Department ActivityCurrent;
     public static String DBName = "ActivityManagementDB.odb";
 
     public static MainPageController stageMainPage;
@@ -146,11 +146,11 @@ public class MainProgram extends Application {
     {
         ObjectDB odb = new ObjectDB();
         EntityManager em = odb.createConnection(DBName);
-        TypedQuery<Department> query = em.createQuery("SELECT d FROM Department d where d.id = '"+dept.getId()+"'", Department.class);
+        TypedQuery<Department> query = em.createQuery("SELECT d FROM Department d where d.id = '"+ActivityCurrent.getId()+"'", Department.class);
         List<Department> results = query.getResultList();
         em.getTransaction().begin();
         for (Department d : results) {
-            dept = d;
+            ActivityCurrent = d;
         }
         em.getTransaction().commit();
         odb.closeConnection();
