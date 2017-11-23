@@ -38,7 +38,7 @@
                               <Font name="Arial Bold" size="17.0" />
                            </font>
                         </Label>
-                        <JFXTextField fx:id="userid_box" focusColor="#43b58f" layoutX="75.0" layoutY="110.0" onAction="#callLoginEvent" prefHeight="25.0" prefWidth="316.0" text="58011470">
+                        <JFXTextField fx:id="userid_box" focusColor="#43b58f" layoutX="75.0" layoutY="110.0" onAction="#callLoginEvent" prefHeight="25.0" prefWidth="316.0" text="zxc">
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>
@@ -53,7 +53,7 @@
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Label>
-                        <JFXPasswordField fx:id="pass_box" focusColor="#43b58f" layoutX="75.0" layoutY="217.0" onAction="#callLoginEvent" prefHeight="25.0" prefWidth="316.0" text="123456" />
+                        <JFXPasswordField fx:id="pass_box" focusColor="#43b58f" layoutX="75.0" layoutY="217.0" onAction="#callLoginEvent" prefHeight="25.0" prefWidth="316.0" text="123" />
                         <ImageView fitHeight="25.0" fitWidth="50.0" layoutX="23.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@image/man-user.png" />

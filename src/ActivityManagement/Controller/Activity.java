@@ -16,9 +16,10 @@ public class Activity {
     private String actdes;
     private int active;
     @OneToMany(fetch=FetchType.EAGER)
-    private ArrayList<SubActivity> subact = new ArrayList<SubActivity>();
+    private ArrayList<Department> dept = new ArrayList<>();
     @OneToMany(fetch=FetchType.EAGER)
     private ArrayList<Person> actmember = new ArrayList<>();
+
 
     public Activity(){}
     public Activity(String aid,String aname,String oname,String pass,String ades)
@@ -116,5 +117,11 @@ public class Activity {
             }
         }
         return p;
+    }
+
+    public void addDept(Department d) { dept.add(d); }
+
+    public ArrayList<Department> getMyActivityDept() {
+        return dept;
     }
 }
