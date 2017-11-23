@@ -18,7 +18,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <JFXButton buttonType="RAISED" prefHeight="37.0" prefWidth="87.0" ripplerFill="#754c38" style="-fx-background-color: #ea6f32;" text="Remove" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="40.0">
+                        <JFXButton id="record-sales" buttonType="RAISED" prefHeight="37.0" prefWidth="87.0" ripplerFill="#754c38" style="-fx-background-color: #ea6f32;" stylesheets="@css/Removebutton.css" text="Remove" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="40.0">
                            <font>
                               <Font name="Arial Bold" size="16.0" />
                            </font>
