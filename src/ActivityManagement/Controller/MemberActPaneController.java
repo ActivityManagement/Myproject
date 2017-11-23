@@ -2,6 +2,7 @@ package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
 import ActivityManagement.Model.ObjectDB;
+import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -38,6 +39,14 @@ public class MemberActPaneController implements Reloadable{
 
     private Person currentselectReqPerson;
 
+    @FXML
+    private JFXButton removeButton;
+
+    @FXML
+    private JFXButton rejectButton;
+
+    @FXML
+    private JFXButton approveButton;
 
     public void loadMemberTable()
     {
@@ -76,8 +85,29 @@ public class MemberActPaneController implements Reloadable{
     void clickSelectPerson(MouseEvent event) {
         // check if don't click null
         if (!reqTable.getSelectionModel().isEmpty())
+        {
+            approveButton.setDisable(false);
+            rejectButton.setDisable(false);
             currentselectReqPerson = reqTable.getSelectionModel().getSelectedItem();
+            if (!joinedTable.getSelectionModel().isEmpty()) //if another table had selected
+            {
+                joinedTable.getSelectionModel().clearSelection();
+            }
+        }
     }
+
+    @FXML
+    void clickSelectJoinedMember(MouseEvent event) {
+        if (!joinedTable.getSelectionModel().isEmpty())
+        {
+            if (!reqTable.getSelectionModel().isEmpty()) //if another table had selected
+            {
+                disableButton();
+                reqTable.getSelectionModel().clearSelection();
+            }
+        }
+    }
+
 
     @FXML
     void callApproveSelect(ActionEvent event) {
@@ -123,6 +153,14 @@ public class MemberActPaneController implements Reloadable{
     public void reloadPage() {
         MainProgram.updatePerson();
         MainProgram.updateActivity();
+        disableButton();
         loadMemberTable();
+    }
+
+    void disableButton()
+    {
+        removeButton.setDisable(true);
+        approveButton.setDisable(true);
+        rejectButton.setDisable(true);
     }
 }
