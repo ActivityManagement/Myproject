@@ -4,3 +4,5 @@ out/
 
 src/objectdb/log/
 src/objectdb/db/ActivityManagementDB.odb
+
+src/ActivityManagement/log/
