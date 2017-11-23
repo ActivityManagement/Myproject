@@ -41,7 +41,7 @@
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Label>
-                        <JFXTextField fx:id="deptname_box" focusColor="#43b58f" layoutX="210.0" layoutY="87.0" prefHeight="25.0" prefWidth="495.0" promptText="Enter Activity Name">
+                        <JFXTextField fx:id="deptname_box" focusColor="#43b58f" layoutX="210.0" layoutY="87.0" onAction="#clickConfirmButton" prefHeight="25.0" prefWidth="495.0" promptText="Enter Activity Name">
                            <font>
                               <Font size="16.0" />
                            </font>

@@ -193,7 +193,7 @@
                                  <font>
                                     <Font name="Arial Bold" size="16.0" />
                                  </font></Label>
-                              <PasswordField fx:id="JoinPassField" layoutX="109.0" layoutY="176.0" />
+                              <PasswordField fx:id="JoinPassField" layoutX="109.0" layoutY="176.0" onAction="#callsubmitjoinAct" />
                               <Label fx:id="joinActName" layoutX="135.0" layoutY="8.0" text="-Activity Management-" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="8.0">
                                  <font>
                                     <Font name="Arial Bold" size="16.0" />
