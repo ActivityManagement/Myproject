@@ -113,7 +113,8 @@ public class DeptPaneController implements Reloadable{
 
     @Override
     public void reloadPage() {
-        //MainProgram.updateDepartment();
+        MainProgram.updateActivity();
+//        MainProgram.updateDepartment();
         enter_button.setDisable(true);
         LoadTable();
     }
