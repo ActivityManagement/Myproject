@@ -41,6 +41,7 @@ public class MainDeptController implements Reloadable {
 
     @Override
     public void reloadPage() {
-        titleactdept.setText(MainProgram.stageDeptPane.getCurrentselectdept().getDeptName());
+        String title = String.format("%s : %s",MainProgram.stageMainPage.getCurrentselectact().getActname(),MainProgram.stageDeptPane.getCurrentselectdept().getDeptName());
+        titleactdept.setText(title);
     }
 }
