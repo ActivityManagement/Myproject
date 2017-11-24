@@ -60,7 +60,7 @@ public class DeptPaneController implements Reloadable{
 
     public void LoadTable(){
         DeptNameColumn.setCellValueFactory(new PropertyValueFactory<>("DeptName"));
-        DeptHeadColumn.setCellValueFactory(new PropertyValueFactory<>("DeptMaster"));
+        DeptHeadColumn.setCellValueFactory(new PropertyValueFactory<>("DeptMasterName"));
         DeptMemberColumn.setCellValueFactory(new PropertyValueFactory<>("Member"));
         //DeptTable.setItems(getAllDepartment());
         DeptTable.setItems(getActivityDepartment());

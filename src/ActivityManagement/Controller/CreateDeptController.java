@@ -37,7 +37,7 @@ public class CreateDeptController implements Reloadable {
     @FXML
     void clickConfirmButton(ActionEvent event) {
         String deptname = deptname_box.getText();
-        if (deptname.length() != 0) {
+        if (deptname.length() != 0 && !deptname.startsWith(" ")) {
             String deptid = null;
             ObjectDB odb = new ObjectDB();
             EntityManager em = odb.createConnection(MainProgram.DBName);
@@ -52,7 +52,7 @@ public class CreateDeptController implements Reloadable {
                 }
                 deptid = String.format("%06d", cid + 1);
             }
-            Department dept = new Department(deptname, MainProgram.personCurrent.getId(), 1);
+            Department dept = new Department(deptname, MainProgram.personCurrent.getFirstname() +" "+ MainProgram.personCurrent.getLastname(), 1);
             //MainProgram.stageMainPage.getCurrentselectact().addDept(dept);
             odb.saveObject(dept);
             odb.closeConnection();
