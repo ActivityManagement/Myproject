@@ -17,7 +17,84 @@ import javax.persistence.TypedQuery;
 public class MainProgram extends Application {
 
     public static Stage primaryWindow;
-    public static Scene programScene;
+    private static Scene programScene;
+
+    public static Stage getPrimaryWindow() {
+        return primaryWindow;
+    }
+
+    public static Parent getLogin() {
+        return login;
+    }
+
+    public static Parent getCreateact() {
+        return createact;
+    }
+
+    public static Parent getMainpage() {
+        return mainpage;
+    }
+
+    public static Parent getMainactpage() {
+        return mainactpage;
+    }
+
+    public static Parent getMainDept() {
+        return mainDept;
+    }
+
+    public static Parent getCreateDept() {
+        return createDept;
+    }
+
+    public static Node getDeptPane() {
+        return DeptPane;
+    }
+
+    public static Node getMemberactpane() {
+        return memberactpane;
+    }
+
+    public static Person getPersonCurrent() {
+        return personCurrent;
+    }
+
+    public static String getDBName() {
+        return DBName;
+    }
+
+    public static MainPageController getStageMainPage() {
+        return stageMainPage;
+    }
+
+    public static LoginController getStageLoginPage() {
+        return stageLoginPage;
+    }
+
+    public static CreateActController getStageCreateActPage() {
+        return stageCreateActPage;
+    }
+
+    public static ActPageController getStageMainActPage() {
+        return stageMainActPage;
+    }
+
+    public static MemberActPaneController getStageMemberActPane() {
+        return stageMemberActPane;
+    }
+
+    public static MainDeptController getStageMainDeptController() {
+        return stageMainDeptController;
+    }
+
+    public static DeptPaneController getStageDeptPane() {
+        return stageDeptPane;
+    }
+
+    public static CreateDeptController getStageCreateDeptPage() {
+        return stageCreateDeptPage;
+    }
+
     public static Parent login;
     public static Parent createact;
     public static Parent mainpage;
@@ -28,7 +105,7 @@ public class MainProgram extends Application {
     public static Node memberactpane;
 
     public static Person personCurrent;
-    public static Department ActivityCurrent;
+    private static Department ActivityCurrent;
     public static String DBName = "ActivityManagementDB.odb";
 
     public static MainPageController stageMainPage;
@@ -127,6 +204,7 @@ public class MainProgram extends Application {
         em.getTransaction().commit();
         odb.closeConnection();
     }
+
 
     public static void updatePerson()
     {
