@@ -1,7 +1,10 @@
 package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
+import ActivityManagement.Model.Activity;
+import ActivityManagement.Model.HasActivity;
 import ActivityManagement.Model.ObjectDB;
+import ActivityManagement.Model.Person;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
@@ -15,7 +18,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.ArrayList;

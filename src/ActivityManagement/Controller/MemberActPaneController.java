@@ -1,7 +1,9 @@
 package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
+import ActivityManagement.Model.HasActivity;
 import ActivityManagement.Model.ObjectDB;
+import ActivityManagement.Model.Person;
 import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

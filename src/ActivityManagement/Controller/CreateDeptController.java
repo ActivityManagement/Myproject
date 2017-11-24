@@ -1,6 +1,8 @@
 package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
+import ActivityManagement.Model.Activity;
+import ActivityManagement.Model.Department;
 import ActivityManagement.Model.ObjectDB;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;

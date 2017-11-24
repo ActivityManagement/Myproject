@@ -1,6 +1,7 @@
 package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
+import ActivityManagement.Model.Department;
 import ActivityManagement.Model.ObjectDB;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

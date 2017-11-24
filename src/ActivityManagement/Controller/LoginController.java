@@ -2,6 +2,7 @@ package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
 import ActivityManagement.Model.ObjectDB;
+import ActivityManagement.Model.Person;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;

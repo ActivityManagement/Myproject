@@ -1,10 +1,9 @@
-package ActivityManagement.Controller;
+package ActivityManagement.Model;
 
 import ActivityManagement.MainProgram;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 public class Activity {

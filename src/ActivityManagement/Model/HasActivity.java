@@ -1,4 +1,4 @@
-package ActivityManagement.Controller;
+package ActivityManagement.Model;
 
 import javax.persistence.*;
 

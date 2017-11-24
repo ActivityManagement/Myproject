@@ -1,7 +1,6 @@
-package ActivityManagement.Controller;
+package ActivityManagement.Model;
 
 import ActivityManagement.MainProgram;
-import ActivityManagement.Model.ObjectDB;
 
 import javax.persistence.*;
 

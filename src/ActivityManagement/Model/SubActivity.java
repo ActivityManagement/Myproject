@@ -1,4 +1,4 @@
-package ActivityManagement.Controller;
+package ActivityManagement.Model;
 
 public class SubActivity {
     private String subactname;
