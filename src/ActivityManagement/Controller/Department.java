@@ -16,15 +16,16 @@ public class Department {
     private int id;
     private String DeptName;
     private long DeptMaster;
+    private String DeptMasterName;
     private int Member;
 
 
 
     public Department() {}
 
-    public Department(String Deptname,long Deptmaster,int member) {
+    public Department(String Deptname,String Deptmastername,int member) {
         this.DeptName = Deptname;
-        this.DeptMaster = Deptmaster;
+        this.DeptMasterName = Deptmastername;
         this.Member = member;
     }
 
@@ -43,6 +44,10 @@ public class Department {
 
     public int getMember() {
         return Member;
+    }
+
+    public String getDeptMasterName() {
+        return DeptMasterName;
     }
 
     public Department getDepartment() {
