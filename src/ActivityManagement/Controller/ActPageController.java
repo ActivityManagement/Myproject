@@ -16,7 +16,7 @@ public class ActPageController implements Reloadable{
 
     @FXML
     void callBacktoHome(ActionEvent event) {
-        MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainpage);
+        MainProgram.getPrimaryWindow().getScene().setRoot(MainProgram.getMainpage());
     }
 
     public AnchorPane getMainactpane() {
@@ -26,7 +26,7 @@ public class ActPageController implements Reloadable{
     @Override
     public void reloadPage() {
         mainactpane.getChildren().clear();
-        titleact.setText(MainProgram.stageMainPage.getCurrentselectact().getActname());
+        titleact.setText(MainProgram.getStageMainPage().getCurrentselectact().getActname());
     }
 
     @FXML
@@ -34,20 +34,20 @@ public class ActPageController implements Reloadable{
         //TODO
         // remain anchor with children when add new node
         mainactpane.getChildren().clear();
-        mainactpane.getChildren().add(MainProgram.memberactpane);
-        fitNodetoParent(MainProgram.memberactpane);
-        MainProgram.stageMemberActPane.reloadPage();
+        mainactpane.getChildren().add(MainProgram.getMemberactpane());
+        fitNodetoParent(MainProgram.getMemberactpane());
+        MainProgram.getStageMemberActPane().reloadPage();
     }
 
     @FXML
     void calltoShowDepartmentPane(ActionEvent event) {
         mainactpane.getChildren().clear();
-        mainactpane.getChildren().add(MainProgram.DeptPane);
-        fitNodetoParent(MainProgram.DeptPane);
-        MainProgram.stageDeptPane.reloadPage();
+        mainactpane.getChildren().add(MainProgram.getDeptPane());
+        fitNodetoParent(MainProgram.getDeptPane());
+        MainProgram.getStageDeptPane().reloadPage();
     }
 
-    void fitNodetoParent(Node nd)
+    private void fitNodetoParent(Node nd)
     {
         AnchorPane.setTopAnchor(nd,0.0);
         AnchorPane.setLeftAnchor(nd,0.0);

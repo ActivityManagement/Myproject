@@ -28,9 +28,9 @@ public class LoginController implements Reloadable {
         {
             // go to main scene
             status_login.setText("");
-            MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainpage);
+            MainProgram.getPrimaryWindow().getScene().setRoot(MainProgram.getMainpage());
             reloadPage(); //could reload when change scene
-            MainProgram.stageMainPage.reloadPage(); //reload to refresh act
+            MainProgram.getStageMainPage().reloadPage(); //reload to refresh act
         }
     }
     @FXML
@@ -38,7 +38,7 @@ public class LoginController implements Reloadable {
 //        String userid = userid_box.getText();
 //        String pass = pass_box.getText();
         ObjectDB odb = new ObjectDB();
-        odb.createConnection(MainProgram.DBName);
+        odb.createConnection(MainProgram.getDBName());
         odb.saveObject(new Person());
         odb.closeConnection();
     }
@@ -59,7 +59,7 @@ public class LoginController implements Reloadable {
         String getpass = null;
         // get object from database
         ObjectDB odb = new ObjectDB();
-        EntityManager em = odb.createConnection(MainProgram.DBName);
+        EntityManager em = odb.createConnection(MainProgram.getDBName());
         TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p", Person.class);
         List<Person> results = query.getResultList();
         for (Person p : results) {
@@ -72,7 +72,7 @@ public class LoginController implements Reloadable {
         odb.closeConnection();
         if (getpass!=null && getpass.equals(pass))
         {
-            MainProgram.personCurrent = pobj;
+            MainProgram.setPersonCurrent(pobj);
             return true;
         }
         status_login.setText("Username or Password invalid");

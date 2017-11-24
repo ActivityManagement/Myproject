@@ -29,9 +29,9 @@ public class MainDeptController implements Reloadable {
 
     @FXML
     void callBacktoAct(ActionEvent event) {
-        MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainactpage);
+        MainProgram.getPrimaryWindow().getScene().setRoot(MainProgram.getMainactpage());
         reloadPage(); //could reload when change scene
-        MainProgram.stageMainActPage.reloadPage();
+        MainProgram.getStageMainActPage().reloadPage();
     }
 
     @FXML
@@ -41,7 +41,7 @@ public class MainDeptController implements Reloadable {
 
     @Override
     public void reloadPage() {
-        String title = String.format("%s : %s",MainProgram.stageMainPage.getCurrentselectact().getActname(),MainProgram.stageDeptPane.getCurrentselectdept().getDeptName());
+        String title = String.format("%s : %s",MainProgram.getStageMainPage().getCurrentselectact().getActname(),MainProgram.getStageDeptPane().getCurrentselectdept().getDeptName());
         titleactdept.setText(title);
     }
 }

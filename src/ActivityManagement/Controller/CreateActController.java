@@ -30,7 +30,7 @@ public class CreateActController implements Reloadable {
     @FXML
     void clickBackButton(ActionEvent event) {
         //TODO
-        MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainpage);
+        MainProgram.getPrimaryWindow().getScene().setRoot(MainProgram.getMainpage());
         reloadPage(); //could reload when change scene
     }
 
@@ -54,7 +54,7 @@ public class CreateActController implements Reloadable {
 //            create_status.setText("ถูกแล้วจ้าาา");
             String actid = null;
             ObjectDB odb = new ObjectDB();
-            EntityManager em = odb.createConnection(MainProgram.DBName);
+            EntityManager em = odb.createConnection(MainProgram.getDBName());
             if (!odb.isRecordExist("Activity")) // check if does't exists any act
                 actid = "000000";
             else
@@ -68,26 +68,26 @@ public class CreateActController implements Reloadable {
                 actid = String.format("%06d",cid+1);
             }
             Activity act = new Activity(actid,actname,orgname,password,desc);
-            act.addMember(MainProgram.personCurrent);
+            act.addMember(MainProgram.getPersonCurrent());
             HasActivity hact = new HasActivity(act,1);
             odb.saveObject(act);
             odb.saveObject(hact);
             odb.closeConnection();
 
             // update hasact in person
-            em = odb.createConnection(MainProgram.DBName);
-            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+MainProgram.personCurrent.getId()+"", Person.class);
+            em = odb.createConnection(MainProgram.getDBName());
+            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+MainProgram.getPersonCurrent().getId()+"", Person.class);
             List<Person> results = query.getResultList();
             em.getTransaction().begin();
             for (Person p : results) {
                 p.addAct(hact);
-                MainProgram.personCurrent = p;
+                MainProgram.setPersonCurrent(p);
             }
             em.getTransaction().commit();
             odb.closeConnection();
 
-            MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainpage);
-            MainProgram.stageMainPage.reloadPage(); //reload to refresh act
+            MainProgram.getPrimaryWindow().getScene().setRoot(MainProgram.getMainpage());
+            MainProgram.getStageMainPage().reloadPage(); //reload to refresh act
             reloadPage(); //could reload when change scene
         }
     }

@@ -50,7 +50,7 @@ public class MemberActPaneController implements Reloadable{
     @FXML
     private JFXButton approveButton;
 
-    public void loadMemberTable()
+    private void loadMemberTable()
     {
         joinedpidColumn.setCellValueFactory(new PropertyValueFactory<>("userid"));
         joinedpnameColumn.setCellValueFactory(new PropertyValueFactory<>("firstname"));
@@ -61,22 +61,22 @@ public class MemberActPaneController implements Reloadable{
         reqTable.setItems(getRequestPerson());
     }
 
-    public ObservableList<Person> getJoinedPerson()
+    private ObservableList<Person> getJoinedPerson()
     {
         ObservableList<Person> p = FXCollections.observableArrayList();
         MainProgram.updateActivity();
-        ArrayList<Person> jmem = MainProgram.stageMainPage.getCurrentselectact().getJoinedMember();
+        ArrayList<Person> jmem = MainProgram.getStageMainPage().getCurrentselectact().getJoinedMember();
         for (int i = 0; i < jmem.size() ; i++) {
             p.add(jmem.get(i));
         }
         return p;
     }
 
-    public ObservableList<Person> getRequestPerson()
+    private ObservableList<Person> getRequestPerson()
     {
         ObservableList<Person> p = FXCollections.observableArrayList();
         MainProgram.updateActivity();
-        ArrayList<Person> rmem = MainProgram.stageMainPage.getCurrentselectact().getRequestMember();
+        ArrayList<Person> rmem = MainProgram.getStageMainPage().getCurrentselectact().getRequestMember();
         for (int i = 0; i < rmem.size() ; i++) {
             p.add(rmem.get(i));
         }
@@ -127,12 +127,12 @@ public class MemberActPaneController implements Reloadable{
         reloadPage();
     }
 
-    public void setStatus(int status)
+    private void setStatus(int status)
     {
         //TODO
         System.out.println(currentselectReqPerson.getFirstname());
         ObjectDB odb = new ObjectDB();
-        EntityManager em = odb.createConnection(MainProgram.DBName);
+        EntityManager em = odb.createConnection(MainProgram.getDBName());
         TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+currentselectReqPerson.getId()+"", Person.class);
         List<Person> results = query.getResultList();
         em.getTransaction().begin();
@@ -140,7 +140,7 @@ public class MemberActPaneController implements Reloadable{
             ArrayList<HasActivity> hact = p.getMyact();
             for (HasActivity ha : hact) {
                 //search has act of this activity
-                if (ha.getActivity().getActid().equals(MainProgram.stageMainPage.getCurrentselectact().getActid()))
+                if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid()))
                 {
                     ha.setApprove(status);
                 }
@@ -159,7 +159,7 @@ public class MemberActPaneController implements Reloadable{
         loadMemberTable();
     }
 
-    void disableButton()
+    private void disableButton()
     {
         removeButton.setDisable(true);
         approveButton.setDisable(true);

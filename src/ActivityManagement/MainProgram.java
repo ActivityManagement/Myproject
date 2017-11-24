@@ -16,8 +16,7 @@ import javax.persistence.TypedQuery;
 
 public class MainProgram extends Application {
 
-    public static Stage primaryWindow;
-    private static Scene programScene;
+    private static Stage primaryWindow;
 
     public static Stage getPrimaryWindow() {
         return primaryWindow;
@@ -95,27 +94,31 @@ public class MainProgram extends Application {
         return stageCreateDeptPage;
     }
 
-    public static Parent login;
-    public static Parent createact;
-    public static Parent mainpage;
-    public static Parent mainactpage;
-    public static Parent mainDept;
-    public static Parent createDept;
-    public static Node DeptPane;
-    public static Node memberactpane;
+    private static Parent login;
+    private static Parent createact;
+    private static Parent mainpage;
+    private static Parent mainactpage;
+    private static Parent mainDept;
+    private static Parent createDept;
+    private static Node DeptPane;
+    private static Node memberactpane;
+
+    public static void setPersonCurrent(Person personCurrent) {
+        MainProgram.personCurrent = personCurrent;
+    }
 
     public static Person personCurrent;
     private static Department ActivityCurrent;
     public static String DBName = "ActivityManagementDB.odb";
 
-    public static MainPageController stageMainPage;
-    public static LoginController stageLoginPage;
-    public static CreateActController stageCreateActPage;
-    public static ActPageController stageMainActPage;
-    public static MemberActPaneController stageMemberActPane;
-    public static MainDeptController stageMainDeptController;
-    public static DeptPaneController stageDeptPane;
-    public static CreateDeptController stageCreateDeptPage;
+    private static MainPageController stageMainPage;
+    private static LoginController stageLoginPage;
+    private static CreateActController stageCreateActPage;
+    private static ActPageController stageMainActPage;
+    private static MemberActPaneController stageMemberActPane;
+    private static MainDeptController stageMainDeptController;
+    private static DeptPaneController stageDeptPane;
+    private static CreateDeptController stageCreateDeptPage;
 
     private double winWidth = 1280;
     private double winHeigth = 720+40;
@@ -168,7 +171,7 @@ public class MainProgram extends Application {
         createDept = loader.load();
         stageCreateDeptPage = loader.getController();
         //------------------------------------------------------------------------------------------
-        programScene = new Scene(login);
+        Scene programScene = new Scene(login);
         primaryWindow = primaryStage;
         primaryWindow.setTitle("Activity Management");
         primaryWindow.setScene(programScene);

@@ -27,7 +27,7 @@ public class CreateDeptController implements Reloadable {
 
     @FXML
     void clickBackButton(ActionEvent event) {
-        MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainactpage);
+        MainProgram.getPrimaryWindow().getScene().setRoot(MainProgram.getMainactpage());
         reloadPage(); //could reload when change scene
     }
 
@@ -42,7 +42,7 @@ public class CreateDeptController implements Reloadable {
         if (deptname.length() != 0 && !deptname.startsWith(" ")) {
             String deptid = null;
             ObjectDB odb = new ObjectDB();
-            EntityManager em = odb.createConnection(MainProgram.DBName);
+            EntityManager em = odb.createConnection(MainProgram.getDBName());
             if (!odb.isRecordExist("Department")) // check if does't exists any act
                 deptid = "000000";
             else {
@@ -54,27 +54,26 @@ public class CreateDeptController implements Reloadable {
                 }
                 deptid = String.format("%06d", cid + 1);
             }
-            Department dept = new Department(deptname, MainProgram.personCurrent.getFirstname() +" "+ MainProgram.personCurrent.getLastname(), 1);
+            Department dept = new Department(deptname, MainProgram.getPersonCurrent().getFirstname() +" "+ MainProgram.getPersonCurrent().getLastname(), 1);
             //MainProgram.stageMainPage.getCurrentselectact().addDept(dept);
             odb.saveObject(dept);
             odb.closeConnection();
 
             // update hasact in person
-            em = odb.createConnection(MainProgram.DBName);
-            TypedQuery<Activity> actquery = em.createQuery("SELECT a FROM Activity a where a.actid = '" + MainProgram.stageMainPage.getCurrentselectact().getActid() + "'", Activity.class);
+            em = odb.createConnection(MainProgram.getDBName());
+            TypedQuery<Activity> actquery = em.createQuery("SELECT a FROM Activity a where a.actid = '" + MainProgram.getStageMainPage().getCurrentselectact().getActid() + "'", Activity.class);
             List<Activity> actresults = actquery.getResultList();
             em.getTransaction().begin();
             for (Activity a : actresults) {
                 a.addDept(dept);
-                MainProgram.stageMainPage.setCurrentselectact(a);
-                //MainProgram.stageMainPage.getCurrentselectact() = a;
+                MainProgram.getStageMainPage().setCurrentselectact(a);
             }
             em.getTransaction().commit();
             odb.closeConnection();
 
-            MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainactpage);
-            MainProgram.stageMainActPage.reloadPage();
-            MainProgram.stageMainActPage.calltoShowDepartmentPane(null);
+            MainProgram.getPrimaryWindow().getScene().setRoot(MainProgram.getMainactpage());
+            MainProgram.getStageMainActPage().reloadPage();
+            MainProgram.getStageMainActPage().calltoShowDepartmentPane(null);
             reloadPage(); //could reload when change scene
         }
         else{

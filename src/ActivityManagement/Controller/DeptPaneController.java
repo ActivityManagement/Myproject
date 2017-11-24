@@ -40,26 +40,26 @@ public class DeptPaneController implements Reloadable{
 
     private Department currenselectdept;
 
-    public Department getCurrentselectdept()
+    Department getCurrentselectdept()
     {
         return currenselectdept;
     }
 
     @FXML
     void callCreateDept(ActionEvent event) {
-        MainProgram.primaryWindow.getScene().setRoot(MainProgram.createDept);
-        MainProgram.stageCreateDeptPage.reloadPage();
+        MainProgram.getPrimaryWindow().getScene().setRoot(MainProgram.getCreateDept());
+        MainProgram.getStageCreateDeptPage().reloadPage();
     }
 
     @FXML
     void callEnterDept(ActionEvent event) {
-        MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainDept);
+        MainProgram.getPrimaryWindow().getScene().setRoot(MainProgram.getMainDept());
         reloadPage(); //could reload when change scene
-        MainProgram.stageMainDeptController.reloadPage();
+        MainProgram.getStageMainDeptController().reloadPage();
     }
 
 
-    public void LoadTable(){
+    private void LoadTable(){
         DeptNameColumn.setCellValueFactory(new PropertyValueFactory<>("DeptName"));
         DeptHeadColumn.setCellValueFactory(new PropertyValueFactory<>("DeptMasterName"));
         DeptMemberColumn.setCellValueFactory(new PropertyValueFactory<>("Member"));
@@ -71,7 +71,7 @@ public class DeptPaneController implements Reloadable{
     {
         ObservableList<Department> dept = FXCollections.observableArrayList();
         ObjectDB odb = new ObjectDB();
-        EntityManager em = odb.createConnection(MainProgram.DBName);
+        EntityManager em = odb.createConnection(MainProgram.getDBName());
         TypedQuery<Department> query = em.createQuery("SELECT a FROM Department a", Department.class);
         List<Department> results = query.getResultList();
         em.getTransaction().begin();
@@ -82,13 +82,13 @@ public class DeptPaneController implements Reloadable{
         return dept;
     }
 
-    public ObservableList<Department> getActivityDepartment()
+    private ObservableList<Department> getActivityDepartment()
     {
         //TODO
         //Remain remove Rejected from table
         ObservableList<Department> dept = FXCollections.observableArrayList();
         //ArrayList<HasActivity> hact = MainProgram.personCurrent.getMyact();
-        ArrayList<Department> hact = MainProgram.stageMainPage.getCurrentselectact().getMyActivityDept();
+        ArrayList<Department> hact = MainProgram.getStageMainPage().getCurrentselectact().getMyActivityDept();
         for (int i = 0; i < hact.size() ; i++) {
            // if (hact.get(i).getApprove()!=2) // except Rejected
                // activity.add(hact.get(i).getActivity());
@@ -97,7 +97,7 @@ public class DeptPaneController implements Reloadable{
         return dept;
     }
 
-    void clickDeptSelect(TableView<Department> deptset)
+    private void clickDeptSelect(TableView<Department> deptset)
     {
         if (!deptset.getSelectionModel().isEmpty())
         {

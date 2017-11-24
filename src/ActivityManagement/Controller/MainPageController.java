@@ -107,13 +107,13 @@ public class MainPageController implements Reloadable {
 
     @FXML
     void callCreateAct(ActionEvent event) {
-        MainProgram.primaryWindow.getScene().setRoot(MainProgram.createact);
+        MainProgram.getPrimaryWindow().getScene().setRoot(MainProgram.getCreateact());
         reloadPage();
     }
 
     @FXML
     void callLogout(ActionEvent event) {
-        MainProgram.primaryWindow.getScene().setRoot(MainProgram.login);
+        MainProgram.getPrimaryWindow().getScene().setRoot(MainProgram.getLogin());
         reloadPage();
     }
 
@@ -135,7 +135,7 @@ public class MainPageController implements Reloadable {
             boolean found = false;
             MainProgram.updatePerson();
             MainProgram.updateActivity();
-            ArrayList<HasActivity> myact = MainProgram.personCurrent.getMyact();
+            ArrayList<HasActivity> myact = MainProgram.getPersonCurrent().getMyact();
             for (HasActivity ha : myact) {
                 // check if has act
                 if (ha.getActivity().getActid().equals(currentselectact.getActid()))
@@ -148,48 +148,48 @@ public class MainPageController implements Reloadable {
             {
                 //TODO
                 ObjectDB odb = new ObjectDB();
-                EntityManager em = odb.createConnection(MainProgram.DBName);
-                TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = " + MainProgram.personCurrent.getId() + "", Person.class);
+                EntityManager em = odb.createConnection(MainProgram.getDBName());
+                TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = " + MainProgram.getPersonCurrent().getId() + "", Person.class);
                 List<Person> results = query.getResultList();
                 em.getTransaction().begin();
                 for (Person p : results) {
                     ArrayList<HasActivity> hact = p.getMyact();
                     for (HasActivity ha : hact) {
                         //search has act of this activity
-                        if (ha.getActivity().getActid().equals(MainProgram.stageMainPage.getCurrentselectact().getActid()))
+                        if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid()))
                         {
                             ha.setApprove(0);
                         }
                     }
-                    MainProgram.personCurrent = p;
+                    MainProgram.setPersonCurrent(p);
                 }
                 em.getTransaction().commit();
                 odb.closeConnection();
             }
             else {
                 ObjectDB odb = new ObjectDB();
-                odb.createConnection(MainProgram.DBName);
+                odb.createConnection(MainProgram.getDBName());
                 HasActivity hact = new HasActivity(currentselectact, 0);
                 odb.saveObject(hact);
                 odb.closeConnection();
                 //-------------------------- update hasact in person--------------------------
-                EntityManager em = odb.createConnection(MainProgram.DBName);
-                TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = " + MainProgram.personCurrent.getId() + "", Person.class);
+                EntityManager em = odb.createConnection(MainProgram.getDBName());
+                TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = " + MainProgram.getPersonCurrent().getId() + "", Person.class);
                 List<Person> results = query.getResultList();
                 em.getTransaction().begin();
                 for (Person p : results) {
                     p.addAct(hact);
-                    MainProgram.personCurrent = p;
+                    MainProgram.setPersonCurrent(p);
                 }
                 em.getTransaction().commit();
                 //----------------------------------------------------------------------------
                 //-------------------------- update member to activity--------------------------
-                em = odb.createConnection(MainProgram.DBName);
+                em = odb.createConnection(MainProgram.getDBName());
                 TypedQuery<Activity> actquery = em.createQuery("SELECT a FROM Activity a where a.actid = '" + currentselectact.getActid() + "'", Activity.class);
                 List<Activity> actresults = actquery.getResultList();
                 em.getTransaction().begin();
                 for (Activity a : actresults) {
-                    a.addMember(MainProgram.personCurrent);
+                    a.addMember(MainProgram.getPersonCurrent());
                     currentselectact = a;
                 }
                 em.getTransaction().commit();
@@ -229,8 +229,8 @@ public class MainPageController implements Reloadable {
             if (isApprove(currentselectact))
             {
                 //TODO
-                MainProgram.primaryWindow.getScene().setRoot(MainProgram.mainactpage);
-                MainProgram.stageMainActPage.reloadPage();
+                MainProgram.getPrimaryWindow().getScene().setRoot(MainProgram.getMainactpage());
+                MainProgram.getStageMainActPage().reloadPage();
                 System.out.println("gogo");
             }
             else //wait to approve
@@ -245,9 +245,9 @@ public class MainPageController implements Reloadable {
         }
     }
 
-    public boolean isDoNotJoin(Activity a)
+    private boolean isDoNotJoin(Activity a)
     {
-        ArrayList<HasActivity> hact = MainProgram.personCurrent.getMyact();
+        ArrayList<HasActivity> hact = MainProgram.getPersonCurrent().getMyact();
         for (int i = 0; i < hact.size() ; i++) {
             if (a.getActid().equals(hact.get(i).getActivity().getActid()))
             {
@@ -258,9 +258,9 @@ public class MainPageController implements Reloadable {
         return true;
     }
 
-    public boolean isApprove(Activity a)
+    private boolean isApprove(Activity a)
     {
-        ArrayList<HasActivity> hact = MainProgram.personCurrent.getMyact();
+        ArrayList<HasActivity> hact = MainProgram.getPersonCurrent().getMyact();
         for (int i = 0; i < hact.size() ; i++) {
             if (a.getActid().equals(hact.get(i).getActivity().getActid()))
             {
@@ -278,7 +278,7 @@ public class MainPageController implements Reloadable {
         closeAllDialogPane();
     }
 
-    void closeAllDialogPane()
+    private void closeAllDialogPane()
     {
         joinPane.setVisible(false);
         waitPane.setVisible(false);
@@ -290,11 +290,11 @@ public class MainPageController implements Reloadable {
         statusjointext.setText("");
     }
 
-    public ObservableList<Activity> getAllActivity()
+    private ObservableList<Activity> getAllActivity()
     {
         ObservableList<Activity> activity = FXCollections.observableArrayList();
         ObjectDB odb = new ObjectDB();
-        EntityManager em = odb.createConnection(MainProgram.DBName);
+        EntityManager em = odb.createConnection(MainProgram.getDBName());
         TypedQuery<Activity> query = em.createQuery("SELECT a FROM Activity a", Activity.class);
         List<Activity> results = query.getResultList();
         em.getTransaction().begin();
@@ -305,7 +305,7 @@ public class MainPageController implements Reloadable {
         return activity;
     }
 
-    public void loadTableActivity()
+    private void loadTableActivity()
     {
         actidColumn.setCellValueFactory(new PropertyValueFactory<>("actid"));
         actnameColumn.setCellValueFactory(new PropertyValueFactory<>("actname"));
@@ -332,12 +332,12 @@ public class MainPageController implements Reloadable {
 
     }
 
-    public ObservableList<Activity> getMyActivity()
+    private ObservableList<Activity> getMyActivity()
     {
         //TODO
         //Remain remove Rejected from table
         ObservableList<Activity> activity = FXCollections.observableArrayList();
-        ArrayList<HasActivity> hact = MainProgram.personCurrent.getMyact();
+        ArrayList<HasActivity> hact = MainProgram.getPersonCurrent().getMyact();
         for (int i = 0; i < hact.size() ; i++) {
             if (hact.get(i).getApprove()!=2) // except Rejected
                 activity.add(hact.get(i).getActivity());
@@ -345,7 +345,7 @@ public class MainPageController implements Reloadable {
         return activity;
     }
 
-    void clickActSelect(TableView<Activity> actset,TableView<Activity> actreset)
+    private void clickActSelect(TableView<Activity> actset,TableView<Activity> actreset)
     {
         if (!actset.getSelectionModel().isEmpty())
         {
@@ -382,9 +382,9 @@ public class MainPageController implements Reloadable {
     @Override
     public void reloadPage() {
         loadTableActivity();
-        useridLabel.setText(MainProgram.personCurrent.getUserid());
-        fnameLabel.setText(MainProgram.personCurrent.getFirstname());
-        lnameLabel.setText(MainProgram.personCurrent.getLastname());
+        useridLabel.setText(MainProgram.getPersonCurrent().getUserid());
+        fnameLabel.setText(MainProgram.getPersonCurrent().getFirstname());
+        lnameLabel.setText(MainProgram.getPersonCurrent().getLastname());
         currentselectact = null;
         join_button.setDisable(true);
         statusjointext.setText("");
