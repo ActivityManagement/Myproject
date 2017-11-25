@@ -12,7 +12,7 @@ public class Department {
     private long DeptMaster;
     private String DeptMasterName;
     private int Member;
-
+    private String Note;
 
 
     public Department() {}
@@ -47,4 +47,13 @@ public class Department {
     public Department getDepartment() {
         return this;
     }
+
+    public String getNote() {
+        return Note;
+    }
+
+    public void setNote(String note) {
+        Note = note;
+    }
+
 }

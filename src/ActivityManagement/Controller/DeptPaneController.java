@@ -40,9 +40,13 @@ public class DeptPaneController implements Reloadable{
 
     private Department currenselectdept;
 
-    Department getCurrentselectdept()
+    public Department getCurrentselectdept()
     {
         return currenselectdept;
+    }
+
+    public void setCurrenselectdept(Department currenselectdept) {
+        this.currenselectdept = currenselectdept;
     }
 
     @FXML

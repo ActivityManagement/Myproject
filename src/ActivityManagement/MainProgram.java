@@ -245,11 +245,11 @@ public class MainProgram extends Application {
     {
         ObjectDB odb = new ObjectDB();
         EntityManager em = odb.createConnection(DBName);
-        TypedQuery<Department> query = em.createQuery("SELECT d FROM Department d where d.id = '"+ActivityCurrent.getId()+"'", Department.class);
+        TypedQuery<Department> query = em.createQuery("SELECT d FROM Department d where d.id = '"+stageDeptPane.getCurrentselectdept().getId()+"'", Department.class);
         List<Department> results = query.getResultList();
         em.getTransaction().begin();
         for (Department d : results) {
-            ActivityCurrent = d;
+            stageDeptPane.setCurrenselectdept(d);
         }
         em.getTransaction().commit();
         odb.closeConnection();

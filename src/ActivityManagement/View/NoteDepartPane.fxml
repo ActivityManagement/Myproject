@@ -19,8 +19,12 @@
             </Label>
          </children>
       </VBox>
-      <TextArea layoutX="72.0" layoutY="94.0" prefHeight="414.0" prefWidth="878.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" />
-      <JFXButton buttonType="RAISED" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: #ab5412;" text="Accept" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="50.0">
+      <TextArea fx:id="noteFieldArea" layoutX="72.0" layoutY="94.0" prefHeight="414.0" prefWidth="878.0" AnchorPane.bottomAnchor="112.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="94.0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </TextArea>
+      <JFXButton buttonType="RAISED" onAction="#callAcceptNote" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: #ab5412;" text="Accept" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="50.0">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
