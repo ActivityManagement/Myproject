@@ -3,11 +3,16 @@ package ActivityManagement.Controller;
 import ActivityManagement.MainProgram;
 import ActivityManagement.Model.ObjectDB;
 import ActivityManagement.Model.Person;
+import com.jfoenix.controls.JFXDialog;
+import com.jfoenix.controls.JFXDialogLayout;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.StackPane;
 
 import javax.persistence.*;
 import java.util.List;
@@ -19,6 +24,27 @@ public class LoginController implements Reloadable {
     private JFXPasswordField pass_box;
     @FXML
     private Label status_login;
+
+//    --------------------Register Field--------------------
+    @FXML
+    private StackPane registerPane;
+    @FXML
+    private JFXDialogLayout contentofRegister;
+
+    private JFXDialog registerdialog = null;
+
+    @FXML
+    private TextField regUserField;
+
+    @FXML
+    private TextField regFNameField;
+
+    @FXML
+    private TextField regLNameField;
+
+    @FXML
+    private TextField regPassField;
+//    --------------------------------------------------------
 
     @FXML
     void callLoginEvent(ActionEvent event) {
@@ -37,10 +63,50 @@ public class LoginController implements Reloadable {
     void callRegisterEvent(ActionEvent event) {
 //        String userid = userid_box.getText();
 //        String pass = pass_box.getText();
-        ObjectDB odb = new ObjectDB();
-        odb.createConnection(MainProgram.getDBName());
-        odb.saveObject(new Person());
-        odb.closeConnection();
+
+        registerPane.setVisible(true);
+        if (registerdialog == null) {
+            registerdialog = new JFXDialog(registerPane, contentofRegister, JFXDialog.DialogTransition.CENTER);
+        }
+        registerdialog.show();
+    }
+
+    private void clearRegField()
+    {
+        regUserField.clear();
+        regFNameField.clear();
+        regLNameField.clear();
+        regPassField.clear();
+    }
+
+    @FXML
+    void callWantToRegister(ActionEvent event) {
+        String user = regUserField.getText();
+        String fname = regFNameField.getText();
+        String lname = regLNameField.getText();
+        String pass = regPassField.getText();
+        if (!user.equals("") && !pass.equals(""))
+        {
+            Person p = new Person(user,pass,fname,lname);
+            ObjectDB odb = new ObjectDB();
+            odb.createConnection(MainProgram.getDBName());
+            odb.saveObject(p);
+            odb.closeConnection();
+            registerdialog.close();
+            registerPane.setVisible(false);
+            clearRegField();
+        }
+        else
+        {
+            System.out.println("error");
+        }
+    }
+    @FXML
+    void closeRegisterDialog(MouseEvent event) {
+        registerPane.setVisible(false);
+        if (registerdialog != null)
+            registerdialog.close();
+        clearRegField();
     }
 
     private boolean checkLogin(String userid,String pass)
