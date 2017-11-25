@@ -42,6 +42,7 @@
             <Font name="Arial Bold" size="23.0" />
          </font>
       </JFXButton>
+      <AnchorPane fx:id="departmentPane" layoutX="446.0" layoutY="112.0" prefHeight="620.0" prefWidth="1018.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
       <VBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #11425a;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label fx:id="titleactdept" alignment="CENTER" prefHeight="50.0" prefWidth="1280.0" text="Activity Name : Department Name" textFill="WHITE">
