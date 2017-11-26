@@ -102,6 +102,14 @@ public class MainProgram extends Application {
         return NoteDepartPane;
     }
 
+    public static Node getTimelineDepartPane() {
+        return TimelineDepartPane;
+    }
+
+    public static TimelineDepartPaneController getStageTimelineDepartPane() {
+        return stageTimelineDepartPane;
+    }
+
     private static Parent login;
     private static Parent createact;
     private static Parent mainpage;
@@ -111,6 +119,7 @@ public class MainProgram extends Application {
     private static Node DeptPane;
     private static Node memberactpane;
     private static Node NoteDepartPane;
+    private static Node TimelineDepartPane;
 
     public static void setPersonCurrent(Person personCurrent) {
         MainProgram.personCurrent = personCurrent;
@@ -128,10 +137,8 @@ public class MainProgram extends Application {
     private static MainDeptController stageMainDeptController;
     private static DeptPaneController stageDeptPane;
     private static CreateDeptController stageCreateDeptPage;
-
-
-
     private static NoteDepartPaneController stageNoteDepartPane;
+    private static TimelineDepartPaneController stageTimelineDepartPane;
 
     private double winWidth = 1280;
     private double winHeigth = 720+40;
@@ -188,6 +195,11 @@ public class MainProgram extends Application {
         loader.setLocation(getClass().getResource("View/NoteDepartPane.fxml"));
         NoteDepartPane = loader.load();
         stageNoteDepartPane = loader.getController();
+        //------------------------------------------------------------------------------------------
+        loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("View/TimelineDepartPane.fxml"));
+        TimelineDepartPane = loader.load();
+        stageTimelineDepartPane = loader.getController();
         //------------------------------------------------------------------------------------------
         Scene programScene = new Scene(login);
         primaryWindow = primaryStage;
