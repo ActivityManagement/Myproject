@@ -9,8 +9,13 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXTimePicker;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 
 import javax.persistence.EntityManager;
@@ -35,13 +40,44 @@ public class TimelineDepartPaneController implements Reloadable {
 
     private Timeline currentTimelineDate;
 
+    @FXML
+    private TableView<TimeItem> timelineTable;
+
+    @FXML
+    private TableColumn<TimeItem, String> coltime;
+
+    @FXML
+    private TableColumn<TimeItem, String> coldetail;
+
+
 
     @FXML
     void callSelectDate(ActionEvent event) {
-        if (datePicker.getValue()!=null)
+        if (datePicker.getValue()!=null) {
             currentTimelineDate = getTimelineDate(datePicker.getValue());
+            loadTimelineTable();
+        }
         checkAddButton();
 
+    }
+
+    private void loadTimelineTable()
+    {
+        coltime.setCellValueFactory(new PropertyValueFactory<>("time"));
+        coldetail.setCellValueFactory(new PropertyValueFactory<>("detail"));
+        timelineTable.setItems(getTimeItemList());
+    }
+
+    private ObservableList<TimeItem> getTimeItemList()
+    {
+        MainProgram.updateDepartment();
+        Department dept = MainProgram.getStageDeptPane().getCurrentselectdept();
+        ObservableList<TimeItem> list = FXCollections.observableArrayList();
+        for (Timeline t:dept.getTimelines()) {
+            if (t.getDate().equals(currentTimelineDate.getDate()))
+                list.addAll(t.getItem());
+        }
+        return list;
     }
 
     @FXML
@@ -54,6 +90,7 @@ public class TimelineDepartPaneController implements Reloadable {
     {
         MainProgram.updateDepartment();
         currentTimelineDate = null;
+        timelineTable.getItems().clear();
         timePicker.setIs24HourView(true);
         datePicker.setValue(null);
         timePicker.setValue(null);
