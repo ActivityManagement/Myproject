@@ -14,9 +14,11 @@ public class Activity {
     private String password;
     private String actdes;
     private int active;
+//    @OneToMany(cascade = CascadeType.ALL)
     @OneToMany(fetch=FetchType.EAGER)
     private ArrayList<Department> dept = new ArrayList<>();
     @OneToMany(fetch=FetchType.EAGER)
+//    @OneToMany(cascade = CascadeType.ALL)
     private ArrayList<Person> actmember = new ArrayList<>();
 
 

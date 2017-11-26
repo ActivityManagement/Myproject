@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="620.0" prefWidth="1018.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ActivityManagement.Controller.TimelineDepartPaneController">
+   <children>
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="50.0" style="-fx-background-color: #4ea083;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" text="Timeline" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <JFXDatePicker fx:id="datePicker" layoutX="812.0" layoutY="57.0" onAction="#callSelectDate" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="57.0" />
+      <TableView fx:id="timelineTable" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+        <columns>
+          <TableColumn fx:id="coltime" prefWidth="92.33332824707031" text="Time" />
+          <TableColumn fx:id="coldetail" prefWidth="924.6666717529297" text="Detail" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="add_button" buttonType="RAISED" disable="true" layoutX="909.0" layoutY="545.0" onAction="#clickAddTimeButton" prefHeight="38.0" prefWidth="61.0" style="-fx-background-color: #1188aa;" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="48.0">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="155.0" layoutY="560.0" text="Time" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="825.0">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="353.0" layoutY="560.0" text="Detail" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="621.0">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="detailInput" layoutX="515.0" layoutY="555.0" onKeyTyped="#inputToText" prefHeight="25.0" prefWidth="479.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="135.0" />
+      <JFXTimePicker fx:id="timePicker" layoutX="204.0" layoutY="552.0" onAction="#callSelectTime" prefHeight="28.0" prefWidth="150.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="664.0" />
+   </children>
+</AnchorPane>

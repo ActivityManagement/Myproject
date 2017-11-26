@@ -39,6 +39,7 @@ public class MainDeptController implements Reloadable {
         MainProgram.getStageMainActPage().reloadPage();
     }
 
+
     @FXML
     void callCollapse(ActionEvent event) {
 
@@ -51,6 +52,14 @@ public class MainDeptController implements Reloadable {
         fitNodetoParent(MainProgram.getNoteDepartPane());
         MainProgram.getStageNoteDepartPane().reloadPage();
 
+    }
+
+    @FXML
+    void clickTimelineButton(ActionEvent event) {
+        departmentPane.getChildren().clear();
+        departmentPane.getChildren().add(MainProgram.getTimelineDepartPane());
+        fitNodetoParent(MainProgram.getTimelineDepartPane());
+        MainProgram.getStageTimelineDepartPane().reloadPage();
     }
 
     private void fitNodetoParent(Node nd)
