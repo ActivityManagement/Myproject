@@ -22,6 +22,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class TimelineDepartPaneController implements Reloadable {
@@ -66,6 +67,7 @@ public class TimelineDepartPaneController implements Reloadable {
         coltime.setCellValueFactory(new PropertyValueFactory<>("time"));
         coldetail.setCellValueFactory(new PropertyValueFactory<>("detail"));
         timelineTable.setItems(getTimeItemList());
+        timelineTable.getSortOrder().add(coltime);
     }
 
     private ObservableList<TimeItem> getTimeItemList()

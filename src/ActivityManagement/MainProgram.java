@@ -260,7 +260,7 @@ public class MainProgram extends Application {
     {
         ObjectDB odb = new ObjectDB();
         EntityManager em = odb.createConnection(DBName);
-        TypedQuery<Department> query = em.createQuery("SELECT d FROM Department d where d.id = '"+stageDeptPane.getCurrentselectdept().getId()+"'", Department.class);
+        TypedQuery<Department> query = em.createQuery("SELECT d FROM Department d where d.id = "+stageDeptPane.getCurrentselectdept().getId()+"", Department.class);
         List<Department> results = query.getResultList();
         for (Department d : results) {
             stageDeptPane.setCurrenselectdept(d);

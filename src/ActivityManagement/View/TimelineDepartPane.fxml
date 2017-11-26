@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="620.0" prefWidth="1018.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ActivityManagement.Controller.TimelineDepartPaneController">
    <children>
       <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="50.0" style="-fx-background-color: #4ea083;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -45,7 +44,10 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="detailInput" layoutX="515.0" layoutY="555.0" onKeyTyped="#inputToText" prefHeight="25.0" prefWidth="479.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="135.0" />
+      <JFXTextField fx:id="detailInput" layoutX="515.0" layoutY="555.0" onKeyTyped="#inputToText" prefHeight="25.0" prefWidth="479.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="135.0">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></JFXTextField>
       <JFXTimePicker fx:id="timePicker" layoutX="204.0" layoutY="552.0" onAction="#callSelectTime" prefHeight="28.0" prefWidth="150.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="664.0" />
    </children>
 </AnchorPane>
