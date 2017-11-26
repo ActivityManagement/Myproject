@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -27,5 +30,22 @@
           <TableColumn prefWidth="924.6666717529297" text="Detail" />
         </columns>
       </TableView>
+      <JFXButton fx:id="add_button" buttonType="RAISED" disable="true" layoutX="909.0" layoutY="545.0" prefHeight="38.0" prefWidth="61.0" style="-fx-background-color: #1188aa;" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="48.0">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="155.0" layoutY="560.0" text="Time" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="825.0">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="353.0" layoutY="560.0" text="Detail" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="621.0">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="detailInput" layoutX="515.0" layoutY="555.0" onKeyTyped="#inputToText" prefHeight="25.0" prefWidth="479.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="135.0" />
+      <JFXTimePicker fx:id="timePicker" layoutX="204.0" layoutY="552.0" onAction="#callSelectTime" prefHeight="28.0" prefWidth="150.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="664.0" />
    </children>
 </AnchorPane>
