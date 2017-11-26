@@ -1,19 +1,25 @@
 package ActivityManagement.Model;
 
 
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+
+@Entity
 public class Timeline {
-    private LocalDate date;
+    @Id @GeneratedValue
+    private long id;
+    private String date;
+    @OneToMany(cascade = CascadeType.ALL,fetch=FetchType.EAGER)
     private ArrayList<TimeItem> item = new ArrayList<TimeItem>();
 
 
     public Timeline(LocalDate date)
     {
-        this.date = date;
+        this.date = date.toString();
     }
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 

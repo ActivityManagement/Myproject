@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.sql.Time;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -220,6 +221,8 @@ public class MainProgram extends Application {
         em.getMetamodel().entity(Person.class);
         em.getMetamodel().entity(HasActivity.class);
         em.getMetamodel().entity(Department.class);
+        em.getMetamodel().entity(Timeline.class);
+        em.getMetamodel().entity(TimeItem.class);
         odb.closeConnection();
 
     }
@@ -259,11 +262,9 @@ public class MainProgram extends Application {
         EntityManager em = odb.createConnection(DBName);
         TypedQuery<Department> query = em.createQuery("SELECT d FROM Department d where d.id = '"+stageDeptPane.getCurrentselectdept().getId()+"'", Department.class);
         List<Department> results = query.getResultList();
-        em.getTransaction().begin();
         for (Department d : results) {
             stageDeptPane.setCurrenselectdept(d);
         }
-        em.getTransaction().commit();
         odb.closeConnection();
     }
 }

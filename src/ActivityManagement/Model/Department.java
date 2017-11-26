@@ -1,6 +1,7 @@
 package ActivityManagement.Model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 
 @Entity
 public class Department {
@@ -13,6 +14,8 @@ public class Department {
     private String DeptMasterName;
     private int Member;
     private String Note;
+    @OneToMany(cascade = CascadeType.ALL,fetch=FetchType.EAGER)
+    private ArrayList<Timeline> timelines = new ArrayList<Timeline>();
 
 
     public Department() {}
@@ -27,6 +30,14 @@ public class Department {
         return id;
     }
 
+    public ArrayList<Timeline> getTimelines() {
+        return timelines;
+    }
+
+    public void addTimeline(Timeline t)
+    {
+        timelines.add(t);
+    }
 
     public String getDeptName() {
         return DeptName;

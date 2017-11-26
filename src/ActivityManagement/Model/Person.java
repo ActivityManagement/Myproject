@@ -15,6 +15,7 @@ public class Person {
     private String firstname;
     private String lastname;
     private String password;
+//    @OneToMany(cascade = CascadeType.ALL)
     @OneToMany(fetch=FetchType.EAGER)
     private ArrayList<HasActivity> myact = new ArrayList<HasActivity>();
 

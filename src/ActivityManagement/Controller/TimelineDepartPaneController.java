@@ -1,7 +1,9 @@
 package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
+import ActivityManagement.Model.Department;
 import ActivityManagement.Model.ObjectDB;
+import ActivityManagement.Model.TimeItem;
 import ActivityManagement.Model.Timeline;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDatePicker;
@@ -14,6 +16,7 @@ import javafx.scene.input.KeyEvent;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class TimelineDepartPaneController implements Reloadable {
@@ -30,9 +33,13 @@ public class TimelineDepartPaneController implements Reloadable {
     @FXML
     private JFXTextField detailInput;
 
+    private Timeline currentTimelineDate;
+
 
     @FXML
     void callSelectDate(ActionEvent event) {
+        if (datePicker.getValue()!=null)
+            currentTimelineDate = getTimelineDate(datePicker.getValue());
         checkAddButton();
 
     }
@@ -45,7 +52,13 @@ public class TimelineDepartPaneController implements Reloadable {
 
     public void reloadPage()
     {
+        MainProgram.updateDepartment();
+        currentTimelineDate = null;
         timePicker.setIs24HourView(true);
+        datePicker.setValue(null);
+        timePicker.setValue(null);
+        detailInput.clear();
+        checkAddButton();
     }
 
     private void checkAddButton()
@@ -60,31 +73,54 @@ public class TimelineDepartPaneController implements Reloadable {
 
     private Timeline getTimelineDate(LocalDate date)
     {
-        Timeline currentTl = null;
-        ObjectDB odb = new ObjectDB();
-        EntityManager em = odb.createConnection(MainProgram.getDBName());
-        TypedQuery<Timeline> query = em.createQuery("SELECT tl FROM Timeline tl WHERE tl.date = "+date+"", Timeline.class);
-        List<Timeline> result = query.getResultList();
-        for (Timeline tl: result) {
-            currentTl = tl;
+        MainProgram.updateDepartment();
+        Timeline currenttl = null;
+        Department dept = MainProgram.getStageDeptPane().getCurrentselectdept();
+        ArrayList<Timeline> gtimelines = dept.getTimelines();
+        for (Timeline tl : gtimelines) {
+            if (tl.getDate().equals(date.toString())) //if have timeline in this department
+            {
+                currenttl = tl;
+            }
         }
-        odb.closeConnection();
-        if (currentTl==null) //don't have timeline in Database
+        if (currenttl==null) //don't have timelinedate in this department
         {
-            Timeline newtl = new Timeline(date);
-            odb = new ObjectDB();
-            odb.createConnection(MainProgram.getDBName());
-            odb.saveObject(newtl);
-            odb.closeConnection();
-            currentTl = newtl;
+            currenttl = new Timeline(date);
+            System.out.println("New Timeline");
         }
-        return currentTl;
+        return currenttl;
     }
 
     @FXML
     void clickAddTimeButton(ActionEvent event) {
-        Timeline tl = getTimelineDate(datePicker.getValue());
-
+        if (datePicker.getValue()!=null && timePicker.getValue()!=null && !detailInput.getText().trim().isEmpty()) {
+            currentTimelineDate = getTimelineDate(datePicker.getValue());
+            Department dept = MainProgram.getStageDeptPane().getCurrentselectdept();
+            TimeItem ti = new TimeItem(timePicker.getValue().toString(), detailInput.getText());
+            ObjectDB odb = new ObjectDB();
+            EntityManager em = odb.createConnection(MainProgram.getDBName());
+            TypedQuery<Department> query = em.createQuery("SELECT d FROM Department d WHERE d.id = " + dept.getId() + "", Department.class);
+            List<Department> result = query.getResultList();
+            em.getTransaction().begin();
+            for (Department d : result) {
+                boolean isfound = false;
+                for (Timeline t: d.getTimelines()) {
+                    if (t.getDate().equals(currentTimelineDate.getDate())) {
+                        isfound=true;
+                        t.addTime(ti);
+                    }
+                }
+                if (!isfound)
+                {
+                    currentTimelineDate.addTime(ti);
+                    d.addTimeline(currentTimelineDate);
+                }
+                MainProgram.getStageDeptPane().setCurrenselectdept(d);
+            }
+            em.getTransaction().commit();
+            odb.closeConnection();
+            reloadPage();
+        }
     }
 
     @FXML
