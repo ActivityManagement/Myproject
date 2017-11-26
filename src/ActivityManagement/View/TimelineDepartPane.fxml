@@ -30,7 +30,7 @@
           <TableColumn prefWidth="924.6666717529297" text="Detail" />
         </columns>
       </TableView>
-      <JFXButton fx:id="add_button" buttonType="RAISED" disable="true" layoutX="909.0" layoutY="545.0" prefHeight="38.0" prefWidth="61.0" style="-fx-background-color: #1188aa;" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="48.0">
+      <JFXButton fx:id="add_button" buttonType="RAISED" disable="true" layoutX="909.0" layoutY="545.0" onAction="#clickAddTimeButton" prefHeight="38.0" prefWidth="61.0" style="-fx-background-color: #1188aa;" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="48.0">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>

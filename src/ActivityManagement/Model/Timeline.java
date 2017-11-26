@@ -1,5 +1,6 @@
 package ActivityManagement.Model;
 
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -7,6 +8,11 @@ public class Timeline {
     private LocalDate date;
     private ArrayList<TimeItem> item = new ArrayList<TimeItem>();
 
+
+    public Timeline(LocalDate date)
+    {
+        this.date = date;
+    }
     public LocalDate getDate() {
         return date;
     }
