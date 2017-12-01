@@ -22,7 +22,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class TimelineDepartPaneController implements Reloadable {
@@ -158,7 +157,10 @@ public class TimelineDepartPaneController implements Reloadable {
             }
             em.getTransaction().commit();
             odb.closeConnection();
-            reloadPage();
+            MainProgram.updateDepartment();
+            loadTimelineTable();
+            timePicker.setValue(null);
+            detailInput.clear();
         }
     }
 
