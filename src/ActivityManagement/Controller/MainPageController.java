@@ -377,6 +377,7 @@ public class MainPageController implements Reloadable {
     void callRefreshTable(ActionEvent event) {
         MainProgram.updatePerson();
         loadTableActivity();
+        reloadPage();
     }
 
     @Override

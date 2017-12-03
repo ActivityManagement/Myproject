@@ -54,7 +54,7 @@ public class CreateDeptController implements Reloadable {
                 }
                 deptid = String.format("%06d", cid + 1);
             }
-            Department dept = new Department(deptname, MainProgram.getPersonCurrent().getFirstname() +" "+ MainProgram.getPersonCurrent().getLastname(), 1);
+            Department dept = new Department(deptname, MainProgram.getPersonCurrent().getFirstname() +" "+ MainProgram.getPersonCurrent().getLastname());
             //MainProgram.stageMainPage.getCurrentselectact().addDept(dept);
             odb.saveObject(dept);
             odb.closeConnection();

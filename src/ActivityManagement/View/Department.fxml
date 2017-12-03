@@ -12,9 +12,9 @@
 
 <AnchorPane prefHeight="620.0" prefWidth="1018.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ActivityManagement.Controller.DeptPaneController">
    <children>
-      <VBox prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #b54444;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1500.0" style="-fx-background-color: #bf3838;" text="Department" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #bf3838;" text="Department" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
@@ -29,9 +29,8 @@
                      <children>
                         <TableView fx:id="DeptTable" onMouseClicked="#clickDeptItem" prefHeight="554.0" prefWidth="1018.0" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <columns>
-                              <TableColumn fx:id="DeptNameColumn" prefWidth="385.0" text="Department" />
-                              <TableColumn fx:id="DeptHeadColumn" prefWidth="360.0" text="Master of Department" />
-                              <TableColumn fx:id="DeptMemberColumn" prefWidth="271.0" text="No. member" />
+                              <TableColumn fx:id="DeptNameColumn" prefWidth="503.0" text="Department" />
+                              <TableColumn fx:id="DeptHeadColumn" prefWidth="514.0" text="Create By" />
                            </columns>
                         </TableView>
                         <Button id="record-sales" fx:id="enter_button" layoutX="815.0" layoutY="519.0" mnemonicParsing="false" onAction="#callEnterDept" prefHeight="37.0" prefWidth="71.0" stylesheets="@css/Enterbutton.css" text="Enter" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="50.0" />
