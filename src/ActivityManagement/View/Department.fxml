@@ -12,9 +12,9 @@
 
 <AnchorPane prefHeight="620.0" prefWidth="1018.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ActivityManagement.Controller.DeptPaneController">
    <children>
-      <VBox prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #b54444;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="1500.0" style="-fx-background-color: #bf3838;" text="Department" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #bf3838;" text="Department" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>

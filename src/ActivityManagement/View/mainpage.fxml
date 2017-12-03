@@ -9,7 +9,6 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -114,7 +113,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton layoutX="1001.0" layoutY="63.0" onAction="#callRefreshTable" prefHeight="37.0" prefWidth="112.0" style="-fx-background-color: #78c591;" text="refresh" textFill="WHITE" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="63.0">
+      <JFXButton layoutX="1001.0" layoutY="63.0" onAction="#callRefreshTable" prefHeight="37.0" prefWidth="112.0" style="-fx-background-color: #78c591;" text="refresh" textFill="WHITE" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="63.0">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -132,12 +131,12 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="367.0" prefWidth="966.0">
                      <children>
-                        <TableView fx:id="acttable" onMouseClicked="#clickActItem" prefHeight="554.0" prefWidth="1020.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                        <TableView fx:id="acttable" onMouseClicked="#clickActItem" prefHeight="554.0" prefWidth="1020.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <columns>
                               <TableColumn fx:id="actidColumn" prefWidth="130.0" text="ID" />
                               <TableColumn fx:id="actnameColumn" prefWidth="260.0" text="Name" />
                               <TableColumn fx:id="actorColumn" prefWidth="180.0" text="Organization" />
-                              <TableColumn fx:id="actdescColumn" prefWidth="450.0" text="Description" />
+                              <TableColumn fx:id="actdescColumn" maxWidth="1.7976931348623157E308" prefWidth="450.0" text="Description" />
                            </columns>
                         </TableView>
                      </children>
@@ -163,12 +162,6 @@
             </Tab>
          </tabs>
       </JFXTabPane>
-      <TextField layoutX="1065.0" layoutY="71.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="71.0" />
-      <ImageView fitHeight="25.0" fitWidth="34.0" layoutX="1226.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="68.0">
-         <image>
-            <Image url="@image/search-icon-23710.png" />
-         </image>
-      </ImageView>
       <StackPane fx:id="joinPane" onMouseClicked="#callCancelJoin" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane prefHeight="231.0" prefWidth="505.0">
