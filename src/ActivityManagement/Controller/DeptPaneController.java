@@ -35,8 +35,6 @@ public class DeptPaneController implements Reloadable{
     @FXML
     private TableColumn<Department, String> DeptHeadColumn;
 
-    @FXML
-    private TableColumn<Department, Integer> DeptMemberColumn;
 
     private Department currenselectdept;
 
@@ -62,7 +60,6 @@ public class DeptPaneController implements Reloadable{
     private void LoadTable(){
         DeptNameColumn.setCellValueFactory(new PropertyValueFactory<>("DeptName"));
         DeptHeadColumn.setCellValueFactory(new PropertyValueFactory<>("DeptMasterName"));
-        DeptMemberColumn.setCellValueFactory(new PropertyValueFactory<>("Member"));
         //DeptTable.setItems(getAllDepartment());
         DeptTable.setItems(getActivityDepartment());
     }
