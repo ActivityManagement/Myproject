@@ -62,6 +62,11 @@ public class MainDeptController implements Reloadable {
         MainProgram.getStageTimelineDepartPane().reloadPage();
     }
 
+    @FXML
+    void clickPollButton(ActionEvent event) {
+
+    }
+
     private void fitNodetoParent(Node nd)
     {
         AnchorPane.setTopAnchor(nd,0.0);
