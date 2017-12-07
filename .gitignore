@@ -3,3 +3,5 @@ out/
 \.idea/
 
 src/ActivityManagement/log/
+
+canrun/Program_jar/log/
