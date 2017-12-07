@@ -64,7 +64,7 @@
                               <Image url="@image/door-key.png" />
                            </image>
                         </ImageView>
-                        <JFXButton buttonType="RAISED" layoutX="118.0" layoutY="286.0" onAction="#callRegisterEvent" prefHeight="37.0" prefWidth="115.0" style="-fx-background-color: #aeaeae;" text="REGISTER" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" disable="true" layoutX="118.0" layoutY="286.0" onAction="#callRegisterEvent" prefHeight="37.0" prefWidth="115.0" style="-fx-background-color: #aeaeae;" text="REGISTER" textFill="WHITE">
                            <font>
                               <Font name="Arial Bold" size="15.0" />
                            </font>
