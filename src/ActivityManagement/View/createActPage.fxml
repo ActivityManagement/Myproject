@@ -12,7 +12,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ActivityManagement.Controller.CreateActController">
    <children>
       <VBox alignment="CENTER" layoutY="50.0" prefHeight="670.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -72,7 +71,7 @@
                               <Font size="16.0" />
                            </font>
                         </JFXTextField>
-                        <JFXTextField fx:id="descript_box" focusColor="#43b58f" layoutX="209.0" layoutY="227.0" prefHeight="25.0" prefWidth="495.0" promptText="Enter Description">
+                        <JFXTextField fx:id="descript_box" focusColor="#43b58f" layoutX="209.0" layoutY="227.0" prefHeight="25.0" prefWidth="495.0" promptText="Enter Description (optional)">
                            <font>
                               <Font size="16.0" />
                            </font>
