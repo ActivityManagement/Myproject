@@ -1,0 +1,14 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-12-07 18:07:40 #1 type] 
+Type ActivityManagement.Model.Activity is not enhanced.
+
+[2017-12-07 18:07:40 #2 type] 
+Type ActivityManagement.Model.Person is not enhanced.
+
+[2017-12-07 18:07:40 #3 type] 
+Type ActivityManagement.Model.Department is not enhanced.
+
+[2017-12-07 18:07:40 #4 type] 
+Type ActivityManagement.Model.HasActivity is not enhanced.
+

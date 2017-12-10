@@ -1,10 +1,7 @@
 package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
-import ActivityManagement.Model.Activity;
-import ActivityManagement.Model.HasActivity;
-import ActivityManagement.Model.ObjectDB;
-import ActivityManagement.Model.Person;
+import ActivityManagement.Model.*;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -69,7 +66,7 @@ public class CreateActController implements Reloadable {
             }
             Activity act = new Activity(actid,actname,orgname,password,desc);
             act.addMember(MainProgram.getPersonCurrent());
-            HasActivity hact = new HasActivity(act,1);
+            HasActivity hact = new HasActivity(act,1,3);
             odb.saveObject(act);
             odb.saveObject(hact);
             odb.closeConnection();

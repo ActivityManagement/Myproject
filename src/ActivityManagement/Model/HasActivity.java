@@ -9,7 +9,7 @@ public class HasActivity {
     private Activity activity;
     private int approve;
     private String actstatus;
-    private Role role;
+    private int role;
     /*
     status approve :
     0 = waiting
@@ -17,12 +17,20 @@ public class HasActivity {
     2 = rejected
      */
 
+    /*
+    role :
+    0: guest
+    1: member
+    2: Subleader
+    3: Leader
+     */
 
     public HasActivity(){}
-    public HasActivity(Activity act,int app)
+    public HasActivity(Activity act,int app,int role)
     {
         this.activity = act;
         setApprove(app);
+        this.role = role ;
     }
 
     public int getApprove()
@@ -39,6 +47,14 @@ public class HasActivity {
     {
         approve = value;
         actstatus = getStatusText();
+    }
+
+    public void setRole(int role) {
+        this.role = role;
+    }
+
+    public int getRole() {
+        return role;
     }
 
     public String getActstatus()

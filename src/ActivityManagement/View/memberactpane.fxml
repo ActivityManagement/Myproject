@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="670.0" prefWidth="1018.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ActivityManagement.Controller.MemberActPaneController">
    <children>
-      <JFXTabPane layoutX="24.0" layoutY="6.0" prefHeight="620.0" prefWidth="1018.0" stylesheets="@css/tabmainact.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+      <JFXTabPane fx:id="MemberTabPane" layoutX="24.0" layoutY="6.0" prefHeight="620.0" prefWidth="1018.0" stylesheets="@css/tabmainact.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
          <tabs>
             <Tab text="Joined">
                <content>
@@ -27,13 +31,19 @@
                            <columns>
                               <TableColumn fx:id="joinedpidColumn" prefWidth="131.0" text="User ID" />
                               <TableColumn fx:id="joinedpnameColumn" prefWidth="440.0" text="Name" />
+                              <TableColumn fx:id="RoleColumn" prefWidth="131.0" text="Role" />
                            </columns>
                         </TableView>
+                        <JFXButton id="record-sales" fx:id="SetPermButton" buttonType="RAISED" disable="true" layoutX="723.0" layoutY="518.0" onAction="#SetPermission" prefHeight="42.0" prefWidth="144.0" ripplerFill="#2712e7" style="-fx-background-color: #2712e7;" stylesheets="@css/Removebutton.css" text="Set Permission" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
                      </children>
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab text="Request">
+            <Tab fx:id="RequestTab" text="Request">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -59,6 +69,50 @@
             </Tab>
          </tabs>
       </JFXTabPane>
+      <StackPane fx:id="SetPermissionPane" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#callcancelPerm" prefHeight="675.0" prefWidth="1021.0" visible="false">
+         <children>
+            <AnchorPane onMouseClicked="#callcancelPerm" prefHeight="647.0" prefWidth="963.0">
+               <children>
+                  <JFXDialogLayout fx:id="contentofPerm" layoutX="345.0" layoutY="195.0" prefHeight="289.0" prefWidth="339.0" style="-fx-background-color: f1edd0;" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="195.0">
+                     <children>
+                        <AnchorPane prefHeight="305.0" prefWidth="368.0" style="-fx-background-color: f1edd0;">
+                           <children>
+                              <JFXButton buttonType="RAISED" layoutX="71.0" layoutY="223.0" onAction="#callcancelPerm" prefHeight="32.0" prefWidth="77.0" ripplerFill="#90483f" style="-fx-background-color: #ff5858;" text="Cancel" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="163.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="174.0" layoutY="223.0" onAction="#callsubmitPerm" ripplerFill="#3b793a" style="-fx-background-color: #78c591;" text="Submit" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="60.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label layoutX="56.0" layoutY="14.0" text="Set Permission">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="16.0" layoutY="87.0" text="Permission :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <RadioButton fx:id="LeaderRadio" layoutX="105.0" layoutY="89.0" mnemonicParsing="false" onAction="#SetPermToLeader" text="Leader" />
+                              <RadioButton fx:id="SubLeaderRadio" layoutX="105.0" layoutY="116.0" mnemonicParsing="false" onAction="#SetPermToSubLeader" text="Sub-Leader" />
+                              <RadioButton fx:id="MemberRadio" layoutX="105.0" layoutY="141.0" mnemonicParsing="false" onAction="#SetPermToMember" text="Member" />
+                              <Label fx:id="PersonIDLabel" layoutX="50.0" layoutY="64.0" text="ID :" />
+                              <Label fx:id="NameLabel" layoutX="105.0" layoutY="64.0" text="Name" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                  </JFXDialogLayout>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
       <VBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #b54444;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" style="-fx-background-color: #b54444;" text="Member" textFill="WHITE">

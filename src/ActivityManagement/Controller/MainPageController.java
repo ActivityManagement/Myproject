@@ -1,10 +1,7 @@
 package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
-import ActivityManagement.Model.Activity;
-import ActivityManagement.Model.HasActivity;
-import ActivityManagement.Model.ObjectDB;
-import ActivityManagement.Model.Person;
+import ActivityManagement.Model.*;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
@@ -169,7 +166,7 @@ public class MainPageController implements Reloadable {
             else {
                 ObjectDB odb = new ObjectDB();
                 odb.createConnection(MainProgram.getDBName());
-                HasActivity hact = new HasActivity(currentselectact, 0);
+                HasActivity hact = new HasActivity(currentselectact, 0,0);
                 odb.saveObject(hact);
                 odb.closeConnection();
                 //-------------------------- update hasact in person--------------------------
