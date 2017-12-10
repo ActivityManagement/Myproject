@@ -23,16 +23,16 @@ import java.util.List;
 public class MemberActPaneController implements Reloadable {
 
     @FXML
-    private TableView<Person> joinedTable;
+    private TableView<MemberJoinedTable> joinedTable;
 
     @FXML
-    private TableColumn<Person, String> joinedpidColumn;
+    private TableColumn<MemberJoinedTable, String> joinedpidColumn;
 
     @FXML
-    private TableColumn<Person, String> joinedpnameColumn;
+    private TableColumn<MemberJoinedTable, String> joinedpnameColumn;
 
     @FXML
-    private TableColumn<HasActivity, String> RoleColumn;
+    private TableColumn<MemberJoinedTable, String> RoleColumn;
 
     @FXML
     private TableView<Person> reqTable;
@@ -198,8 +198,8 @@ public class MemberActPaneController implements Reloadable {
 
     private void loadMemberTable() {
         joinedpidColumn.setCellValueFactory(new PropertyValueFactory<>("userid"));
-        joinedpnameColumn.setCellValueFactory(new PropertyValueFactory<>("firstname"));
-        //RoleColumn.setCellValueFactory(new PropertyValueFactory<>("Role"));
+        joinedpnameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        RoleColumn.setCellValueFactory(new PropertyValueFactory<>("role"));
         joinedTable.setItems(getJoinedPerson());
 
         reqpidColumn.setCellValueFactory(new PropertyValueFactory<>("userid"));
@@ -207,12 +207,28 @@ public class MemberActPaneController implements Reloadable {
         reqTable.setItems(getRequestPerson());
     }
 
-    private ObservableList<Person> getJoinedPerson() {
-        ObservableList<Person> p = FXCollections.observableArrayList();
+    private ObservableList<MemberJoinedTable> getJoinedPerson() {
+        ObservableList<MemberJoinedTable> p = FXCollections.observableArrayList();
         MainProgram.updateActivity();
         ArrayList<Person> jmem = MainProgram.getStageMainPage().getCurrentselectact().getJoinedMember();
         for (int i = 0; i < jmem.size(); i++) {
-            p.add(jmem.get(i));
+            String role= null;
+            ArrayList<HasActivity> myact = jmem.get(i).getMyact();
+            for (int j = 0; j < myact.size(); j++) {
+                if (myact.get(j).getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid()))
+                {
+                    if (myact.get(j).getRole()==0)
+                        role = "Guest";
+                    else if (myact.get(j).getRole()==1)
+                        role = "Member";
+                    else if (myact.get(j).getRole()==2)
+                        role = "Subleader";
+                    else if (myact.get(j).getRole()==3)
+                        role = "Leader";
+                }
+            }
+            MemberJoinedTable tmp = new MemberJoinedTable(jmem.get(i).getUserid(),jmem.get(i).getFirstname(),role,jmem.get(i));
+            p.add(tmp);
         }
         return p;
     }
@@ -245,7 +261,7 @@ public class MemberActPaneController implements Reloadable {
     @FXML
     void clickSelectJoinedMember(MouseEvent event) {
         if (!joinedTable.getSelectionModel().isEmpty()) {
-            currentselectJoinedPerson = joinedTable.getSelectionModel().getSelectedItem();
+            currentselectJoinedPerson = joinedTable.getSelectionModel().getSelectedItem().getPerson();
             SetPermButton.setDisable(false);
             if (!reqTable.getSelectionModel().isEmpty()) //if another table had selected
             {
