@@ -16,7 +16,7 @@
 
 <AnchorPane prefHeight="670.0" prefWidth="1018.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ActivityManagement.Controller.MemberActPaneController">
    <children>
-      <JFXTabPane layoutX="24.0" layoutY="6.0" prefHeight="620.0" prefWidth="1018.0" stylesheets="@css/tabmainact.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+      <JFXTabPane fx:id="MemberTabPane" layoutX="24.0" layoutY="6.0" prefHeight="620.0" prefWidth="1018.0" stylesheets="@css/tabmainact.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
          <tabs>
             <Tab text="Joined">
                <content>
@@ -43,7 +43,7 @@
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab text="Request">
+            <Tab fx:id="RequestTab" text="Request">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>

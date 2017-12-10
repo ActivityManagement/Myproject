@@ -5,14 +5,12 @@ import ActivityManagement.Model.*;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
+import com.jfoenix.controls.JFXTabPane;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
@@ -274,6 +272,10 @@ public class MemberActPaneController implements Reloadable {
         }
         reloadPage();
     }
+    @FXML
+    private JFXTabPane MemberTabPane;
+    @FXML
+    private Tab RequestTab;
 
     private void setStatus(int status, int role) {
         //TODO
@@ -334,17 +336,21 @@ public class MemberActPaneController implements Reloadable {
             loadMemberTable();
             reqTable.setDisable(false);
             joinedTable.setDisable(false);
-
+            MemberTabPane.getTabs().remove(RequestTab);
+            MemberTabPane.getTabs().add(RequestTab);
         } else if (checkrole == 2) {
             disableButton();
             loadMemberTable();
             reqTable.setDisable(true);
             joinedTable.setDisable(true);
+            MemberTabPane.getTabs().remove(RequestTab);
+            MemberTabPane.getTabs().add(RequestTab);
         } else {
             disableButton();
             loadMemberTable();
             reqTable.setDisable(true);
             joinedTable.setDisable(true);
+            MemberTabPane.getTabs().remove(RequestTab);
         }
 
 
