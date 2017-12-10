@@ -2,13 +2,16 @@ package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
 import ActivityManagement.Model.Department;
+import ActivityManagement.Model.HasActivity;
 import ActivityManagement.Model.ObjectDB;
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
+import java.util.ArrayList;
 import java.util.List;
 
 public class NoteDepartPaneController implements Reloadable {
@@ -16,11 +19,36 @@ public class NoteDepartPaneController implements Reloadable {
     @FXML
     private TextArea noteFieldArea;
 
+    @FXML
+    private JFXButton AcceptButton;
+
+
     @Override
     public void reloadPage()
     {
         MainProgram.updateDepartment();
         noteFieldArea.setText(MainProgram.getStageDeptPane().getCurrentselectdept().getNote());
+
+        ArrayList<HasActivity> hact = MainProgram.getPersonCurrent().getMyact();
+        int checkrole = 0;
+        for (HasActivity ha : hact) {
+            //search has act of this activity
+            if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid())) {
+                checkrole = ha.getRole();
+                break;
+            }
+        }
+        System.out.println(checkrole);
+
+        if (checkrole == 3) {
+            AcceptButton.setDisable(false);
+            noteFieldArea.setDisable(false);
+
+        }
+        else {
+            AcceptButton.setDisable(true);
+            noteFieldArea.setDisable(true);
+        }
     }
 
     @FXML

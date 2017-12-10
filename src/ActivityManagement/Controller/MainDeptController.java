@@ -1,6 +1,7 @@
 package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
+import ActivityManagement.Model.HasActivity;
 import ActivityManagement.Model.ObjectDB;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
@@ -33,17 +34,15 @@ public class MainDeptController implements Reloadable {
     private AnchorPane departmentPane;
 
     @FXML
+    private JFXButton AcceptButton;
+
+    @FXML
     void callBacktoAct(ActionEvent event) {
         MainProgram.getPrimaryWindow().getScene().setRoot(MainProgram.getMainactpage());
         reloadPage(); //could reload when change scene
         MainProgram.getStageMainActPage().reloadPage();
     }
 
-
-    @FXML
-    void callCollapse(ActionEvent event) {
-
-    }
 
     @FXML
     void clickNoteButton(ActionEvent event) {
@@ -62,10 +61,6 @@ public class MainDeptController implements Reloadable {
         MainProgram.getStageTimelineDepartPane().reloadPage();
     }
 
-    @FXML
-    void clickPollButton(ActionEvent event) {
-
-    }
 
     private void fitNodetoParent(Node nd)
     {
@@ -80,5 +75,6 @@ public class MainDeptController implements Reloadable {
         departmentPane.getChildren().clear();
         String title = String.format("%s : %s",MainProgram.getStageMainPage().getCurrentselectact().getActname(),MainProgram.getStageDeptPane().getCurrentselectdept().getDeptName());
         titleactdept.setText(title);
+
     }
 }

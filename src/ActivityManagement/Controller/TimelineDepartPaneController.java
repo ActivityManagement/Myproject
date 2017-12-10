@@ -1,10 +1,7 @@
 package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
-import ActivityManagement.Model.Department;
-import ActivityManagement.Model.ObjectDB;
-import ActivityManagement.Model.TimeItem;
-import ActivityManagement.Model.Timeline;
+import ActivityManagement.Model.*;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
@@ -17,6 +14,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
+import jdk.jfr.Enabled;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
@@ -87,17 +85,7 @@ public class TimelineDepartPaneController implements Reloadable {
 
     }
 
-    public void reloadPage()
-    {
-        MainProgram.updateDepartment();
-        currentTimelineDate = null;
-        timelineTable.getItems().clear();
-        timePicker.setIs24HourView(true);
-        datePicker.setValue(null);
-        timePicker.setValue(null);
-        detailInput.clear();
-        checkAddButton();
-    }
+
 
     private void checkAddButton()
     {
@@ -167,5 +155,49 @@ public class TimelineDepartPaneController implements Reloadable {
     @FXML
     void inputToText(KeyEvent event) {
         checkAddButton();
+    }
+
+    void setDisableall(){
+        timePicker.setDisable(true);
+        add_button.setDisable(true);
+        detailInput.setDisable(true);
+        timelineTable.setDisable(true);
+    }
+
+    void setEnableall(){
+        timePicker.setDisable(false);
+        add_button.setDisable(false);
+        detailInput.setDisable(false);
+        timelineTable.setDisable(false);
+    }
+
+    public void reloadPage()
+    {
+        MainProgram.updateDepartment();
+        currentTimelineDate = null;
+        timelineTable.getItems().clear();
+        timePicker.setIs24HourView(true);
+        datePicker.setValue(null);
+        timePicker.setValue(null);
+        detailInput.clear();
+        checkAddButton();
+        ArrayList<HasActivity> hact = MainProgram.getPersonCurrent().getMyact();
+        int checkrole = 0;
+        for (HasActivity ha : hact) {
+            //search has act of this activity
+            if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid())) {
+                checkrole = ha.getRole();
+                break;
+            }
+        }
+        System.out.println(checkrole);
+
+        if (checkrole == 3) {
+            setEnableall();
+
+        }
+        else {
+            setDisableall();
+        }
     }
 }

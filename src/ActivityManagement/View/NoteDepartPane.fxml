@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="620.0" prefWidth="1018.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ActivityManagement.Controller.NoteDepartPaneController">
    <children>
       <VBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #4ea083;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -24,7 +23,7 @@
             <Font name="Arial Bold" size="24.0" />
          </font>
       </TextArea>
-      <JFXButton buttonType="RAISED" onAction="#callAcceptNote" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: #ab5412;" text="Accept" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="50.0">
+      <JFXButton fx:id="AcceptButton" buttonType="RAISED" onAction="#callAcceptNote" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: #ab5412;" text="Accept" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="50.0">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>

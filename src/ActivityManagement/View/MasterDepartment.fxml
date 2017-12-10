@@ -17,17 +17,7 @@
                   <Font name="System Bold" size="22.0" />
                </font>
             </JFXButton>
-            <JFXButton alignment="TOP_LEFT" buttonType="RAISED" prefHeight="39.0" prefWidth="262.0" style="-fx-background-color: #7fccb5;" text="Member" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-            </JFXButton>
             <JFXButton alignment="TOP_LEFT" buttonType="RAISED" onAction="#clickNoteButton" prefHeight="39.0" prefWidth="262.0" style="-fx-background-color: #7fccb5;" text="Note" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-            </JFXButton>
-            <JFXButton alignment="TOP_LEFT" buttonType="RAISED" onAction="#clickPollButton" prefHeight="39.0" prefWidth="262.0" style="-fx-background-color: #7fccb5;" text="Poll" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
@@ -38,11 +28,6 @@
          </opaqueInsets>
       </VBox>
       <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="24.0" layoutY="652.0" onAction="#callBacktoAct" prefHeight="50.0" prefWidth="200.0" ripplerFill="#7bdcff" style="-fx-background-color: #11425a;" text="Back" textFill="WHITE" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="31.0">
-         <font>
-            <Font name="Arial Bold" size="23.0" />
-         </font>
-      </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#callCollapse" prefHeight="50.0" prefWidth="200.0" ripplerFill="#f8aea2" style="-fx-background-color: #dd553d;" text="Collapse" textFill="WHITE" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="31.0">
          <font>
             <Font name="Arial Bold" size="23.0" />
          </font>
