@@ -1,10 +1,7 @@
 package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
-import ActivityManagement.Model.HasActivity;
-import ActivityManagement.Model.ObjectDB;
-import ActivityManagement.Model.Person;
-import ActivityManagement.Model.Role;
+import ActivityManagement.Model.*;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
@@ -25,7 +22,7 @@ import javax.persistence.TypedQuery;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MemberActPaneController implements Reloadable{
+public class MemberActPaneController implements Reloadable {
 
     @FXML
     private TableView<Person> joinedTable;
@@ -92,6 +89,7 @@ public class MemberActPaneController implements Reloadable{
 
     @FXML
     void SetPermToLeader(ActionEvent event) {
+        LeaderRadio.setSelected(true);
         SubLeaderRadio.setSelected(false);
         MemberRadio.setSelected(false);
     }
@@ -99,53 +97,55 @@ public class MemberActPaneController implements Reloadable{
     @FXML
     void SetPermToMember(ActionEvent event) {
         LeaderRadio.setSelected(false);
-        MemberRadio.setSelected(false);
+        SubLeaderRadio.setSelected(false);
+        MemberRadio.setSelected(true);
     }
 
     @FXML
     void SetPermToSubLeader(ActionEvent event) {
         LeaderRadio.setSelected(false);
-        SubLeaderRadio.setSelected(false);
+        SubLeaderRadio.setSelected(true);
+        MemberRadio.setSelected(false);
     }
 
     @FXML
     void SetPermission(ActionEvent event) {
 
-        if (currentselectJoinedPerson !=null) {
-            System.out.println("Test");
-                PersonIDLabel.setText(String.valueOf(currentselectJoinedPerson.getId()));
-                NameLabel.setText(currentselectJoinedPerson.getFirstname());
-                SetPermissionPane.setVisible(true);
-                if (SetPermDialog == null) {
-                    SetPermDialog = new JFXDialog(SetPermissionPane,contentofPerm , JFXDialog.DialogTransition.CENTER);
-                }
+        if (currentselectJoinedPerson != null) {
+
+            //.setText(currentselectJoinedPerson.getId().toString());
+            NameLabel.setText(currentselectJoinedPerson.getFirstname());
+            SetPermissionPane.setVisible(true);
+            System.out.println("Test1");
+            if (SetPermDialog == null) {
+                SetPermDialog = new JFXDialog(SetPermissionPane, contentofPerm, JFXDialog.DialogTransition.CENTER);
+                System.out.println("Test2");
+            }
             SetPermDialog.show();
+            System.out.println("Test3");
         }
     }
 
     @FXML
     void callcancelPerm(ActionEvent event) {
 
-        SetPermDialog.close();
-        SetPermissionPane.setVisible(false);
+        closeAllDialogPane();
     }
 
     @FXML
     void callsubmitPerm(ActionEvent event) {
 
-        if(LeaderRadio.isSelected() == true ){
-            System.out.println(currentselectJoinedPerson.getFirstname());
+        if (LeaderRadio.isSelected() == true) {
             ObjectDB odb = new ObjectDB();
             EntityManager em = odb.createConnection(MainProgram.getDBName());
-            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+ currentselectJoinedPerson.getId()+"", Person.class);
+            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = " + currentselectJoinedPerson.getId() + "", Person.class);
             List<Person> results = query.getResultList();
             em.getTransaction().begin();
             for (Person p : results) {
                 ArrayList<HasActivity> hact = p.getMyact();
                 for (HasActivity ha : hact) {
                     //search has act of this activity
-                    if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid()))
-                    {
+                    if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid())) {
                         ha.setRole(3);
                     }
                 }
@@ -154,19 +154,17 @@ public class MemberActPaneController implements Reloadable{
             em.getTransaction().commit();
             odb.closeConnection();
         }
-        if(SubLeaderRadio.isSelected() == true ){
-            System.out.println(currentselectJoinedPerson.getFirstname());
+        if (SubLeaderRadio.isSelected() == true) {
             ObjectDB odb = new ObjectDB();
             EntityManager em = odb.createConnection(MainProgram.getDBName());
-            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+ currentselectJoinedPerson.getId()+"", Person.class);
+            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = " + currentselectJoinedPerson.getId() + "", Person.class);
             List<Person> results = query.getResultList();
             em.getTransaction().begin();
             for (Person p : results) {
                 ArrayList<HasActivity> hact = p.getMyact();
                 for (HasActivity ha : hact) {
                     //search has act of this activity
-                    if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid()))
-                    {
+                    if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid())) {
                         ha.setRole(2);
                     }
                 }
@@ -175,19 +173,17 @@ public class MemberActPaneController implements Reloadable{
             em.getTransaction().commit();
             odb.closeConnection();
         }
-        if(MemberRadio.isSelected() == true ){
-            System.out.println(currentselectJoinedPerson.getFirstname());
+        if (MemberRadio.isSelected() == true) {
             ObjectDB odb = new ObjectDB();
             EntityManager em = odb.createConnection(MainProgram.getDBName());
-            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+ currentselectJoinedPerson.getId()+"", Person.class);
+            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = " + currentselectJoinedPerson.getId() + "", Person.class);
             List<Person> results = query.getResultList();
             em.getTransaction().begin();
             for (Person p : results) {
                 ArrayList<HasActivity> hact = p.getMyact();
                 for (HasActivity ha : hact) {
                     //search has act of this activity
-                    if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid()))
-                    {
+                    if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid())) {
                         ha.setRole(1);
                     }
                 }
@@ -198,11 +194,11 @@ public class MemberActPaneController implements Reloadable{
         }
         SetPermDialog.close();
         SetPermissionPane.setVisible(false);
+        reloadPage();
     }
 
 
-    private void loadMemberTable()
-    {
+    private void loadMemberTable() {
         joinedpidColumn.setCellValueFactory(new PropertyValueFactory<>("userid"));
         joinedpnameColumn.setCellValueFactory(new PropertyValueFactory<>("firstname"));
         //RoleColumn.setCellValueFactory(new PropertyValueFactory<>("Role"));
@@ -213,23 +209,21 @@ public class MemberActPaneController implements Reloadable{
         reqTable.setItems(getRequestPerson());
     }
 
-    private ObservableList<Person> getJoinedPerson()
-    {
+    private ObservableList<Person> getJoinedPerson() {
         ObservableList<Person> p = FXCollections.observableArrayList();
         MainProgram.updateActivity();
         ArrayList<Person> jmem = MainProgram.getStageMainPage().getCurrentselectact().getJoinedMember();
-        for (int i = 0; i < jmem.size() ; i++) {
+        for (int i = 0; i < jmem.size(); i++) {
             p.add(jmem.get(i));
         }
         return p;
     }
 
-    private ObservableList<Person> getRequestPerson()
-    {
+    private ObservableList<Person> getRequestPerson() {
         ObservableList<Person> p = FXCollections.observableArrayList();
         MainProgram.updateActivity();
         ArrayList<Person> rmem = MainProgram.getStageMainPage().getCurrentselectact().getRequestMember();
-        for (int i = 0; i < rmem.size() ; i++) {
+        for (int i = 0; i < rmem.size(); i++) {
             p.add(rmem.get(i));
         }
         return p;
@@ -239,8 +233,7 @@ public class MemberActPaneController implements Reloadable{
     @FXML
     void clickSelectPerson(MouseEvent event) {
         // check if don't click null
-        if (!reqTable.getSelectionModel().isEmpty())
-        {
+        if (!reqTable.getSelectionModel().isEmpty()) {
             approveButton.setDisable(false);
             rejectButton.setDisable(false);
             currentselectReqPerson = reqTable.getSelectionModel().getSelectedItem();
@@ -253,8 +246,7 @@ public class MemberActPaneController implements Reloadable{
 
     @FXML
     void clickSelectJoinedMember(MouseEvent event) {
-        if (!joinedTable.getSelectionModel().isEmpty())
-        {
+        if (!joinedTable.getSelectionModel().isEmpty()) {
             currentselectJoinedPerson = joinedTable.getSelectionModel().getSelectedItem();
             SetPermButton.setDisable(false);
             if (!reqTable.getSelectionModel().isEmpty()) //if another table had selected
@@ -269,35 +261,33 @@ public class MemberActPaneController implements Reloadable{
 
     @FXML
     void callApproveSelect(ActionEvent event) {
-        if (currentselectReqPerson!=null) {
-            setStatus(1,1);
+        if (currentselectReqPerson != null) {
+            setStatus(1, 1);
         }
         reloadPage();
     }
 
     @FXML
     void callRejectMember(ActionEvent event) {
-        if (currentselectReqPerson!=null) {
-            setStatus(2,0);
+        if (currentselectReqPerson != null) {
+            setStatus(2, 0);
         }
         reloadPage();
     }
 
-    private void setStatus(int status,int role)
-    {
+    private void setStatus(int status, int role) {
         //TODO
         System.out.println(currentselectReqPerson.getFirstname());
         ObjectDB odb = new ObjectDB();
         EntityManager em = odb.createConnection(MainProgram.getDBName());
-        TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+currentselectReqPerson.getId()+"", Person.class);
+        TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = " + currentselectReqPerson.getId() + "", Person.class);
         List<Person> results = query.getResultList();
         em.getTransaction().begin();
         for (Person p : results) {
             ArrayList<HasActivity> hact = p.getMyact();
             for (HasActivity ha : hact) {
                 //search has act of this activity
-                if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid()))
-                {
+                if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid())) {
                     ha.setApprove(status);
                     ha.setRole(role);
                 }
@@ -308,58 +298,56 @@ public class MemberActPaneController implements Reloadable{
         odb.closeConnection();
     }
 
-    @Override
-    public void reloadPage() {
-        int checkrole = 0;
-
-        ObjectDB odb = new ObjectDB();
-        EntityManager em = odb.createConnection(MainProgram.getDBName());
-        TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+currentselectReqPerson.getId()+"", Person.class);
-        List<Person> results = query.getResultList();
-        em.getTransaction().begin();
-        for (Person p : results) {
-            ArrayList<HasActivity> hact = p.getMyact();
-            for (HasActivity ha : hact) {
-                //search has act of this activity
-                if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid()))
-                {
-                    checkrole = ha.getRole() ;
-                }
-            }
-        }
-        if(checkrole == 3){
-            MainProgram.updatePerson();
-            MainProgram.updateActivity();
-            disableButton();
-            loadMemberTable();
-            Person p = MainProgram.getPersonCurrent();
-            ArrayList<HasActivity> hact = p.getMyact();
-        }
-        else if(checkrole == 2) {
-            MainProgram.updatePerson();
-            MainProgram.updateActivity();
-            disableButton();
-            loadMemberTable();
-            Person p = MainProgram.getPersonCurrent();
-            ArrayList<HasActivity> hact = p.getMyact();
-        }
-        else {
-            MainProgram.updatePerson();
-            MainProgram.updateActivity();
-            disableButton();
-            loadMemberTable();
-            Person p = MainProgram.getPersonCurrent();
-            ArrayList<HasActivity> hact = p.getMyact();
-        }
-
-
-    }
-
-    private void disableButton()
-    {
+    private void disableButton() {
         removeButton.setDisable(true);
         approveButton.setDisable(true);
         rejectButton.setDisable(true);
         SetPermButton.setDisable(true);
     }
+
+    private void closeAllDialogPane()
+    {
+        SetPermissionPane.setVisible(false);
+        if (SetPermDialog != null)
+            SetPermDialog.close();
+
+    }
+
+    @Override
+    public void reloadPage() {
+        int checkrole = 0;
+        MainProgram.updatePerson();
+        MainProgram.updateActivity();
+        ArrayList<HasActivity> hact = MainProgram.getPersonCurrent().getMyact();
+        for (HasActivity ha : hact) {
+            //search has act of this activity
+            if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid())) {
+                checkrole = ha.getRole();
+                break;
+            }
+        }
+        System.out.println(checkrole);
+
+        if (checkrole == 3) {
+
+            disableButton();
+            loadMemberTable();
+            reqTable.setDisable(false);
+            joinedTable.setDisable(false);
+
+        } else if (checkrole == 2) {
+            disableButton();
+            loadMemberTable();
+            reqTable.setDisable(true);
+            joinedTable.setDisable(true);
+        } else {
+            disableButton();
+            loadMemberTable();
+            reqTable.setDisable(true);
+            joinedTable.setDisable(true);
+        }
+
+
+    }
+
 }

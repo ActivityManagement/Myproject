@@ -2,6 +2,7 @@ package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
 import ActivityManagement.Model.Department;
+import ActivityManagement.Model.HasActivity;
 import ActivityManagement.Model.ObjectDB;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -122,6 +123,23 @@ public class DeptPaneController implements Reloadable{
 //        MainProgram.updateDepartment();
         enter_button.setDisable(true);
         LoadTable();
+        int checkrole = 0;
+        ArrayList<HasActivity> hact = MainProgram.getPersonCurrent().getMyact();
+        for (HasActivity ha : hact) {
+            //search has act of this activity
+            if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid())) {
+                checkrole = ha.getRole();
+                break;
+            }
+        }
+
+        if (checkrole == 3) {
+            create_button.setDisable(false);
+        } else if (checkrole == 2) {
+            create_button.setDisable(true);
+        } else {
+            create_button.setDisable(true);
+        }
     }
 }
 

@@ -69,20 +69,11 @@
             </Tab>
          </tabs>
       </JFXTabPane>
-      <VBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #b54444;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <StackPane fx:id="SetPermissionPane" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#callcancelPerm" prefHeight="675.0" prefWidth="1021.0" visible="false">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" style="-fx-background-color: #b54444;" text="Member" textFill="WHITE">
-               <font>
-                  <Font name="Arial Bold" size="20.0" />
-               </font>
-            </Label>
-         </children>
-      </VBox>
-      <StackPane fx:id="SetPermissionPane" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#callcancelPerm" prefHeight="675.0" prefWidth="1021.0">
-         <children>
-            <AnchorPane prefHeight="647.0" prefWidth="963.0">
+            <AnchorPane onMouseClicked="#callcancelPerm" prefHeight="647.0" prefWidth="963.0">
                <children>
-                  <JFXDialogLayout fx:id="contentofPerm" layoutX="345.0" layoutY="195.0" prefHeight="289.0" prefWidth="339.0" style="-fx-background-color: f1edd0;" visible="false" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="195.0">
+                  <JFXDialogLayout fx:id="contentofPerm" layoutX="345.0" layoutY="195.0" prefHeight="289.0" prefWidth="339.0" style="-fx-background-color: f1edd0;" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="195.0">
                      <children>
                         <AnchorPane prefHeight="305.0" prefWidth="368.0" style="-fx-background-color: f1edd0;">
                            <children>
@@ -122,5 +113,14 @@
             </AnchorPane>
          </children>
       </StackPane>
+      <VBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #b54444;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" style="-fx-background-color: #b54444;" text="Member" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
