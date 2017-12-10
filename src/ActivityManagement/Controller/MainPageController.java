@@ -169,7 +169,7 @@ public class MainPageController implements Reloadable {
             else {
                 ObjectDB odb = new ObjectDB();
                 odb.createConnection(MainProgram.getDBName());
-                HasActivity hact = new HasActivity(currentselectact, 0);
+                HasActivity hact = new HasActivity(currentselectact, 0,0);
                 odb.saveObject(hact);
                 odb.closeConnection();
                 //-------------------------- update hasact in person--------------------------

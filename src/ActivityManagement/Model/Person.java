@@ -30,7 +30,7 @@ public class Person {
 
     public void joinAct(Activity a)
     {
-        HasActivity ha = new HasActivity(a,0);
+        HasActivity ha = new HasActivity(a,0,0);
         ObjectDB odb = new ObjectDB();
         EntityManager em = odb.createConnection(MainProgram.DBName);
         odb.saveObject(ha);
@@ -73,4 +73,9 @@ public class Person {
     public ArrayList<HasActivity> getMyact() {
         return myact;
     }
+    public int getRole()
+    {
+        return
+    }
+
 }

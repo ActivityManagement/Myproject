@@ -69,7 +69,7 @@ public class CreateActController implements Reloadable {
             }
             Activity act = new Activity(actid,actname,orgname,password,desc);
             act.addMember(MainProgram.getPersonCurrent());
-            HasActivity hact = new HasActivity(act,1);
+            HasActivity hact = new HasActivity(act,1,1);
             odb.saveObject(act);
             odb.saveObject(hact);
             odb.closeConnection();
