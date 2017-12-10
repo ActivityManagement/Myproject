@@ -73,9 +73,5 @@ public class Person {
     public ArrayList<HasActivity> getMyact() {
         return myact;
     }
-    public int getRole()
-    {
-        return
-    }
 
 }

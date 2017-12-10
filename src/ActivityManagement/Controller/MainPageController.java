@@ -1,10 +1,7 @@
 package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
-import ActivityManagement.Model.Activity;
-import ActivityManagement.Model.HasActivity;
-import ActivityManagement.Model.ObjectDB;
-import ActivityManagement.Model.Person;
+import ActivityManagement.Model.*;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;

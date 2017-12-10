@@ -2,9 +2,9 @@ package ActivityManagement.Controller;
 
 import ActivityManagement.MainProgram;
 import ActivityManagement.Model.HasActivity;
-import ActivityManagement.Model.Leader;
 import ActivityManagement.Model.ObjectDB;
 import ActivityManagement.Model.Person;
+import ActivityManagement.Model.Role;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
@@ -21,7 +21,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 
 import javax.persistence.EntityManager;
-import javax.persistence.JoinTable;
 import javax.persistence.TypedQuery;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +37,9 @@ public class MemberActPaneController implements Reloadable{
     private TableColumn<Person, String> joinedpnameColumn;
 
     @FXML
+    private TableColumn<HasActivity, String> RoleColumn;
+
+    @FXML
     private TableView<Person> reqTable;
 
     @FXML
@@ -49,7 +51,7 @@ public class MemberActPaneController implements Reloadable{
     private Person currentselectReqPerson;
 
     @FXML
-    private Person currrentselectJoinedPerson;
+    private Person currentselectJoinedPerson;
 
     @FXML
     private JFXButton removeButton;
@@ -108,9 +110,11 @@ public class MemberActPaneController implements Reloadable{
 
     @FXML
     void SetPermission(ActionEvent event) {
-        if (currrentselectJoinedPerson!=null) {
-                PersonIDLabel.setText(String.valueOf(currrentselectJoinedPerson.getId()));
-                NameLabel.setText(currrentselectJoinedPerson.getFirstname());
+
+        if (currentselectJoinedPerson !=null) {
+            System.out.println("Test");
+                PersonIDLabel.setText(String.valueOf(currentselectJoinedPerson.getId()));
+                NameLabel.setText(currentselectJoinedPerson.getFirstname());
                 SetPermissionPane.setVisible(true);
                 if (SetPermDialog == null) {
                     SetPermDialog = new JFXDialog(SetPermissionPane,contentofPerm , JFXDialog.DialogTransition.CENTER);
@@ -130,10 +134,10 @@ public class MemberActPaneController implements Reloadable{
     void callsubmitPerm(ActionEvent event) {
 
         if(LeaderRadio.isSelected() == true ){
-            System.out.println(currrentselectJoinedPerson.getFirstname());
+            System.out.println(currentselectJoinedPerson.getFirstname());
             ObjectDB odb = new ObjectDB();
             EntityManager em = odb.createConnection(MainProgram.getDBName());
-            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+currrentselectJoinedPerson.getId()+"", Person.class);
+            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+ currentselectJoinedPerson.getId()+"", Person.class);
             List<Person> results = query.getResultList();
             em.getTransaction().begin();
             for (Person p : results) {
@@ -145,16 +149,16 @@ public class MemberActPaneController implements Reloadable{
                         ha.setRole(3);
                     }
                 }
-                currrentselectJoinedPerson = p;
+                currentselectJoinedPerson = p;
             }
             em.getTransaction().commit();
             odb.closeConnection();
         }
         if(SubLeaderRadio.isSelected() == true ){
-            System.out.println(currrentselectJoinedPerson.getFirstname());
+            System.out.println(currentselectJoinedPerson.getFirstname());
             ObjectDB odb = new ObjectDB();
             EntityManager em = odb.createConnection(MainProgram.getDBName());
-            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+currrentselectJoinedPerson.getId()+"", Person.class);
+            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+ currentselectJoinedPerson.getId()+"", Person.class);
             List<Person> results = query.getResultList();
             em.getTransaction().begin();
             for (Person p : results) {
@@ -166,16 +170,16 @@ public class MemberActPaneController implements Reloadable{
                         ha.setRole(2);
                     }
                 }
-                currrentselectJoinedPerson = p;
+                currentselectJoinedPerson = p;
             }
             em.getTransaction().commit();
             odb.closeConnection();
         }
         if(MemberRadio.isSelected() == true ){
-            System.out.println(currrentselectJoinedPerson.getFirstname());
+            System.out.println(currentselectJoinedPerson.getFirstname());
             ObjectDB odb = new ObjectDB();
             EntityManager em = odb.createConnection(MainProgram.getDBName());
-            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+currrentselectJoinedPerson.getId()+"", Person.class);
+            TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+ currentselectJoinedPerson.getId()+"", Person.class);
             List<Person> results = query.getResultList();
             em.getTransaction().begin();
             for (Person p : results) {
@@ -187,7 +191,7 @@ public class MemberActPaneController implements Reloadable{
                         ha.setRole(1);
                     }
                 }
-                currrentselectJoinedPerson = p;
+                currentselectJoinedPerson = p;
             }
             em.getTransaction().commit();
             odb.closeConnection();
@@ -201,6 +205,7 @@ public class MemberActPaneController implements Reloadable{
     {
         joinedpidColumn.setCellValueFactory(new PropertyValueFactory<>("userid"));
         joinedpnameColumn.setCellValueFactory(new PropertyValueFactory<>("firstname"));
+        //RoleColumn.setCellValueFactory(new PropertyValueFactory<>("Role"));
         joinedTable.setItems(getJoinedPerson());
 
         reqpidColumn.setCellValueFactory(new PropertyValueFactory<>("userid"));
@@ -250,9 +255,12 @@ public class MemberActPaneController implements Reloadable{
     void clickSelectJoinedMember(MouseEvent event) {
         if (!joinedTable.getSelectionModel().isEmpty())
         {
+            currentselectJoinedPerson = joinedTable.getSelectionModel().getSelectedItem();
+            SetPermButton.setDisable(false);
             if (!reqTable.getSelectionModel().isEmpty()) //if another table had selected
             {
                 disableButton();
+
                 reqTable.getSelectionModel().clearSelection();
             }
         }
@@ -262,7 +270,7 @@ public class MemberActPaneController implements Reloadable{
     @FXML
     void callApproveSelect(ActionEvent event) {
         if (currentselectReqPerson!=null) {
-            setStatus(1);
+            setStatus(1,1);
         }
         reloadPage();
     }
@@ -270,12 +278,12 @@ public class MemberActPaneController implements Reloadable{
     @FXML
     void callRejectMember(ActionEvent event) {
         if (currentselectReqPerson!=null) {
-            setStatus(2);
+            setStatus(2,0);
         }
         reloadPage();
     }
 
-    private void setStatus(int status)
+    private void setStatus(int status,int role)
     {
         //TODO
         System.out.println(currentselectReqPerson.getFirstname());
@@ -291,6 +299,7 @@ public class MemberActPaneController implements Reloadable{
                 if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid()))
                 {
                     ha.setApprove(status);
+                    ha.setRole(role);
                 }
             }
             currentselectReqPerson = p;
@@ -301,10 +310,49 @@ public class MemberActPaneController implements Reloadable{
 
     @Override
     public void reloadPage() {
-        MainProgram.updatePerson();
-        MainProgram.updateActivity();
-        disableButton();
-        loadMemberTable();
+        int checkrole = 0;
+
+        ObjectDB odb = new ObjectDB();
+        EntityManager em = odb.createConnection(MainProgram.getDBName());
+        TypedQuery<Person> query = em.createQuery("SELECT p FROM Person p where p.id = "+currentselectReqPerson.getId()+"", Person.class);
+        List<Person> results = query.getResultList();
+        em.getTransaction().begin();
+        for (Person p : results) {
+            ArrayList<HasActivity> hact = p.getMyact();
+            for (HasActivity ha : hact) {
+                //search has act of this activity
+                if (ha.getActivity().getActid().equals(MainProgram.getStageMainPage().getCurrentselectact().getActid()))
+                {
+                    checkrole = ha.getRole() ;
+                }
+            }
+        }
+        if(checkrole == 3){
+            MainProgram.updatePerson();
+            MainProgram.updateActivity();
+            disableButton();
+            loadMemberTable();
+            Person p = MainProgram.getPersonCurrent();
+            ArrayList<HasActivity> hact = p.getMyact();
+        }
+        else if(checkrole == 2) {
+            MainProgram.updatePerson();
+            MainProgram.updateActivity();
+            disableButton();
+            loadMemberTable();
+            Person p = MainProgram.getPersonCurrent();
+            ArrayList<HasActivity> hact = p.getMyact();
+        }
+        else {
+            MainProgram.updatePerson();
+            MainProgram.updateActivity();
+            disableButton();
+            loadMemberTable();
+            Person p = MainProgram.getPersonCurrent();
+            ArrayList<HasActivity> hact = p.getMyact();
+        }
+
+
     }
 
     private void disableButton()
